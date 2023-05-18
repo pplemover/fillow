@@ -20,6 +20,8 @@ def get_movie_datas():
 
         # for movie in movies['results']:
         #         # Movie 모델 필드명에 맞추어 데이터를 저장함.
+        genre_lst = [genre['id'] for genre in movie['genres']]
+        print(genre_lst)
         data = {
             "model": "fillow.movie",
             "pk": movie['id'],
@@ -30,7 +32,7 @@ def get_movie_datas():
                 'vote_avg': movie['vote_average'],
                 'overview': movie['overview'],
                 'poster_path': movie['poster_path'],
-                'genres': movie['genres'],
+                'genres': genre_lst,
                 'vote_count': movie['vote_count'],
             },
         }
@@ -84,9 +86,9 @@ def edit_json():
     with open("location_data.json", "w", encoding="utf-8") as w:
         json.dump(total_data, w, indent=" ", ensure_ascii=False)
     
-edit_json()
+# edit_json()
 
-# get_movie_datas()
+get_movie_datas()
 # get_genre_datas()
 
 # readcsv = pd.read_csv('helloworld.csv',engine='python',encoding='CP949')
