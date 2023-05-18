@@ -33,9 +33,20 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # my app
     'fillow',
+    'accounts',
     
     # CORS policy
     "corsheaders",
+    
+    # registration
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'dj_rest_auth.registration',
+    # auth
+    'rest_framework.authtoken',
+    'dj_rest_auth',
     
     # django
     'rest_framework',
@@ -47,8 +58,38 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+# 회원가입시 토큰 발급 =====================
+REST_AUTH = {
+    'SESSION_LOGIN' : False,
+}
+
+# 하나의 컨텐츠로 여러 개의 도메인에 등록하고 싶을 때 사용, 첫번째 사이트다 라고 알려줌
+SITE_ID = 1
+# =======================================
+
+REST_FRAMEWORK = {
+    # Authentication
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+
+    # permission
+    'DEFAULT_PERMISSION_CLASSES': [
+        # 'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.AllowAny',
+    ],
+
+    # spectacular Settings
+    # 'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
+    
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    
+    # 이거 위에
     "django.middleware.common.CommonMiddleware",
     
     'django.middleware.security.SecurityMiddleware',
@@ -141,3 +182,5 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'accounts.User'
