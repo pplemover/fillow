@@ -1,16 +1,13 @@
 [
   {
-    "model": "fillow.movielocation",
-    "fields":{
-      "tmdb_id":89,
-      "location_country":"요르단",
-      "location_name":"Petra",
-      "latitude":30.32181067,
-      "longitude":35.48019374,
-      "youtube_url":"https:\/\/www.youtube.com\/embed\/bGN0LuEXBYY",
-      "location_photo_url":"https:\/\/img.delicious.com.au\/kY3ltSj4\/del\/2019\/12\/indiana-jones-and-the-last-crusade-petra-jordan-121526-2.jpg",
-      "location_description":"The Last Crusade?(1989) is the third installment in the popular Indiana Jones series, and here we head to the ancient city of?Petra?in?Jordan. The Holy Grail is supposedly housed in the “Canyon of the Crescent Moon”, actually ? in real life ? the Al Khazneh. The intricate sandstone carving and Greek-influenced architecture make it an exceptionally beautiful structure."
-    }
+    "tmdb_id":89,
+    "location_country":"요르단",
+    "location_name":"Petra",
+    "latitude":30.32181067,
+    "longitude":35.48019374,
+    "youtube_url":"https:\/\/www.youtube.com\/embed\/bGN0LuEXBYY",
+    "location_photo_url":"https:\/\/img.delicious.com.au\/kY3ltSj4\/del\/2019\/12\/indiana-jones-and-the-last-crusade-petra-jordan-121526-2.jpg",
+    "location_description":"The Last Crusade?(1989) is the third installment in the popular Indiana Jones series, and here we head to the ancient city of?Petra?in?Jordan. The Holy Grail is supposedly housed in the “Canyon of the Crescent Moon”, actually ? in real life ? the Al Khazneh. The intricate sandstone carving and Greek-influenced architecture make it an exceptionally beautiful structure."
   },
   {
     "tmdb_id":278,

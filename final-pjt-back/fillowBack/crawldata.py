@@ -67,11 +67,27 @@ def get_genre_datas():
 
 #==================================================================================================================================================================
 def edit_json():
-    pass
-    
+    with open('checking.json', 'r', encoding='utf-8') as f:
+        json_data = json.load(f)
+    # for mv in json_data:
+    #     print(mv)
+    total_data = []
+    for item in json_data:
+        data = {
+            "model": "fillow.movielocation",
+            'fields': item
+        }
+        total_data.append(data)
 
-get_movie_datas()
-get_genre_datas()
+
+
+    with open("location_data.json", "w", encoding="utf-8") as w:
+        json.dump(total_data, w, indent=" ", ensure_ascii=False)
+    
+edit_json()
+
+# get_movie_datas()
+# get_genre_datas()
 
 # readcsv = pd.read_csv('helloworld.csv',engine='python',encoding='CP949')
 # readcsv = pd.DataFrame(readcsv)
