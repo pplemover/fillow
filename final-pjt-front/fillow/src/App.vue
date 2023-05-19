@@ -2,12 +2,13 @@
   <div id="app">
     <nav>
       <router-link to="/">Map</router-link> |
+      <router-link :to="{name:'LoginView'}">LoginView</router-link>|
+      <router-link :to="{name:'SignUpView'}">SignUpView</router-link>|
       <!-- <router-link to="/about">About</router-link> -->
     </nav>
     <div class="d-flex">
-      <div class="d-inline-block" style="width: 40%;">
-        <MovieInfo style="height: 100%"/>
-      </div>
+      <MovieList/>
+      <MovieInfo/>
       <div class="d-inline-block" style="width: 60%; height: 100%">
         <router-view/>
       </div>
@@ -21,11 +22,13 @@
 <script>
 // import MapView from '@/views/MapView.vue'
 import MovieInfo from '@/components/MovieInfo.vue'
+import MovieList from '@/components/MovieList.vue'
 
 export default {
   name: 'App',
   components: {
     // MapView,
+    MovieList,
     MovieInfo,
   },
   created() {
