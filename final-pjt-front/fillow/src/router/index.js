@@ -1,17 +1,22 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 // import HomeView from '../views/HomeView.vue'
-import MapView from '@/views/MapView.vue'
+import MyMapView from '@/views/MyMapView'
 import LoginView from '@/views/LoginView.vue'
 import SignUpView from '@/views/SignUpView.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
+  // {
+  //   path: '/',
+  //   name: 'mapView',
+  //   component: MapView
+  // },
   {
     path: '/',
-    name: 'mapView',
-    component: MapView
+    name: 'MyMapView',
+    component: MyMapView
   },
   {
     path: '/',

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div @click="selectThisItem">
+    <div @click="selectThisItem" class="item-box">
       <h3>{{movieitem.movie_id}}</h3>
     </div>
   </div>
@@ -22,5 +22,11 @@ export default {
 </script>
 
 <style>
-
+.item-box {
+  width: 500px;
+  height: 30px;
+  margin: auto;
+  line-height: 30px;
+  text-align: center;
+}
 </style>

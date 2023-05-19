@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style>
-/* .video_video {
+.video_video {
   width: 100%;
 }
 .video_ratio {
@@ -25,5 +25,5 @@ export default {
   height: 0;
   padding-top: 56.25%;
   margin: 5px;
-} */
+}
 </style>

@@ -22,6 +22,9 @@ export default new Vuex.Store({
     // 초기값 12 (스타워즈)
   },
   getters: {
+    selectedmovie(state){
+      return state.homemovieselect_id
+    }
   },
   mutations: {
     GET_MOVIE_LOCATIONS(state, movieLocations) {

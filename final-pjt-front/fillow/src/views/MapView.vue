@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <gmap-map
         :zoom="3"    
         :center="center"
@@ -11,6 +12,7 @@
         :position="m.position"
       ></gmap-marker>
     </gmap-map>
+
   </div>
 </template>
 
