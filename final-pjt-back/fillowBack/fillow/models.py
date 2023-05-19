@@ -11,7 +11,8 @@ class Movie(models.Model):
     release_date = models.DateField()  #
     popularity = models.FloatField()  #
     vote_count = models.IntegerField()  #
-    vote_avg = models.FloatField()  #
+    vote_avg = models.FloatField()
+    # 평균평점 vote_avg = models.DecimalField(max_digits=5, decimal_places=3) 
     overview = models.TextField()  #
     poster_path = models.CharField(max_length=200)  #
     genres = models.ManyToManyField(Genre)  #
@@ -19,9 +20,9 @@ class Movie(models.Model):
 
 # ============================================================================================================
 class MovieLocation(models.Model):
-    # title = models.CharField(max_length=50)          # 영화 제목 (TMDB에서 받아올거)
+    # title = models.CharField(max_length=50)        # 영화 제목 (TMDB에서 받아올거)
     tmdb_id = models.ForeignKey(Movie, on_delete=models.CASCADE)
-    # tmdb_id = models.IntegerField()                  # tmdb_id
+    # tmdb_id = models.IntegerField()                # tmdb_id
     location_name = models.CharField(max_length=50)  # 장소 이름
     latitude = models.DecimalField(max_digits=15, decimal_places=6)  # 위도
     longitude = models.DecimalField(max_digits=15, decimal_places=6) # 경도
@@ -29,15 +30,4 @@ class MovieLocation(models.Model):
     youtube_url = models.URLField(max_length=300)    # 유튜브 동영상 링크
     location_photo_url = models.URLField(max_length=300) # 장소 사진 url
     location_description = models.TextField()        # 장소 설명
-
-    # vote_average = models.DecimalField(max_digits=5, decimal_places=3)      # 평균 평점
-    # 장르
-    # 성인영화 여부
-    # 연도
-    # 감독
-    # 줄거리
-    # 포스터 url
-    # 배경 url
-    # 원제목
-    
     
