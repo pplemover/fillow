@@ -18,7 +18,8 @@ export default new Vuex.Store({
     movieLocations: [
 
     ],
-
+    homemovieselect_id: 12,
+    // 초기값 12 (스타워즈)
   },
   getters: {
   },
@@ -27,6 +28,9 @@ export default new Vuex.Store({
       // console.log('이 왜 됨?')
       console.log('0번 내용', movieLocations[0])
       state.movieLocations = movieLocations
+    },
+    SELECT_THIS_ITEM(state, index){
+      state.homemovieselect_id = index
     },
 
     // =============================인증 시스템 관련 =================================
@@ -55,6 +59,10 @@ export default new Vuex.Store({
       .catch((err) => {
         console.log(err)
       })
+    },
+    selectThisItem(context, index){
+      // console.log(index,'store');
+      context.commit('SELECT_THIS_ITEM', index)
     },
 
     // =============================인증 시스템 관련 =================================
