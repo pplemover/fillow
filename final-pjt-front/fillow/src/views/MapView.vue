@@ -18,7 +18,6 @@
         :opened="openedMarkerID === m.id"
         >
         
-          <div>I am in info window {{ m.id }} </div>
           <InfoWindowVue
           :movie-location-item="m.data"
           />
