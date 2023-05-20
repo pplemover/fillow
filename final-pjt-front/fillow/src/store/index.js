@@ -18,8 +18,8 @@ export default new Vuex.Store({
     movieLocations: [
 
     ],
-    homemovieselect_id: 12,
-    // 초기값 12 (스타워즈)
+    homemovieselect_id: 11,
+    // 초기값 11 (스타워즈)
   },
   getters: {
     selectedmovie(state){
@@ -39,7 +39,7 @@ export default new Vuex.Store({
     // =============================인증 시스템 관련 =================================
     SAVE_TOKEN(state, token){
       state.token = token
-      router.push({name:'mapView'})  // store/index,js $ router 접근 불가 ->import 해야됨
+      router.push({name:'MyMapView'})  // store/index,js $ router 접근 불가 ->import 해야됨
     },
     DELETE_TOKEN(state){
       state.token = null
@@ -85,6 +85,7 @@ export default new Vuex.Store({
       })
       .catch((err)=>{
         console.log(err);
+        alert('아이디, 비밀번호를 제대로 입력해 주세요.')
       })
     },
     logout(context, payload){

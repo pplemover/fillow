@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div @click="selectThisItem" class="item-box">
+    
+    <div @click="selectThisItem"> <!-- class="item-box" <= 잠깐만 빼놓을게요--> 
       <h3>{{movieitem.movie_id}}</h3>
     </div>
   </div>

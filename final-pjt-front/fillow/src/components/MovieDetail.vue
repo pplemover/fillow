@@ -3,7 +3,7 @@
 
     
     <h1>Detail</h1>
-    <div v-show="0">{{ selected_movie_id }}</div>
+    {{ selected_movie_id }}
     
     {{ detail_data }}
 
