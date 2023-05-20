@@ -52,7 +52,7 @@ export default new Vuex.Store({
       // console.log('이게 되네')
       axios({
         method: 'get',
-        url: `${DJANGO_URL}/api/v1/movies/`,
+        url: `${DJANGO_URL}/api/v1/location/`,
       })
       .then((res) => {
         // console.log(res)

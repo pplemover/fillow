@@ -23,12 +23,6 @@ export default {
       return this.$store.getters.selectedmovie
     }
   },
-  // created() {
-  //     const cur_id = this.$store.state.homemovieselect_id
-  //     this.getMovieDetail(cur_id)
-  //     return cur_id
-    
-  // },
   methods:{
     getMovieDetail(thisid){
       // const cur_id = this.selected_movie_id

@@ -4,9 +4,11 @@ import store from './store'
 import router from './router'
 
 import "bootstrap";
-import"bootstrap/dist/css/bootstrap.min.css";
+import"bootstrap/dist/css/bootstrap.min.css"
 
 import * as VueGoogleMaps from "vue2-google-maps" // Import package
+
+import '@/styles/global.css' // scrollbar customizing css
 
 Vue.config.productionTip = false
 
