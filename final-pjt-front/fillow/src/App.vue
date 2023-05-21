@@ -1,7 +1,10 @@
 <template>
-  <div id="app">
+  <div id="app" class="inner">
     <header>
       <!-- 로고 -->
+      <a href="/" class="logo">
+        <img src="/assets/images/header_fillow.png" alt="logo" />
+      </a>
 
       <!-- 네비게이션 -->
       <router-link to="/">Map</router-link>
