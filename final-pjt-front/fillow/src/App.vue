@@ -1,26 +1,25 @@
 <template>
-  <div id="app" class="inner">
+  <div id="app">
+    <!-- HEADER -->
     <header>
-      <!-- 로고 -->
-      <a href="/" class="logo">
-        <img src="/assets/images/header_fillow.png" alt="logo" />
-      </a>
-
-      <!-- 네비게이션 -->
-      <router-link to="/">Map</router-link>
+      <!-- 홈 화면 routing -->
+      <router-link to="/">
+        <a href="/" class="logo"><img src="@/assets/images/header_fillow.png" alt="logo" style="width: 100px; height: auto;"></a>
+      </router-link>
       
-      <!-- 인증 관련 -->
+      <!-- 인증 화면 routing -->
       <div class="user" v-if="!isLogin">
-        <router-link :to="{name:'LoginView'}">LoginView</router-link>|
-        <router-link :to="{name:'SignUpView'}">SignUpView</router-link>|
+        <router-link :to="{name:'LoginView'}">
+          <button class="btn_custom btn_custom--darkgreen login">로그인</button>
+        </router-link>
+        <router-link :to="{name:'SignUpView'}">
+          <button class="btn_custom btn_custom--darkgreen">회원가입</button>
+        </router-link>
       </div>
-      <div v-if="isLogin" @click="logout">logout</div>
-      <!-- 인증 관련 -->
+      <div v-if="isLogin" @click="logout">로그아웃</div>
     </header>
-
-
+    
     <router-view/>
-
   </div>
 </template>
 
@@ -63,45 +62,46 @@ export default {
 </script>
 
 <style>
-#inner {
-  margin: 0 auto;
-  width: 800px;
-}
-
 #app {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  text-decoration: none;
 }
 
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: #528265;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  border-bottom: 1px solid #c8c8c8;
+  z-index: 9;
+}
+
+.logo {
+  position: relative;
+  left: 15px;
 }
 
 .user {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  margin: 10px;
-  padding: 30px;
-  border-radius: 10px;
-  height: 15px;
+  justify-content: space-between;
+  position: relative;
+  right: 15px;
 }
 
-.user a {
-  font-weight: bold;
-  color: #2c3e50;
-  top: 0; /* 상단에 위치하도록 함 */
-  right: 0; /* 우측에 위치하도록 함 */
+.login {
+  margin-right: 5px;
 }
 
-.user a.router-link-exact-active {
-  color: #42b983;
-  font-weight: bold;
-  color: #2c3e50;
-  top: 0; /* 상단에 위치하도록 함 */
-  right: 0; /* 우측에 위치하도록 함 */
+router-view {
+  margin-top: 61px;
 }
 </style>

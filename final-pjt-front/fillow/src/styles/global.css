@@ -1,21 +1,63 @@
 /* Scroll bar stylings */
 ::-webkit-scrollbar {
-    width: 7px;
+    width: 0px;
     height: 7px;
   }
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: var(--lightestgrey); 
+    background: transparent;
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: transparent; /* 핸들의 배경색을 투명하게 설정 */
     border-radius: 5px;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: transparent;  /* hover 시 핸들의 배경색을 투명하게 설정 */
+  }
+
+  /* 커스텀버튼 */
+  .btn_custom {
+    width: 80px;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: block;
+    transition: .3s;
+  }
+  .btn_custom:hover{
+    background-color: #333;
+    color: #fff;
+  }
+  .btn_custom.btn_custom--darkgreen {
+    color: white;
+    background-color: #809592;
+  }
+  .btn_custom.btn_custom--darkgreen:hover {
+    color: white;
+    border-color: #809592;
+  }
+  .btn_custom.btn_custom--gold {
+    color: #D9AABA;
+    border-color: #D9AABA;
+  }
+  .btn_custom.btn_custom--gold:hover {
+    color: #FFF;
+    background-color: #D9AABA;
+  }
+  .btn_custom.btn_custom--white {
+    color: #FFF;
+    border-color: #FFF;
+  }
+  .btn_custom.btn_custom--white:hover {
+    color: #333;
+    background-color: #FFF;
   }
