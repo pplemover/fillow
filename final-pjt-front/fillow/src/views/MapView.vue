@@ -1,31 +1,37 @@
 <template>
   <div>
-
     <gmap-map
-    :zoom="3"    
+    :zoom="4"
     :center="center"
     style="width:100%;  height: 855px;"
     >
+
+    <div
+    :key="index"
+    v-for="(m, index) in locationMarkers"
+    >
       <gmap-marker
-      :key="index"
-      v-for="(m, index) in locationMarkers"
+      v-if="$store.getters.selectedmovie === m.data.tmdb_id"
       :position="m.position"
       @click="openMarker(m.id)"
       >
         <gmap-info-window
         :closeclick="true"
         @closeclick="openMarker(null)"
+        @keyup.esc="openMarker(null)"
         :opened="openedMarkerID === m.id"
         >
         
           <InfoWindowVue
           :movie-location-item="m.data"
           />
-
+          
         </gmap-info-window>
       </gmap-marker>
-    </gmap-map>
+    </div>
 
+
+    </gmap-map>
   </div>
 </template>
 
@@ -71,7 +77,7 @@ export default {
         // console.log('MovieLocation', MovieLocation)
         latlngs.push({
           position: { lat: parseFloat(MovieLocation.latitude) ,lng: parseFloat(MovieLocation.longitude) },
-          id : MovieLocation.tmdb_id,
+          id : MovieLocation.id,
           data:MovieLocation,
           })
       }

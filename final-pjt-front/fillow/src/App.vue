@@ -6,11 +6,13 @@
       <!-- 네비게이션 -->
       <router-link to="/">Map</router-link>
       
-      <!-- 회원가입 -->
-      <div class="user">
+      <!-- 인증 관련 -->
+      <div class="user" v-if="!isLogin">
         <router-link :to="{name:'LoginView'}">LoginView</router-link>|
         <router-link :to="{name:'SignUpView'}">SignUpView</router-link>|
       </div>
+      <div v-if="isLogin" @click="logout">logout</div>
+      <!-- 인증 관련 -->
     </header>
 
 
@@ -31,6 +33,11 @@ export default {
     // MovieList,
     // MovieInfo,
   },
+  computed:{
+    isLogin(){
+      return this.$store.getters.isLogin
+    }
+  },
   created() {
     this.getMovieLocations()
   },
@@ -40,6 +47,12 @@ export default {
       if (!this.$store.state.movieLocations.length){
         // console.log('데이터 불러오기')
         this.$store.dispatch('getMovieLocations')
+      }
+    },
+    logout(){
+      if (this.$store.state.token) {
+        const token = JSON.parse(localStorage.vuex)
+        this.$store.dispatch('logout', token.token)
       }
     },
   },  

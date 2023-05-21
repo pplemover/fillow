@@ -16,15 +16,20 @@ export default new Vuex.Store({
   ],
   state: {
     movieLocations: [
-
     ],
     homemovieselect_id: 11,
     // 초기값 11 (스타워즈)
+    token:null,
   },
   getters: {
     selectedmovie(state){
       return state.homemovieselect_id
+    },
+    // =============================getters인증 시스템 관련 =================================
+    isLogin(state){
+      return state.token ? true : false
     }
+    // =============================getters인증 시스템 관련 =================================
   },
   mutations: {
     GET_MOVIE_LOCATIONS(state, movieLocations) {
@@ -36,7 +41,7 @@ export default new Vuex.Store({
       state.homemovieselect_id = index
     },
 
-    // =============================인증 시스템 관련 =================================
+    // =============================mutations 인증 시스템 관련 =================================
     SAVE_TOKEN(state, token){
       state.token = token
       router.push({name:'MyMapView'})  // store/index,js $ router 접근 불가 ->import 해야됨
@@ -44,7 +49,7 @@ export default new Vuex.Store({
     DELETE_TOKEN(state){
       state.token = null
     },
-    // =============================인증 시스템 관련 =================================
+    // =============================mutations 인증 시스템 관련 =================================
   },
   actions: {
     getMovieLocations(context) {
@@ -68,7 +73,7 @@ export default new Vuex.Store({
       context.commit('SELECT_THIS_ITEM', index)
     },
 
-    // =============================인증 시스템 관련 =================================
+    // =============================actions 인증 시스템 관련 =================================
     login(context, payload){
       const username = payload.username
       const password = payload.password
@@ -126,7 +131,7 @@ export default new Vuex.Store({
         console.log(err);
       })
     },
-    // =============================인증 시스템 관련 =================================
+    // =============================actions 인증 시스템 관련 =================================
   },
   modules: {
   }
