@@ -16,26 +16,36 @@ const routes = [
   {
     path: '/',
     name: 'MyMapView',
-    component: MyMapView
+    component: MyMapView,
+    meta: {
+      ogTitle: 'Fillow, Find Famous Film Locations',
+      ogDescription: '내가 좋아하는 영화가 촬영된 장소로 떠나봐요~!',
+      ogImage: require('@/assets/images/ogimage.jpg'),
+      ogUrl: 'https://starbucks.co.kr',
+    },
   },
   {
     path: '/',
     name: 'LoginView',
-    component: LoginView
+    component: LoginView,
+    meta: {
+      ogTitle: 'Fillow, Find Famous Film Locations',
+      ogDescription: '로그인 페이지',
+      ogImage: require('@/assets/images/ogimage.jpg'),
+      ogUrl: 'https://starbucks.co.kr',
+    },
   },
   {
     path: '/',
     name: 'SignUpView',
-    component: SignUpView
+    component: SignUpView,
+    meta: {
+      ogTitle: 'Fillow, Find Famous Film Locations',
+      ogDescription: '회원가입 페이지',
+      ogImage: require('@/assets/images/ogimage.jpg'),
+      ogUrl: 'https://starbucks.co.kr',
+    },
   },
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  // }
 ]
 
 const router = new VueRouter({
