@@ -1,10 +1,9 @@
 <template>
   <div>
-
     <div class="flex-box">
-        <MovieList class="left" style="overflow-x: hidden; height: calc(100vh - 94px);"/>
-        <MovieInfo class="mid" style="overflow-x: hidden; height: calc(100vh - 94px);"/>
-        <MapView class="right"/>
+      <MovieList class="left" style="overflow-x: hidden; height: calc(100vh - 94px);"/>
+      <MovieInfo class="mid" style="overflow-x: hidden; height: calc(100vh - 94px);"/>
+      <MapView class="right"/>
     </div>
 
   </div>
@@ -24,23 +23,23 @@ export default {
     MovieInfo,
   },
   methods:{
-    
+
   },
 
 }
 </script>
 
 <style>
+/* MovieListView, MovieInfoView, MapView */
 .flex-box {
   display: flex;
+  margin-top: 61px;
 }
 .left {
   flex-basis: 25%;
-  margin-top: -15px;
 }
 .mid {
   flex-basis: 33.33%;
-  margin-top: -7px;
 }
 .right {
   flex-basis: 41.67%;
@@ -53,6 +52,9 @@ export default {
   .col-md-6 {
     flex-basis: 100%;
     max-width: 100%;
+    display: none;
+  }
+  .right {
     display: none;
   }
 }

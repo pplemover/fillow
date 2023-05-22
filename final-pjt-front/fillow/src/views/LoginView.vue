@@ -53,7 +53,7 @@ export default {
 <style>
 .signin {
   position: relative;
-  font-family: 'Black Han Sans', sans-serif;
+  font-family: 'Do Hyeon', sans-serif;
   padding: 93px;
   background-image: url("https://source.unsplash.com/random/?movies");
   background-position: center;
@@ -90,7 +90,7 @@ export default {
 
 .signin__card form {
   padding: 30px 22px;
-  margin-bottom: 220px;
+  margin-bottom: 25px;
 }
 .signin__card form input {
   width: 100%;

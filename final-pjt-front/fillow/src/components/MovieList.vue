@@ -1,6 +1,7 @@
 <template>
   <div>
-    <hr>
+    <div @click="calculate" class="recommend_btn">내 위치를 기반으로 추천받기</div>
+
     <MovieListItem
     v-for="homemovieitem in homemovielist"
     :key="homemovieitem.movie_id"
@@ -33,7 +34,52 @@ export default {
         // console.log(res.data);
         this.homemovielist = res.data
       })
-    }
+    },
+    // 거리 계산 ================================================================================================
+    calculate(){
+      // 필요 함수 ==================================
+      var rad = function(x) {
+        return x * Math.PI / 180;
+      };
+
+      var getDistance = function(p1, p2) {
+        var R = 6378137; // Earth’s mean radius in meter
+        var dLat = rad(p2.latitude - p1.lat);
+        var dLong = rad(p2.longitude - p1.lng);
+        var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+          Math.cos(rad(p1.lat)) * Math.cos(rad(p2.latitude)) *
+          Math.sin(dLong / 2) * Math.sin(dLong / 2);
+        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        var d = R * c;
+        return d; // returns the distance in meter
+      };
+      // 필요 함수 ==================================
+      const lst = this.$store.getters.currentLocations
+      const position = this.$store.state.my_location
+      const calculate_lst = []
+      console.log(position.lng);
+      console.log(position.lat);
+      for (const item of lst) {
+        const newdata = {
+          data:item,
+          distance_from_me : getDistance(position, item)
+        }
+        calculate_lst.push(newdata)
+      }
+      const newlst = calculate_lst.sort(function(a, b){
+        return a.distance_from_me - b.distance_from_me
+      })
+
+      console.log(newlst);
+
+      const recommend_lst = []
+      for (const item of newlst) {
+        recommend_lst
+        item
+      }
+    },
+    // 거리 계산 ================================================================================================
+
   },
   data(){
     return{
@@ -44,5 +90,30 @@ export default {
 </script>
 
 <style>
+.recommend_btn {
+  --bg: #528265;
+  --hover-bg: #0fca66;
+  --hover-text: black;
+  margin-top: 5px;
+  margin-left: 10px;
+  height: 40px;
+  color: #fff;
+  border: 1px solid var(--bg);
+  border-radius: 5px;
+  padding: 0.5em 0.1em;
+  background: var(--bg);
+  transition: 0.1s;
+}
 
+.recommend_btn:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem,-0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.recommend_btn:active {
+  transform: translate(0);
+  box-shadow: none;
+}
 </style>

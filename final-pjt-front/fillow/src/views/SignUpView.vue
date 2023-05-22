@@ -52,7 +52,7 @@ export default {
 <style>
 .signup {
   position: relative;
-  font-family: 'Black Han Sans', sans-serif;
+  font-family: 'Do Hyeon', sans-serif;
   padding: 93px;
   background-image: url("https://source.unsplash.com/random/?filmlocation,movie,movies");
   background-position: center;
@@ -89,7 +89,7 @@ export default {
 
 .signup__card form {
   padding: 30px 22px;
-  margin-bottom: 270px;
+  margin-bottom: 74px;
 }
 .signup__card form input {
   width: 100%;

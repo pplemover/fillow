@@ -1,0 +1,639 @@
+[
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 89,
+   "location_country": "요르단",
+   "location_name": "페트라(Petra)",
+   "latitude": 30.32181067,
+   "longitude": 35.48019374,
+   "youtube_url": "https://www.youtube.com/embed/bGN0LuEXBYY",
+   "location_photo_url": "https://img.delicious.com.au/kY3ltSj4/del/2019/12/indiana-jones-and-the-last-crusade-petra-jordan-121526-2.jpg",
+   "location_description": "《인디아나 존스: 최후의 성전》은 전설적인 탐험가 인디아나 존스의 모험을 그린 액션 어드벤처 영화입니다. 이 작품에서는 인디아나 존스가 신비로운 성전을 찾기 위해 전 세계를 누비는데, 그 중 하나의 중요한 장면은 요르단의 매혹적인 도시인 페트라에서 촬영되었습니다. 페트라는 황량한 사막의 중간에 위치하며, 그 고대 도시의 아름다움과 신비로운 분위기는 관객들에게 놀라움과 감동을 선사할 것입니다. 이 영화를 통해 페트라의 숨겨진 보물과 역사를 탐험하는 장소로서의 매력을 느껴보세요."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 278,
+   "location_country": "미국",
+   "location_name": "오하이오주 소년원(Ohio State Reformatory)",
+   "latitude": 40.78437744,
+   "longitude": -82.50241663,
+   "youtube_url": "https://www.youtube.com/embed/mR8hHqDygYQ",
+   "location_photo_url": "https://deih43ym53wif.cloudfront.net/large_ohio-state-reformatory-mansfield-shutterstock_601923842.jpg_32244f1632.jpg",
+   "location_description": "《쇼생크 탈출》은 감옥 생활의 굴레에서 탈출을 꿈꾸는 두 남성의 이야기를 그린 명작 드라마 영화입니다. 이 작품은 미국 오하이오 주에 위치한 오하이오 주립 개혁원(Ohio State Reformatory)에서 촬영되었습니다. 오하이오 주립 소년원은 그 유명한 벽돌 건물과 강력한 분위기로 인해 영화 속 탈출의 공간으로 완벽하게 어울리며, 그 압도적인 체감감은 관객들에게 긴장감과 긴밀한 연출을 선사합니다. 이 영화를 통해 오하이오 주립 소년원이 쇼생크 탈출의 핵심 배경지로서 어떤 역할을 하는지 직접 경험해보세요."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 127585,
+   "location_country": "미국",
+   "location_name": "로버트 F. 케네디 기념 스타디움(Robert F. Kennedy Memorial Stadium)",
+   "latitude": 38.88960124,
+   "longitude": -76.97205485,
+   "youtube_url": "https://www.youtube.com/embed/pAApe_5Rewg",
+   "location_photo_url": "https://eventsdc.com/sites/default/files/styles/upcoming_event_782_x_440_/public/2020-12/New%20Website%20-%20News%20Article%20Image%20Size%20%2852%29_0.png?itok=hv9NL3gM",
+   "location_description": "《엑스맨: 데이즈 오브 퓨처 패스트》는 미래의 멸망을 막기 위해 과거로 돌아가는 엑스맨들의 잠재력을 그린 슈퍼히어로 영화입니다. 이 작품에서는 중요한 장면이 로버트 F. 케네디 기념 스타디움에서 촬영되었습니다. 로버트 F. 케네디 기념 스타디움은 미국 매사추세츠 주에 위치한 역사적인 경기장으로, 그 유명한 건물과 시원한 분위기는 영화 속 액션과 스릴을 한층 더해줍니다. 이 영화를 통해 로버트 F. 케네디 기념 스타디움이 엑스맨들의 모험과 전투의 배경지로서 어떤 역할을 하는지 직접 체험해보세요."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 857,
+   "location_country": "아일랜드",
+   "location_name": "커라클로 비치(Curracloe Beach)",
+   "latitude": 52.38869874,
+   "longitude": -6.362141548,
+   "youtube_url": "https://www.youtube.com/embed/n0YGJ5D8VZk",
+   "location_photo_url": "https://deih43ym53wif.cloudfront.net/large_curracloe-beach-co-wexford-ireland-shutterstock_1478053556.jpg_f35c9ca0d8.jpg",
+   "location_description": "《라이언 일병 구하기》는 제2차 세계 대전을 배경으로 한 전쟁 드라마 영화로, 한 소대가 프랑스로 파견되어 병사 라이언을 찾는 모험을 그립니다. 이 작품에서는 중요한 장면이 커라클로 비치에서 촬영되었습니다. 커라클로 비치는 아일랜드의 아름다운 해안 지역으로, 그 푸른 바다와 깨끗한 모래사장은 영화 속 전투와 감동적인 장면을 한층 더욱 생동감 있게 표현해줍니다. 이 영화를 통해 Curracloe Beach가 전투의 배경지로서 어떤 역할을 하는지 직접 경험해보세요. 그 자연의 아름다움과 전쟁의 잔혹함이 공존하는 이곳이 영화 속 세계를 더욱 빛나게 만들어줄 것입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 37834,
+   "location_country": "스페인",
+   "location_name": "엘푸에르토데산타마리아(El Puerto de Santa María)",
+   "latitude": 36.5968706598764,
+   "longitude": -6.232733818483521,
+   "youtube_url": "https://www.youtube.com/embed/oMWqB05lpRU",
+   "location_photo_url": "https://cst.brightspotcdn.com/dims4/default/c967e91/2147483647/strip/true/crop/3333x2222+43+0/resize/840x560!/format/webp/quality/90/?url=https%3A%2F%2Fcdn.vox-cdn.com%2Fthumbor%2Fj-gG-wV3wB5lk3TEDZmpblHFYZk%3D%2F212x179%3A3719x2401%2F3507x2222%2Ffilters%3Afocal%281921x1921%3A1922x1922%29%2Fcdn.vox-cdn.com%2Fuploads%2Fchorus_asset%2Ffile%2F24168243%2FIMG_7231_2.jpeg",
+   "location_description": "Knight and Day 영화의 The Running of the Bulls 장면은 스페인의 Cádiz 지역 중 하나인 El Puerto de Santa María에서 촬영되었습니다. El Puerto de Santa María는 Cádiz 주에 위치한 도시로, 그리스도 장례식으로 유명한 장소입니다. The Running of the Bulls 장면에서는 이 도시의 거리와 광장에서 주최되는 전통적인 행사의 분위기를 담고 있습니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 353081,
+   "location_country": "프랑스",
+   "location_name": "에투알 개선문(Arc de Triomphe)",
+   "latitude": 48.873968085237145,
+   "longitude": 2.295102598735156,
+   "youtube_url": "https://www.youtube.com/embed/1KafYbnzH-M",
+   "location_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Arc_de_Triomphe%2C_Paris_21_October_2010.jpg/413px-Arc_de_Triomphe%2C_Paris_21_October_2010.jpg",
+   "location_description": "《미션 임파서블: 폴아웃》은 스릴 넘치는 스파이 액션으로 유명한 영화 시리즈로, 이 작품에서는 톰 크루즈가 개선문에서 오토바이를 타는 장면이 촬영되었습니다. 개선문은 프랑스 파리의 상징적인 랜드마크로, 아름다운 건축물과 역사적인 중요성으로 유명합니다. 영화에서 개선문에서 펼쳐지는 오토바이 추격 장면은 긴장감과 속도感을 최대한으로 전달하며, 파리의 아름다움과 장소의 고귀함을 동시에 느낄 수 있습니다. 《미션 임파서블: 폴아웃》은 개선문의 매력과 영화의 역동적인 액션을 결합하여 관객들에게 짜릿한 경험을 선사합니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 380,
+   "location_country": "미국",
+   "location_name": "씨저스 팰리스(Caesar’s Palace, Las Vegas)",
+   "latitude": 36.13772824,
+   "longitude": -115.1659393,
+   "youtube_url": "https://www.youtube.com/embed/RW1qHA5Hqwc",
+   "location_photo_url": "https://deih43ym53wif.cloudfront.net/large_las-vegas-usa-shutterstock_566096053_0dbc130885.jpeg",
+   "location_description": "《레인맨》은 특수한 능력을 지닌 형제의 이야기를 그린 감동적인 드라마 영화입니다. 이 작품에서는 중요한 장면이 씨저스 팰리스에서 촬영되었습니다. 씨저스 팰리스는 미국 라스베이거스에 위치한 호텔과 카지노로, 그 화려하고 고급스러운 분위기는 영화 속 주인공의 변화와 동기부여를 효과적으로 전달합니다. 이 영화를 통해 씨저스 팰리스가 형제의 우정과 성장을 위한 여정의 배경지로서 어떤 역할을 하는지 직접 체험해보세요. 화려한 장식과 활기찬 분위기가 관객들에게 흥미로운 이야기와 감동을 선사할 것입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 1995,
+   "location_country": "캄보디아",
+   "location_name": "앙코르 톰(Angkor Thom)",
+   "latitude": 13.48433455,
+   "longitude": 103.8735611,
+   "youtube_url": "https://www.youtube.com/embed/Rb7ezWhWK1s",
+   "location_photo_url": "https://deih43ym53wif.cloudfront.net/large_bayon-temple-angkor-thom-cambodia-shutterstock_339593069-2_1cab50c197.jpeg",
+   "location_description": "《툼 레이더》는 대체불가한 여전사 라라 크로프트의 모험을 그린 액션 어드벤처 영화입니다. 이 작품에서는 중요한 장면이 캄보디아의 앙코르 톰에서 촬영되었습니다. 앙코르 톰은 세계문화유산으로 알려진 고대 도시로, 그 황량하고 신비로운 분위기는 영화 속 라라 크로프트의 모험과 전투를 한층 더욱 풍성하게 표현해줍니다. 이 영화를 통해 앙코르 톰이 라라 크로프트의 사냥터와 보물의 비밀을 숨기는 장소로서 어떤 역할을 하는지 직접 경험해보세요. 그 유서 깊은 유물과 환상적인 건축물은 관객들에게 놀라움과 열정을 전달할 것입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 45269,
+   "location_country": "잉글랜드",
+   "location_name": "엘리 대성당(Ely Cathedral)",
+   "latitude": 52.39882793,
+   "longitude": 0.263907746,
+   "youtube_url": "https://www.youtube.com/embed/2z0kvlTxsEE",
+   "location_photo_url": "https://deih43ym53wif.cloudfront.net/large_cathedral-gallery-street-ely-england-shutterstock_650224558.jpg_b3b4bee2ed.jpg",
+   "location_description": "《킹스 스피치》는 영국 역사상 가장 위대한 연설을 준비하는 왕의 이야기를 그린 감동적인 역사 드라마 영화입니다. 이 작품에서는 엘리 대성당에서 중요한 장면이 촬영되었습니다. 엘리 대성당은 영국의 런던에 위치한 아름다운 고고한 성당으로, 그 귀족적인 건축물과 웅장한 분위기는 영화 속 주인공의 감정과 위대한 연설의 중요성을 한층 더욱 감미롭게 전달합니다. 이 영화를 통해 엘리 대성당이 왕의 자신감과 인간적 성장을 위한 결정적인 장소로서 어떤 역할을 하는지 직접 체험해보세요. 그 웅장함과 숭고함이 관객들에게 감동과 용기를 안겨줄 것입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 82695,
+   "location_country": "영국",
+   "location_name": "풀테니 다리(Pulteney Bridge)",
+   "latitude": 51.38310937,
+   "longitude": -2.357964654,
+   "youtube_url": "https://www.youtube.com/embed/IsZdfna1LKA",
+   "location_photo_url": "https://deih43ym53wif.cloudfront.net/large_gourdon-france-shutterstock_469169213_40dda9bd18.jpeg",
+   "location_description": "《레미제라블》은 프랑스 혁명 시대의 사랑과 용기를 그린 뮤지컬 드라마 영화입니다. 이 작품에서는 중요한 장면이 풀테니 다리에서 촬영되었습니다. 풀테니 다리는 프랑스 파리에 위치한 아름다운 다리로, 그 아치 모양과 세련된 분위기는 영화 속 인물들의 열정과 사랑을 한층 더욱 감미롭게 전달합니다. 이 영화를 통해 풀테니 다리가 인간의 희망과 혁명의 상징으로서 어떤 역할을 하는지 직접 체험해보세요. 그 아름다운 다리 위에서 펼쳐지는 드라마틱한 순간들은 관객들에게 감동과 용기를 안겨줄 것입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 947,
+   "location_country": "요르단",
+   "location_name": "와디 럼(Wadi Rum)",
+   "latitude": 29.5723129,
+   "longitude": 35.42103943,
+   "youtube_url": "https://www.youtube.com/embed/aARaYjgm_rA",
+   "location_photo_url": "https://deih43ym53wif.cloudfront.net/large_wadi-rum-desert-rocks-jordan-shutterstock_1168759300_440814bbf8.jpeg",
+   "location_description": "《아라비아의 로렌스》는 역사적인 모험과 용감한 영웅의 이야기를 그린 대작 역사 드라마 영화입니다. 이 작품에서는 중요한 장면이 와디 럼에서 촬영되었습니다. 와디 럼은 사막의 보석으로 알려진 사우디아라비아의 아름다운 사막 지역으로, 그 광활하고 고요한 풍경은 영화 속 주인공의 모험과 도전을 한층 더욱 장엄하게 표현해줍니다. 이 영화를 통해 와디 럼이 영웅의 자아실현과 사막의 열정을 가진 이야기의 배경지로서 어떤 역할을 하는지 직접 체험해보세요. 그 넓은 사막과 끝없는 험난함이 관객들에게 감동과 용기를 전달할 것입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 438631,
+   "location_country": "요르단",
+   "location_name": "와디 럼(Wadi Rum)",
+   "latitude": 29.5723129,
+   "longitude": 35.42103943,
+   "youtube_url": "https://www.youtube.com/embed/26bgYpJOqcw",
+   "location_photo_url": "https://deih43ym53wif.cloudfront.net/large_wadi-rum-desert-rocks-jordan-shutterstock_1168759300_440814bbf8.jpeg",
+   "location_description": "SF 영화 《듄》은 신비로운 행성 아라키스를 배경으로 펼쳐지는 이야기를 담고 있습니다. 이 영화는 멋진 풍경과 황량한 사막으로 유명한 요르단의 와디 럼에서 실제로 촬영되었습니다. 와디 럼은 그 특이한 지형과 적막한 분위기로 인해 고대 행성의 느낌을 그대로 전달해줍니다. 이곳에서 촬영된 영화는 아름다운 사막 장면과 강렬한 액션을 통해 관객들에게 몰입감을 선사합니다. 《듄》은 그림 같은 외모와 함께 정신적인 경험을 선사하는 작품으로, 영화를 통해 와디 럼의 아름다움을 직접 느껴보세요."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 286217,
+   "location_country": "요르단",
+   "location_name": "와디 럼(Wadi Rum)",
+   "latitude": 29.5723129,
+   "longitude": 35.42103943,
+   "youtube_url": "https://www.youtube.com/embed/k2Sb7tlMDNs",
+   "location_photo_url": "https://images.chosun.com/resizer/6OyWhHFPphwDFsZ04jYPZfIuftc=/961x641/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/2QDN2DQOXPO4CZXMINT7HB3QLA.jpg",
+   "location_description": "《마션》은 황량한 환경에서의 생존과 인간의 용기를 그린 과학적인 모험 드라마 영화입니다. 이 작품에서는 중요한 장면이 와디 럼에서 촬영되었습니다. 와디 럼은 사우디아라비아의 사막 속에 위치한 아름다운 사막 지역으로, 그 광활한 풍경과 황량한 분위기는 영화 속 주인공의 고립과 절망, 그리고 끈질긴 생존을 한층 더욱 강조해줍니다. 이 영화를 통해 와디 럼이 우주 탐사의 도전적인 배경지로서 어떤 역할을 하는지 직접 체험해보세요. 그 환상적인 사막과 거대한 위험 속에서 벌어지는 이야기는 관객들에게 놀라움과 긴장감을 선사할 것입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 238,
+   "location_country": "이탈리아",
+   "location_name": "사보카(Savoca)",
+   "latitude": 37.95347858,
+   "longitude": 15.3401588,
+   "youtube_url": "https://www.youtube.com/embed/PAgB3qxvRkU",
+   "location_photo_url": "https://deih43ym53wif.cloudfront.net/large_village-savoca-sicily-italy-town-shutterstock_1034570422.jpg_dcb331d4c9.jpg",
+   "location_description": "《대부》는 마피아와 가족의 이야기를 그린 전설적인 범죄 드라마 영화입니다. 이 작품에서는 중요한 장면이 사보카에서 촬영되었습니다. 사보카는 이탈리아 시칠리아에 위치한 아름다운 도시로, 그 도시의 건축물과 문화적인 분위기는 영화 속 주인공의 권력과 복잡한 관계를 한층 더욱 강조해줍니다. 이 영화를 통해 사보카가 마피아의 세력과 가족의 유대를 형성하는 장소로서 어떤 역할을 하는지 직접 체험해보세요. 그 역동적인 도시의 풍경과 강렬한 분위기는 관객들에게 긴장감과 잠재력을 불어넣을 것입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 49026,
+   "location_country": "인도",
+   "location_name": "메랑가르 포르(Mehrangarh Fort)",
+   "latitude": 26.29970276,
+   "longitude": 73.01949171,
+   "youtube_url": "https://www.youtube.com/embed/LdrZeSewhB0",
+   "location_photo_url": "https://remotetraveler.com/wp-content/uploads/2014/10/Mehrangarh-Fort-Jodhpur3.jpg",
+   "location_description": "《다크 나이트 라이즈》는 어둠 속에서 펼쳐지는 영웅의 귀환을 그린 액션 스릴러 영화입니다. 이 작품에서는 중요한 장면이 메랑가르 포르에서 촬영되었습니다. 메랑가르 포르는 몽골의 수도인 울란바토르에 위치한 고요하고 아름다운 영화 속 도시입니다. 그 도시의 고대적인 건축물과 독특한 분위기는 영화 속 주인공의 모험과 잔혹한 싸움을 한층 더욱 감미롭게 표현해줍니다. 이 영화를 통해 메랑가르 포르가 어둠과 빛의 대립 속에서 어떤 역할을 하는지 직접 체험해보세요. 그 도시의 세계관과 절묘한 액션은 관객들에게 긴장감과 전율을 선사할 것입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 15121,
+   "location_country": "오스트리아",
+   "location_name": "잘츠부르크(Salzburg)",
+   "latitude": 47.80315328,
+   "longitude": 13.02964069,
+   "youtube_url": "https://www.youtube.com/embed/FCMpDdTvbU8",
+   "location_photo_url": "https://deih43ym53wif.cloudfront.net/large_schloss-leopoldskron-hohensalzburg-fortress-salzburg-austria-shutterstock_302382239_1adb76b051.jpeg",
+   "location_description": "《사운드 오브 뮤직》은 음악과 사랑의 아름다운 이야기를 그린 뮤지컬 드라마 영화입니다. 이 작품에서는 중요한 장면이 잘츠부르크에서 촬영되었습니다. 잘츠부르크는 오스트리아의 아름다운 도시로, 그 도시의 역사적인 건축물과 아름다운 자연 경관은 영화 속 주인공들의 음악적인 여정과 성장을 한층 더욱 아름답게 표현해줍니다. 이 영화를 통해 잘츠부르크가 음악과 로맨스의 도시로서 어떤 역할을 하는지 직접 체험해보세요. 그 도시의 매력과 환상적인 분위기는 관객들에게 감동과 희망을 전달할 것입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 19995,
+   "location_country": "중국",
+   "location_name": "장가계 국가삼림공원(Zhangjiajie National Forest Park)",
+   "latitude": 29.31547336,
+   "longitude": 110.4347241,
+   "youtube_url": "https://www.youtube.com/embed/wCnxJOhZmC4",
+   "location_photo_url": "https://deih43ym53wif.cloudfront.net/large_maui-hawaii-usa-shutterstock_368857958_9d74926b43.jpeg",
+   "location_description": "《아바타》는 환경 보호와 인간의 연결을 그린 판타지 액션 영화로, 이 작품에서는 중요한 장면이 장가계 국가삼림공원에서 촬영되었습니다. 장가계 국가삼림공원은 중국 광둥성에 위치한 아름다운 자연 보호지역으로, 그 신비로운 숲과 다양한 생태계는 영화 속 판타지 세계를 한층 더욱 아름답게 표현해줍니다. 이 영화를 통해 장가계 국가삼림공원이 자연의 아름다움과 인간의 조화로운 공존을 어떻게 보여주는지 직접 체험해보세요. 그 자연의 신비와 존재감은 관객들에게 경이로움과 영감을 전달할 것입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 429,
+   "location_country": "스페인",
+   "location_name": "타베르나스 사막(Tabernas Desert)",
+   "latitude": 37.0811627,
+   "longitude": -2.519226486,
+   "youtube_url": "https://www.youtube.com/embed/aJCSNIl2Pls",
+   "location_photo_url": "https://deih43ym53wif.cloudfront.net/large_tabernas-spain-shutterstock_113335786_5c59c705b9.jpeg",
+   "location_description": "《석양의 무법자》는 서부 영화의 클래식으로, 황량한 사막 속에서 벌어지는 복수와 모험의 이야기를 그린 작품입니다. 이 작품에서는 중요한 장면이 타베르나스 사막에서 촬영되었습니다. 타베르나스 사막은 멕시코의 아리조나 주에 위치한 광활하고 가혹한 사막으로, 그 사막의 건조하고 절망적인 분위기는 영화 속 주인공의 외로움과 결사적인 여정을 한층 더욱 강조해줍니다. 이 영화를 통해 타베르나스 사막이 서부 영화의 상징적인 배경지로서 어떤 역할을 하는지 직접 체험해보세요. 그 사막의 거대함과 비정형적인 아름다움은 관객들에게 감탄과 전율을 선사할 것입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 11631,
+   "location_country": "그리스",
+   "location_name": "스키아토스(Skiathos)",
+   "latitude": 39.17284577,
+   "longitude": 23.45086989,
+   "youtube_url": "https://www.youtube.com/embed/05qid4p_cfw",
+   "location_photo_url": "http://db.kookje.co.kr/news2000/photo/2022/1013/L20221013.22013003052i1.jpg",
+   "location_description": "《맘마미아》는 아블리빙의 히트 곡을 바탕으로 한 매력적인 뮤지컬 영화로, 이 작품에서는 중요한 장면이 그리스의 스키아토스에서 촬영되었습니다. 스키아토스는 그리스의 작은 섬으로, 화려한 해변과 푸른 바다로 유명한 관광지입니다. 영화 속 주인공들의 환상적인 노래와 춤은 이 작은 섬을 더욱 활기찬 분위기로 가득 채워줍니다. 이 영화를 통해 스키아토스가 사랑과 음악의 섬으로서 어떤 역할을 하는지 직접 체험해보세요. 그 섬의 아름다움과 유럽풍 풍경은 관객들에게 환상적인 여행을 선사할 것입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 11,
+   "location_country": "튀니지",
+   "location_name": "호텔 시디 드리스(Hotel Sidi Driss)",
+   "latitude": 33.54280443,
+   "longitude": 9.967367183,
+   "youtube_url": "https://www.youtube.com/embed/0YiirWsRlQ8",
+   "location_photo_url": "https://deih43ym53wif.cloudfront.net/large_troglodyte-homes-berber-caves-sidi-driss-matmata-tunisia-shutterstock_1188077329_4f4aac782d.jpeg",
+   "location_description": "《스타워즈 에피소드 4: 새로운 희망》은 전설적인 스타워즈 시리즈의 첫 번째 작품으로, 화려한 우주 모험과 영웅들의 전투를 그린 공상과학 소설 영화입니다. 이 작품에서는 중요한 장면이 행성 시디 드리스에서 촬영되었습니다. 시디 드리스는 튀니지에 위치한 사막 지역으로, 그 황량하고 외골수한 분위기는 영화 속 외계 행성의 신비로움과 전투의 치열함을 한층 더욱 강조해줍니다. 이 영화를 통해 시디 드리스가 스타워즈 우주 세계에서 어떤 역할을 하는지 직접 체험해보세요. 그 곳의 독특한 풍경과 황홀한 분위기는 관객들에게 무한한 상상력과 흥분을 선사할 것입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 68734,
+   "location_country": "터키",
+   "location_name": "이스탄불의 그랜드 바자르(Grand Bazaar at Istanbul)",
+   "latitude": 41.01087907,
+   "longitude": 28.96805737,
+   "youtube_url": "https://www.youtube.com/embed/t2NytKIhd68",
+   "location_photo_url": "https://deih43ym53wif.cloudfront.net/large_grand-bazaar-istanbul-turkey-shutterstock_507137884_9ba852fb77.jpeg",
+   "location_description": "《아르고》는 실제 이야기를 바탕으로 한 스릴러 영화로, 이 작품에서는 중요한 장면이 터키의 이스탄불에 위치한 그랜드 바자르에서 촬영되었습니다. 이스탄불의 그랜드 바자르는 세계에서 가장 큰 커버드 마켓으로, 그 화려하고 혼잡한 분위기는 영화 속 주인공들의 긴박한 상황을 한층 더욱 재현합니다. 이 영화를 통해 그랜드 바자르가 동양의 문화적 특성과 아름다움을 담은 배경으로 어떤 역할을 하는지 직접 체험해보세요. 그 곳의 다양한 상점, 화려한 장식 및 독특한 분위기는 관객들에게 탐험의 재미와 긴장감을 선사할 것입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 37724,
+   "location_country": "스코틀랜드",
+   "location_name": "글렌코(Glencoe)",
+   "latitude": 56.68205263,
+   "longitude": -5.1068787,
+   "youtube_url": "https://www.youtube.com/embed/tbtdUOmAPbo",
+   "location_photo_url": "https://www.whiskey-lore.com/travelfuelslife/images/blog-images/2019-Scotland/glencoe-04-skyfall-james-bond.jpg",
+   "location_description": "《007 스카이폴》은 전설적인 스파이 액션 시리즈의 일환으로, 이 작품에서는 중요한 장면이 스코틀랜드의 글렌코에서 촬영되었습니다. 글렌코는 아름다운 자연 경관으로 유명한 곳으로, 그 푸른 산과 깊은 골짜기는 영화 속 액션과 스릴을 한층 더욱 강조해줍니다. 이 영화를 통해 글렌코가 스타일리시한 스파이 액션의 배경으로 어떤 역할을 하는지 직접 체험해보세요. 그 곳의 웅장한 풍경과 자연의 아름다움은 관객들에게 더욱더 흥분과 몰입을 선사할 것입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 13,
+   "location_country": "미국",
+   "location_name": "치페와 광장(Chippewah Square,?Savannah,?Georgia)",
+   "latitude": 32.07601978,
+   "longitude": -81.09325489,
+   "youtube_url": "https://www.youtube.com/embed/7IIBp1HQlWQ",
+   "location_photo_url": "https://deih43ym53wif.cloudfront.net/large_chippewa-square-savannah-georgia-usa-shutterstock_1336590938_955adacaf8.jpeg",
+   "location_description": "《포레스트 검프》는 감동적인 이야기를 그린 영화로, 이 작품에서는 중요한 장면이 미국 조지아 주 사바나에 위치한 치페와 광장에서 촬영되었습니다. 조지아 사바나의 치페와 광장은 아름다운 풍경과 유서 깊은 건축물로 유명한 곳으로, 영화 속 주인공이 자연과 도시의 조화 속에서 펼치는 이야기를 돋보이게 합니다. 이 영화를 통해 조지아 사바나의 치페와 광장이 영화의 분위기와 감동을 한층 더 풍성하게 만들어줍니다. 그곳의 역사적인 매력과 아름다움은 관객들에게 사랑과 성장의 메시지를 전해줄 것입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 38356,
+   "location_country": "미국 ",
+   "location_name": "케네디 우주센터(Kennedy Space Center)",
+   "latitude": 28.572859,
+   "longitude": -80.649185,
+   "youtube_url": "https://www.youtube.com/embed/cvhKJiZ4omc",
+   "location_photo_url": "https://www.latlong.net/photos/transformers-dark-of-the-moon.jpg",
+   "location_description": "《트랜스포머3》은 스크린을 통해 놀라운 전투와 역동적인 액션을 선사하는 대표적인 시리즈입니다. 이 작품은 실제로 미국 텍사스에 위치한 케네디 우주센터에서 몇 가지 장면이 촬영되었습니다. 케네디 우주센터는 인류 역사상 가장 중요한 우주 비행 사건의 발생지로, 그 역사적인 의미와 규모로 유명합니다. 영화에서 이곳에서 펼쳐지는 장면은 굉장한 스케일과 효과를 통해 관객들에게 환상적인 시각적 경험을 선사합니다. 케네디 우주센터는 영화 속에서 강렬한 분위기와 역동성을 제공하며, 관객들을 홀릴 만한 체험으로 이끌어줍니다. 《트랜스포머3》을 통해 케네디 우주센터의 위엄과 역사를 직접 체험해보세요."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 13448,
+   "location_country": "이탈리아",
+   "location_name": "콰트로 피우미 분수(the Fountain of the Four Rivers, Piazza Navona, Rome)",
+   "latitude": 41.89910238,
+   "longitude": 12.47315939,
+   "youtube_url": "https://www.youtube.com/embed/Pw0CzPQdaE4",
+   "location_photo_url": "https://media.istockphoto.com/id/1147741422/photo/rome-italy-fountain-of-the-four-rivers-on-piazza-navona.jpg?s=612x612&w=0&k=20&c=t134Ntq-G_k2BFjtyeYI-1aEae7OjLMLMxvyJPpanXY=",
+   "location_description": "《천사와 악마》는 미스터리와 첩보 속에서 벌어지는 긴박한 이야기를 담은 영화입니다. 이 작품의 몇 가지 장면은 로마의 피아자 나보나에 위치한 네 개의 강 분수인 콰트로 피우미 분수 앞에서 촬영되었습니다. 콰트로 피우미 분수는 로마의 아름다운 랜드마크로, 물이 흐르는 분수와 화려한 조각상이 인상적입니다. 영화에서 이곳에서 펼쳐지는 장면은 역동적이고 긴장감 넘치는 분위기를 전달하며, 로마의 아름다움과 역사적인 매력을 동시에 느낄 수 있습니다. 《천사와 악마》는 장소의 신비와 분위기를 최대한 활용하여 관객들을 마법같은 여정으로 초대합니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 72190,
+   "location_country": "스코틀랜드",
+   "location_name": "조지 광장(George Square in Glasgow, Scotland)",
+   "latitude": 55.86087645,
+   "longitude": -4.250341089,
+   "youtube_url": "https://www.youtube.com/embed/e9ys-ArvLmk",
+   "location_photo_url": "https://i0.wp.com/globalfilmlocations.net/wp-content/uploads/2021/01/philadelphia2.png?resize=708%2C373&ssl=1",
+   "location_description": "《월드워Z》는 좀비로 인해 세상이 위기에 처한 상황에서 주인공이 사태를 해결하기 위해 모험을 떠나는 스릴 넘치는 액션 영화입니다. 이 작품은 미국 필라델피아에서 몇 가지 장면이 촬영되었습니다. 필라델피아는 그 아름다운 도심과 유서 깊은 건축물로 유명하며, 영화 속에서 이곳에서 전개되는 장면들은 도시의 긴장감과 치열한 전투를 생생하게 그려냅니다. 필라델피아의 거리와 건물은 영화의 분위기와 장소의 신비함을 완벽하게 반영하며, 관객들을 더욱 몰입시킵니다. 《월드워Z》를 통해 필라델피아의 매력과 고난한 사태에 맞서 싸우는 영웅의 모습을 경험해보세요."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 99861,
+   "location_country": "한국",
+   "location_name": "MBC 문화방송 본사",
+   "latitude": 37.581217,
+   "longitude": 126.891014,
+   "youtube_url": "https://www.youtube.com/embed/cg1rtWXHSKU",
+   "location_photo_url": "https://mediahub.seoul.go.kr/wp-content/uploads/editor/images/000414/%E1%84%89%E1%85%A1%E1%86%BC%E1%84%8B%E1%85%A1%E1%86%B7_DMC_mbc_%E1%84%91%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8C%E1%85%A1%E1%84%86%E1%85%A9%E1%86%AF-2.jpg",
+   "location_description": "《어벤져스: 에이지 오브 울트론》은 화려한 액션과 스펙터클한 시각 효과로 유명한 영화입니다. 이 작품에서는 한국의 명실상부한 미디어 기관인 MBC 문화방송 본사가 촬영지로 사용되었습니다. MBC 본사는 한류 드라마와 예능 프로그램으로 유명한 곳으로, 영화 속에서는 특별한 장면과 흥미로운 스토리가 펼쳐집니다. MBC 본사의 현대적인 건물과 기술적인 면모는 영화의 분위기와 조화를 이루며, 관객들에게 새로운 시각적 경험을 선사합니다. 이 영화는 MBC 문화방송 본사의 멋진 모습과 함께 감동적인 스토리를 전달할 것입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 98,
+   "location_country": "모로코",
+   "location_name": "아이트 벤 하도우(Ait Ben Haddou)",
+   "latitude": 31.04714131,
+   "longitude": -7.132079805,
+   "youtube_url": "https://www.youtube.com/embed/QyCADHc1LMY",
+   "location_photo_url": "https://deih43ym53wif.cloudfront.net/large_ait-ben-haddou-shutterstock_400558897_137fd2b5c6.jpeg",
+   "location_description": "《글래디에이터》는 역사적인 배경과 장대한 스케일로 유명한 영화입니다. 이 작품에서는 모든 장면이 현실적으로 재현되어야 했고, 그 중 일부는 모로코의 아이트 벤 하도우에서 촬영되었습니다. 아이트 벤 하도우는 황량하고 아름다운 사막 풍경으로 유명한 지역으로, 영화 속에서는 전투 장면과 장엄한 풍경이 함께 펼쳐집니다. 이 촬영지는 영화의 분위기와 설정에 완벽하게 어울리며, 관객들에게 몰입감과 놀라움을 선사합니다. 이 작품은 아이트 벤 하도우의 환상적인 배경과 강렬한 액션으로 극적인 이야기를 전달합니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 284054,
+   "location_country": "한국",
+   "location_name": "부산 자갈치 시장",
+   "latitude": 35.09662,
+   "longitude": 129.030459,
+   "youtube_url": "https://www.youtube.com/embed/JjE9NnBC6v8",
+   "location_photo_url": "https://www.lavalsehotel.co.kr/storage/app/public/lavalse/contents/documents/ko/948fbc16-9597-45db-887e-87dc7b5ef0ac/79/e0/20190920093956c4b8b75de4cab784634cc194c73148c4cf62e11c.jpg",
+   "location_description": "《블랙 팬서》는 대담하고 혁신적인 스토리와 아프리칸 팬더의 왕국 '와칸다'를 배경으로 한 마블 시네마틱 유니버스의 인기 영화입니다. 그 중 일부 장면은 한국의 부산 자갈치 시장에서 촬영되었습니다. 부산 자갈치 시장은 그 독특한 분위기와 활기로운 모습으로 유명한 장소로, 영화 속에서는 블랙 팬서와 그의 동료들이 액션과 모험을 펼치는 장면이 펼쳐집니다. 이 촬영지는 영화에 독특한 분위기와 현실적인 감각을 더해주며, 관객들에게 완전한 몰입을 선사합니다. 이 작품은 부산 자갈치 시장의 다채로운 풍경과 흥미진진한 스토리로 전 세계를 사로잡았습니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 671,
+   "location_country": "영국",
+   "location_name": "크라이스트 처치(Christ Church College, Oxford)",
+   "latitude": 51.74999283,
+   "longitude": -1.255801687,
+   "youtube_url": "https://www.youtube.com/embed/z4K2F_OALPQ",
+   "location_photo_url": "https://deih43ym53wif.cloudfront.net/large_christ-church-college-oxford-university-uk-shutterstock_125772101_5af725a072.jpeg",
+   "location_description": "《해리 포터와 마법사의 돌》은 J.K. 롤링의 인기 소설을 바탕으로 한 마법과 모험의 판타지 영화입니다. 영화의 일부 장면은 영국의 유명한 대학 도시인 크라이스트 처치에서 촬영되었습니다. 크라이스트 처치는 그 아름다운 중세 건축물과 역사적인 거리로 유명하며, 영화 속 해리 포터의 모험을 위해 마법의 세계가 재현되었습니다. 이 촬영지는 영화에 독특한 분위기와 매력을 더하며, 관객들에게 현실에서 마법이 펼쳐진 듯한 경험을 선사합니다. 해리 포터와 그의 친구들이 마법사 학교 호그와트로 향하는 모험의 시작, 그리고 그들이 마법과 어둠의 힘과 맞서 싸우는 여정은 관객들에게 잊지 못할 추억을 선사합니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 76341,
+   "location_country": "나미비아",
+   "location_name": "나미브 사막(Namib Desert)",
+   "latitude": -23.510523,
+   "longitude": 15.383389,
+   "youtube_url": "https://www.youtube.com/embed/UtjGTrVwRr4",
+   "location_photo_url": "https://img.delicious.com.au/W2GZiHqF/del/2019/12/mad-max-fury-road-namib-desert-namibia-121574-2.jpg",
+   "location_description": "《매드 맥스: 분노의 도로》는 황량하고 폭발적인 액션으로 유명한 영화입니다. 이 영화의 촬영지 중 하나는 아프리카 대륙의 아름다운 나미브 사막입니다. 나미브 사막은 그 황량하고 광활한 풍경으로 알려져 있으며, 영화 속 매드 맥스의 거친 모험과 레이싱 장면이 펼쳐집니다. 사막의 황량한 모습은 영화에 독특한 분위기를 부여하며, 극적인 액션과 차 추격 장면이 돋보이게 합니다. 관객들은 매드 맥스가 사막을 배경으로 한 무자비한 생존 게임에 휘말리며, 그의 전투와 도전에 몰입할 수 있습니다. 이 영화는 시각적인 효과와 역동적인 액션으로 흥미를 자아내며, 영화 속 나미브 사막은 청중들에게 환상적인 모험을 선사합니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 22,
+   "location_country": "세인트빈센트 그레나딘",
+   "location_name": "왈라라부 만(Wallilabou Bay)",
+   "latitude": 13.24698834,
+   "longitude": -61.27392903,
+   "youtube_url": "https://www.youtube.com/embed/xyWjlZdu8PU",
+   "location_photo_url": "https://img.delicious.com.au/2deftDEN/del/2019/12/pirates-of-the-caribbean-st-vincent-and-dominica-121595-2.jpg",
+   "location_description": "《캐리비안의 해적: 블랙펄의 저주》는 매력적인 해적 이야기로 전 세계에서 사랑받는 시리즈 중 하나입니다. 이 영화의 촬영지 중 하나는 아름다운 왈라라부 만입니다. 왈라라부 만은 그 푸른 바다와 특별한 야외 세트로 유명한 곳으로, 영화 속 해적들의 모험과 액션 장면이 이곳에서 펼쳐집니다. 왈라라부 만은 그 특유의 아름다움과 독특한 분위기로 관광객들에게 인기를 끌고 있습니다. 영화를 보는 관객들은 왈라라부 만의 환상적인 풍경과 영화 속 해적들의 모험을 함께 경험할 수 있습니다. 이 작품은 섬세한 연출과 스릴 넘치는 전투 장면으로 관객들을 매료시키며, 왈라라부 만의 아름다움은 영화에 더욱 특별한 매력을 더합니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 68718,
+   "location_country": "미국",
+   "location_name": "멜로디 무비 랜치(Melody Ranch, Santa Clarita, California)",
+   "latitude": 34.38361994,
+   "longitude": -118.510315,
+   "youtube_url": "https://www.youtube.com/embed/t1beG9Y6I9c",
+   "location_photo_url": "https://img.delicious.com.au/qQxZudRy/del/2019/12/django-unchained-melody-ranch-santa-clarita-california-121555-2.jpg",
+   "location_description": "《장고: 분노의 추적자》는 퀘타티노 감독의 현대적인 웨스턴 영화로, 독특한 스토리와 폭발적인 액션으로 관객들을 매료시킵니다. 이 영화의 촬영지 중 하나는 멜로디 무비 랜치입니다. 멜로디 무비 랜치는 황량하고 멋진 사막 풍경으로 유명한 장소로, 영화 속 주인공들의 모험과 복수의 여정이 펼쳐집니다. 이 곳은 촬영 크루와 배우들에게 넓은 공간과 매력적인 배경을 제공하며, 영화의 분위기와 스토리에 완벽하게 어울립니다. 관객들은 멜로디 무비 랜치의 아름다운 사막 풍경과 영화 속 장면들을 함께 체험할 수 있습니다. 이 작품은 퀘타티노 감독의 독특한 감각과 뛰어난 연출로 관객들에게 잊지 못할 경험을 선사합니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 402900,
+   "location_country": "미국",
+   "location_name": "메트로폴리탄 미술관(The Met, NYC)",
+   "latitude": 40.77994545,
+   "longitude": -73.96317377,
+   "youtube_url": "https://www.youtube.com/embed/SaipGVydhzg",
+   "location_photo_url": "https://img.delicious.com.au/wc5W-zPR/del/2019/12/oceanys-8-the-met-nyc-121611-2.jpg",
+   "location_description": "《오션스 8》는 스티븐 소더버그 감독의 멋진 범죄 코미디 영화로, 여성들의 탁월한 연기와 궁극적인 강도를 선보입니다. 이 영화의 촬영지 중 하나는 메트로폴리탄 미술관입니다. 메트로폴리탄 미술관은 세계적으로 유명한 예술과 문화의 보고이자 뉴욕의 상징적인 장소로 알려져 있습니다. 영화 속 주인공들은 이 아름다운 미술관에서 정교한 계획을 세우고 대담한 도둑질을 시도합니다. 메트로폴리탄 미술관은 화려하고 우아한 분위기와 함께 영화에 독특한 매력을 더합니다. 관객들은 이 곳에서 예술과 범죄가 만나는 환상적인 이야기를 즐길 수 있습니다.《오션스 8》는 재치 있는 대사와 놀라운 플롯으로 관객들을 매료시키며, 메트로폴리탄 미술관은 그 이야기의 흥미 진진한 배경을 제공합니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 916,
+   "location_country": "미국",
+   "location_name": "필버트 가 893(893 Filbert St.)",
+   "latitude": 39.95272603,
+   "longitude": -75.15482306,
+   "youtube_url": "https://www.youtube.com/embed/FJZ-BHBKyos",
+   "location_photo_url": "https://eder6ypjvgv.exactdn.com/wp-content/uploads/2022/06/FilbertStreetAndGrantAvenueLookingTowardsCoitTowerAndGarfieldElementarySchool.jpeg?strip=all&lossy=1&resize=1280%2C650&ssl=1",
+   "location_description": "《블리트》는 미국의 긴장감 넘치는 범죄 액션 영화로, 흥미진진한 스토리와 역동적인 액션으로 관객들을 사로잡습니다. 이 영화의 촬영지 중 하나는 필버트 가 893입니다. 필라델피아는 미국의 동부에 위치한 도시로, 다양한 문화와 역사적인 유산이 어우러진 곳으로 유명합니다. 영화 속 주인공들은 이 거리에서 표류된 존재로서 복수와 위험에 맞서 싸우며, 폭발적인 액션과 긴장감 넘치는 이야기를 전개합니다. 필버트 가 893은 필라델피아의 도시적인 분위기와 거리의 활기로운 모습을 담고 있어 영화에 생동감과 현실성을 더합니다. 이곳은 관객들에게 다이내믹한 액션과 흥미진진한 이야기를 경험시켜줄 것입니다.《블리트》는 범죄와 복수에 관한 이야기로, 필버트 가 893의 필라델피아는 그 이야기를 풍부하게 장식합니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 771,
+   "location_country": "미국",
+   "location_name": "위네트카 링컨 애비뉴 671(671 Lincoln Ave Winnetka IL 60093)",
+   "latitude": 42.1101329,
+   "longitude": -87.73354306,
+   "youtube_url": "https://www.youtube.com/embed/YejRBZVd6Ao",
+   "location_photo_url": "https://www.explore.com/img/gallery/51-movie-locations-you-can-actually-visit/the-mccallister-home-home-alone-winnetka-illinois-1667490250.webp",
+   "location_description": "《나 홀로 집에》는 전 세계적으로 사랑받는 가족 코미디 영화로, 유쾌하고 따뜻한 이야기로 많은 사람들의 마음을 사로잡았습니다. 이 영화의 촬영지 중 하나는 위네트카 링컨 애비뉴 671입니다. 이 주소는 미국 일리노이 주 시카고에 위치한 아름다운 주택입니다. 영화 속 주인공인 케빈은 이 집에서 홀로 남겨져 가족의 부재를 견디며 재미있고 독특한 모험을 시작합니다. 위네트카 링컨 애비뉴 671은 화려하고 풍부한 인테리어로 장식되어 있어 영화에 근사한 분위기를 더해줍니다. 이곳은 관객들에게 흥미로운 이야기와 따뜻한 가정의 중요성을 전달해줄 것입니다.《나 홀로 집에》는 가정과 사랑에 관한 이야기로, 위네트카 링컨 애비뉴 671은 그 이야기를 멋지게 배경화면으로 꾸며줍니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 10138,
+   "location_country": "미국",
+   "location_name": "랜디스 도넛(Randy's Donuts, Los Angeles, California)",
+   "latitude": 33.96198385,
+   "longitude": -118.3703721,
+   "youtube_url": "https://www.youtube.com/embed/OVGbAFy36xM",
+   "location_photo_url": "https://www.explore.com/img/gallery/51-movie-locations-you-can-actually-visit/randys-donuts-iron-man-2-los-angeles-california-1667490250.webp",
+   "location_description": "《아이언맨 2》는 마블 시네마틱 유니버스의 인기 슈퍼히어로 영화로, 스펙터클한 액션과 재미있는 이야기로 많은 이들에게 사랑받고 있습니다. 이 영화의 촬영지 중 하나는 랜디스 도넛입니다. 랜디스 도넛은 미국 캘리포니아 주에 위치한 유명한 도넛 가게로, 다양한 종류의 맛있는 도넛으로 유명합니다. 영화 속에서 주인공 토니 스타크는 랜디스 도넛에서 재미있는 장면을 연출하며 액션과 유머를 선사합니다. 랜디스 도넛은 화려하고 아늑한 분위기로 꾸며져 있어 영화에 화려한 배경을 제공합니다. 이곳은 관객들에게 다채로운 맛과 웃음을 선사할 것입니다.《아이언맨 2》는 슈퍼히어로의 모험과 인간적인 이야기를 조화롭게 풀어낸 작품으로, 랜디스 도넛은 그 이야기에 즐거움을 더해줄 것입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 313369,
+   "location_country": "미국",
+   "location_name": "110번 고속도로(The Harbor Freeway, Los Angeles, California)",
+   "latitude": 33.89513215,
+   "longitude": -118.28574,
+   "youtube_url": "https://www.youtube.com/embed/7CVfTd-_qbc",
+   "location_photo_url": "https://www.explore.com/img/gallery/51-movie-locations-you-can-actually-visit/the-harbor-freeway-la-la-land-los-angeles-california-1667490250.webp",
+   "location_description": "《라라랜드》는 현대적인 뮤지컬 영화로서 많은 사람들에게 사랑받고 있는 작품입니다. 이 영화의 촬영지 중 하나는 110번 고속도로입니다. 110번 고속도로는 미국 로스앤젤레스에 위치한 주요 도로로, 넓은 차선과 도시의 아름다운 전망을 자랑합니다. 영화 속에서 주인공들은 110번 고속도로에서 화려한 댄스와 노래를 선보이며 멋진 연출을 펼칩니다. 110번 고속도로는 현대 도시의 활기와 열정을 상징하는 장소로, 영화에 독특한 분위기를 더해줍니다. 이곳에서 전개되는 멋진 무대는 관객들에게 잊지 못할 경험을 선사할 것입니다. 《라라랜드》는 음악과 로맨스로 가득한 이야기로, 110번 고속도로는 그 이야기에 더욱 화려함과 아름다움을 더할 것입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 607,
+   "location_country": "미국",
+   "location_name": "구겐하임 미술관(Guggenheim Museum)",
+   "latitude": 40.95448213,
+   "longitude": -73.99452129,
+   "youtube_url": "https://www.youtube.com/embed/bXmo6M2k4Ws",
+   "location_photo_url": "http://onthesetofnewyork.com/locations/meninblack/meninblack17.jpg",
+   "location_description": "《맨 인 블랙》은 화려한 비밀 요원들이 외계인들과의 전투를 벌이는 SF 액션 영화입니다. 이 작품은 미국 맨하탄에 위치한 구겐하임 미술관에서 몇 가지 장면이 촬영되었습니다. 구겐하임 박물관은 현대 미술 작품으로 유명한 곳으로, 독특한 건축과 아름다운 전시장으로 알려져 있습니다. 영화에서 이곳에서 펼쳐지는 장면들은 화려한 액션과 외계인의 신비로운 분위기를 완벽하게 표현하며, 맨하탄의 도시적인 느낌과 전통적인 아름다움을 함께 느낄 수 있습니다. 《맨 인 블랙》은 구겐하임 미술관의 독특한 분위기와 매력을 이용하여 관객들에게 새로운 경험과 스릴을 선사합니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 1858,
+   "location_country": "미국",
+   "location_name": "후버 댐(Hoover Dam)",
+   "latitude": 36.01638544,
+   "longitude": -114.7377518,
+   "youtube_url": "https://www.youtube.com/embed/xhe0DkX3e78",
+   "location_photo_url": "https://travelnevada.com/wp-content/uploads/2015/06/HooverDam74_SM.jpg",
+   "location_description": "《트랜스포머》는 로봇들의 전투와 인류의 운명을 건 대결을 그린 액션 영화로, 몇몇 장면은 미국의 후버 댐에서 촬영되었습니다. 후버 댐은 미국 아리조나주와 네바다주 경계에 위치한 엄청난 공학적 걸작으로, 유명한 관광지입니다. 영화에서 후버 댐에서 촬영된 장면은 막강한 전투와 화려한 시각 효과를 통해 관객들에게 굉장한 인상을 남깁니다. 후버 댐은 영화 속에서 실제 장소의 위엄과 판타지 세계의 결합을 통해 작품의 분위기를 한층 더 고조시킵니다. 《트랜스포머》를 통해 후버 댐의 위대함과 영화 속 장면들의 긴장감을 직접 경험해보세요."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 458423,
+   "location_country": "크로아티아",
+   "location_name": "비스 섬(Vis Island)",
+   "latitude": 43.05773857,
+   "longitude": 16.19575629,
+   "youtube_url": "https://www.youtube.com/embed/OwPvH1WJsyw",
+   "location_photo_url": "https://cdn.mhns.co.kr/news/photo/201909/292889_398285_4712.jpg",
+   "location_description": "《맘마미아2》는 사랑과 음악, 모험을 담은 화려한 뮤지컬 영화로, 그 중요한 촬영지 중 하나는 비스 섬입니다. 비스 섬은 크로아티아의 아름다운 섬으로, 푸른 바다와 햇살 가득한 풍경이 매력적입니다. 영화 속에서 비스 섬은 멋진 해변과 화려한 리조트로 나타나며, 주인공들은 이곳에서 다양한 모험과 음악적인 여정을 시작합니다. 비스 섬은 그레코-로마 시대의 유적과 풍부한 문화 유산을 자랑하며, 이곳에서의 촬영은 영화에 특별한 분위기와 아름다움을 더했습니다. 관객들은 매력적인 비스 섬의 풍경과 함께 노래와 춤으로 가득한 멋진 이야기를 즐길 수 있을 것입니다. 《맘마미아2》는 비스 섬의 아름다움과 흥겨운 음악, 감동적인 이야기가 어우러져 뮤지컬 영화의 매력을 최대한으로 발휘한 작품입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 20453,
+   "location_country": "인도",
+   "location_name": "판공호(Pangong Lake)",
+   "latitude": 33.821751,
+   "longitude": 78.442719,
+   "youtube_url": "https://www.youtube.com/embed/wekt7kNeK5c",
+   "location_photo_url": "https://cdn.mhns.co.kr/news/photo/201909/292889_398288_4953.jpg",
+   "location_description": "《세 얼간이》는 인도의 대표적인 코미디 드라마 영화로, 그 중요한 촬영지 중 하나는 판공호입니다. 판공호는 인도와 중국 사이에 위치한 아름다운 호수로, 그 푸른 물과 웅장한 산악 경관이 영화에 독특한 분위기를 더했습니다. 영화 속에서 판공호는 주인공들의 모험과 유머로 가득한 여정의 배경으로 등장하며, 아름다운 자연환경과 평화로운 분위기가 관객들에게 잊지 못할 경험을 선사합니다. 판공호 주변의 풍경은 영화에 따뜻하고 아름다운 분위기를 부여하며, 관객들에게 차분하고 감동적인 순간을 선사합니다. 《세 얼간이》는 판공호의 아름다움과 코미디로 가득한 이야기로 인도 영화의 매력을 전하는 작품입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 390043,
+   "location_country": "네덜란드",
+   "location_name": "니우에 아흐터흐라흐트(Nieuwe Achtergracht)",
+   "latitude": 52.36328759,
+   "longitude": 4.910524699,
+   "youtube_url": "https://www.youtube.com/embed/1mVk7wal9bk",
+   "location_photo_url": "https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/01/a0001661/img/basic/a0001661_main.jpg?20200717090806&q=80",
+   "location_description": "<킬러의 보디가드>는 매력적인 액션과 유머로 가득한 영화입니다. 이 영화의 촬영지 중 하나는 네덜란드 암스테르담의 니우에 아흐터흐라흐트입니다. 니우에 아흐터흐라흐트는 네덜란드어로 '새로운 뒷골목'을 의미하며, 영화에서는 그 독특한 분위기를 잘 살려냈습니다. 이 곳은 아름다운 운하와 오래된 건물로 둘러싸여 있어 영화의 장면들이 더욱 생생하게 펼쳐집니다. 니우에 아흐터흐라흐트에서의 촬영은 영화에 더욱 독특한 분위기와 매력을 더해주었으며, 관객들은 이 장소에서 펼쳐지는 격렬한 액션과 긴장감 넘치는 장면을 즐길 수 있습니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 129,
+   "location_country": "대만",
+   "location_name": "지우펀(Jiufen)",
+   "latitude": 25.11005658,
+   "longitude": 121.8451574,
+   "youtube_url": "https://www.youtube.com/embed/oUl8FjljO_Q",
+   "location_photo_url": "https://cdn.mhns.co.kr/news/photo/201909/292889_398319_5635.jpg",
+   "location_description": "<센과 치히로의 행방불명>은 일본의 애니메이션 감독 미야자키 하야오의 대표작 중 하나로, 대만에서도 많은 사랑을 받은 작품입니다. 이 작품의 중요한 촬영지 중 하나는 대만의 지우펀입니다. 대만 지우펀은 아름다운 자연 경관과 독특한 건축물로 유명한 장소로, 영화에서도 그 특색 있는 분위기를 잘 표현하였습니다. 센과 치히로는 대만 지우펀의 다양한 장면에서 여정을 시작하며, 관객들은 그들의 모험과 성장을 함께 체험할 수 있습니다. 대만 지우펀은 이 작품에 환상적인 분위기를 더해주며, 관객들에게 잊지 못할 경험을 선사하는 특별한 장소입니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 1593,
+   "location_country": "미국",
+   "location_name": "미국 자연사 박물관(American Museum of Natural History)",
+   "latitude": 40.781334,
+   "longitude": -73.974037,
+   "youtube_url": "https://www.youtube.com/embed/Ltba1_-tRT4",
+   "location_photo_url": "https://a.cdn-hotels.com/gdcs/production198/d349/559df73c-b4ad-42d0-9794-8303314216cb.jpg?impolicy=fcrop&w=1600&h=1066&q=medium",
+   "location_description": "<박물관이 살아있다!>는 재미와 모험이 가득한 코미디 영화로, 미국 자연사 박물관이 중요한 촬영지로 사용되었습니다. 이 박물관은 미국의 역사와 자연을 소개하는 유명한 장소로, 영화 속 주인공들이 박물관 속에서 생생하게 살아나는 장면들을 펼치게 됩니다. 박물관 내부의 다양한 전시물과 환상적인 분위기는 관객들에게 신비로운 경험을 선사합니다. 영화에서는 박물관이 숨 쉬는 것처럼 살아있는데, 이는 미국 자연사 박물관의 매력과 특색을 잘 보여줍니다. 이 영화를 통해 관객들은 박물관에서의 놀라운 모험을 경험하게 됩니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 291805,
+   "location_country": "중국",
+   "location_name": "펠리시다데 거리(Rua da Felicidade)",
+   "latitude": 22.19454982,
+   "longitude": 113.5376364,
+   "youtube_url": "https://www.youtube.com/embed/4I8rVcSQbic",
+   "location_photo_url": "https://mblogthumb-phinf.pstatic.net/MjAxNjEyMjhfNSAg/MDAxNDgyODU0MTI1MDMy.xBKsu0rog0Ihqf-lO_eDw1p-dioGcS2VTVwyPI6UCKwg.wvA_svIdodDw5AQUPWFp3uS5DZnDZw2I8xisTFGi7Iog.JPEG.hyungmingun/%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%98_04.jpg?type=w2",
+   "location_description": "<나우 유 씨 미 2>는 전 세계적으로 사랑받는 액션 코미디 영화 시리즈의 두 번째 작품으로, 이번 작품에서는 스파이들의 활약이 폭발합니다. 영화의 중요한 촬영지 중 하나인 펠리시다데 거리는 화려한 도시 경관과 활기찬 분위기로 유명한 장소입니다. 이 거리는 영화 속 주인공들이 흥미진진한 추격전과 액션 장면을 펼치는 배경으로 사용되었습니다. 펠리시다데 거리의 다양한 상점과 유명한 랜드마크는 관객들에게 시각적인 즐거움을 선사하며, 영화의 긴장감을 한층 더 고조시킵니다. 이 영화를 통해 관객들은 펠리시다데 거리의 매력과 역동성을 체감할 수 있습니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 2454,
+   "location_country": "뉴질랜드",
+   "location_name": "커시드럴코브(Cathedral Cove)",
+   "latitude": -36.82877,
+   "longitude": 175.790573,
+   "youtube_url": "https://www.youtube.com/embed/eUlVUvffX자",
+   "location_photo_url": "https://www.newzealand.com/assets/Tourism-NZ/The-Coromandel/74b3010fb8/img-1536177408-5836-4114-p-823B7D92-94DB-1AD4-E0477F82A1F8C6D7-2544003__aWxvdmVrZWxseQo_CropResizeWzE0NDAsbnVsbCw3NSwicG5nIl0.png",
+   "location_description": "<나니아 연대기: 캐스피언 왕자>는 판타지 모험 영화의 시리즈 중 하나로, 이번 작품에서는 마법의 세계로 펼쳐지는 환상적인 이야기가 전개됩니다. 영화의 중요한 촬영지 중 하나인 커시드럴코브는 아름다운 해안 지형과 신비로운 분위기로 유명한 장소입니다. 이곳은 영화 속 주인공들이 마법과 모험을 경험하는 곳으로 사용되었습니다. 커시드럴코브의 멋진 해변과 동굴, 그리고 신비로운 숲은 관객들에게 마법같은 경험을 선사하며, 영화의 매력을 한층 더 높여줍니다. 이 작품을 통해 관객들은 커시드럴코브의 신비로운 세계에 빠져들 수 있습니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 207703,
+   "location_country": "영국",
+   "location_name": "헌츠맨 양장점(11 Savile Row, London W1)",
+   "latitude": 52.74776557,
+   "longitude": -1.161821329,
+   "youtube_url": "https://www.youtube.com/embed/fuwE3Lvysvs",
+   "location_photo_url": "https://cdn.shopify.com/s/files/1/0685/7418/3739/files/Kingsman_Web_Image_4_900x.png?v=1672752439",
+   "location_description": "<킹스맨: 시크릿 에이전트>는 스파이 액션 영화로, 몰래 치고 들어가는 위험한 임무와 빠른 액션으로 가득한 스토리를 펼쳐갑니다. 이 작품에서는 헌츠맨 양장점이 중요한 촬영지로 사용되었습니다. 헌츠맨 양장점은 고급 수트와 정교한 의상을 제작하는 곳으로, 영화 속 주인공들이 미션을 수행하는 동안 필요한 의상을 입는 장면이 담겨있습니다. 헌츠맨 양장점은 세련된 분위기와 품질 높은 제작으로 유명하며, 영화의 시각적인 아름다움과 스타일을 한층 더 높여줍니다. 이 작품을 통해 관객들은 헌츠맨 양장점의 세계적인 명성과 스파이들의 멋진 변장을 경험할 수 있습니다."
+  }
+ },
+ {
+  "model": "fillow.movielocation",
+  "fields": {
+   "tmdb_id": 453395,
+   "location_country": "영국",
+   "location_name": "리치몬드 공원(Richmond Park)",
+   "latitude": 51.441238,
+   "longitude": -0.274823,
+   "youtube_url": "https://www.youtube.com/embed/mI9oyFMUlfg",
+   "location_photo_url": "https://www.latlong.net/photos/doctor-strange-in-the-multiverse-of-madness.jpg",
+   "location_description": "<닥터 스트레인지: 대혼돈의 멀티버스>는 환상적인 마법과 다양한 차원을 넘나드는 이야기로 우리를 놀라게 할 작품입니다. 이 영화에서는 리치몬드 공원이 중요한 촬영지로 사용되었습니다. 리치몬드 공원은 자연과 조화로운 아름다움을 자랑하는 공원으로, 영화 속 닥터 스트레인지와 그의 동료들이 마법적인 전투와 모험을 펼치는 장면이 그려집니다. 이 공원은 그림 같은 풍경과 평화로운 분위기를 자아내며, 영화의 환상적인 분위기를 한층 더 풍성하게 만들어줍니다. 관객들은 리치몬드 공원에서 벌어지는 장관을 통해 영화의 마법적인 세계에 몰입할 수 있습니다."
+  }
+ }
+]

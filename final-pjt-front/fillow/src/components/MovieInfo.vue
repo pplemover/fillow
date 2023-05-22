@@ -3,11 +3,11 @@
 
     <div v-show="false">{{ selected_movie_id }}</div>
     
-    <div>
+    <div class="MovieVideo">
       <MovieVideo :detail_data="detail_data"/>
+      <div class="MovieDetail">
+        <MovieDetail :detail_data="detail_data"/>
     </div>
-    <div>
-      <MovieDetail :detail_data="detail_data"/>
     </div>
 
     
@@ -60,5 +60,11 @@ export default {
 </script>
 
 <style>
-
+.MovieVideo {
+  position: fixed;
+}
+.MovieDetail {
+  position: relative;
+  top: 5px;
+}
 </style>
