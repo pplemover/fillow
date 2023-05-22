@@ -34,6 +34,15 @@ def get_movie_datas():
                 'poster_path': movie['poster_path'],
                 'genres': genre_lst,
                 'vote_count': movie['vote_count'],
+                
+                
+                'adult': movie['adult'],
+                'backdrop_path': movie['backdrop_path'],
+                'original_language': movie['original_language'],
+                'original_title': movie['original_title'],
+                'revenue': movie['revenue'],
+                'runtime': movie['runtime'],
+                'tagline': movie['tagline'],
             },
         }
         total_data.append(data)

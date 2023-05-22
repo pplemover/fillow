@@ -17,6 +17,7 @@
         </router-link>
       </div>
       <div v-if="isLogin" @click="logout">로그아웃</div>
+      <input type="file">
     </header>
     
     <router-view/>

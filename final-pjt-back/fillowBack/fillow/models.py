@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 # Create your models here.
 # 07 08 참고
@@ -16,6 +17,13 @@ class Movie(models.Model):
     overview = models.TextField()  #
     poster_path = models.CharField(max_length=200)  #
     genres = models.ManyToManyField(Genre)  #
+    adult = models.BooleanField()
+    backdrop_path = models.CharField(max_length=200)
+    original_language = models.CharField(max_length=50)
+    original_title = models.CharField(max_length=100)
+    revenue = models.IntegerField()
+    runtime = models.IntegerField()
+    tagline = models.CharField(max_length=100)
 
 
 # ============================================================================================================
@@ -30,4 +38,7 @@ class MovieLocation(models.Model):
     youtube_url = models.URLField(max_length=300)    # 유튜브 동영상 링크
     location_photo_url = models.URLField(max_length=300) # 장소 사진 url
     location_description = models.TextField()        # 장소 설명
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True, null=True)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, default=1)
     
