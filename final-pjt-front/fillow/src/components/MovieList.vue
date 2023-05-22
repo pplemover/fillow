@@ -94,8 +94,7 @@ export default {
   --bg: #528265;
   --hover-bg: #0fca66;
   --hover-text: black;
-  margin-top: 5px;
-  margin-left: 10px;
+  margin: 5px 10px 5px;
   height: 40px;
   color: #fff;
   border: 1px solid var(--bg);
