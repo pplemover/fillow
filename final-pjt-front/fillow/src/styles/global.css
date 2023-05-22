@@ -25,7 +25,7 @@
     width: 80px;
     padding: 5px;
     border-radius: 10px;
-    font-size: 10px;
+    font-size: 16px;
     font-weight: 700;
     text-align: center;
     cursor: pointer;
@@ -45,13 +45,13 @@
     color: white;
     border-color: #809592;
   }
-  .btn_custom.btn_custom--gold {
-    color: #D9AABA;
-    border-color: #D9AABA;
+  .btn_custom.btn_custom--transparent {
+    color: #528265;
+    border-color: #528265;
   }
-  .btn_custom.btn_custom--gold:hover {
-    color: #FFF;
-    background-color: #D9AABA;
+  .btn_custom.btn_custom--transparent:hover {
+    color: #809592;
+    background-color: #528265;
   }
   .btn_custom.btn_custom--white {
     color: #FFF;

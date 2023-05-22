@@ -70,6 +70,7 @@ export default {
       })
       .finally(()=>{
         this.isCreate = false
+        this.$store.dispatch('getMovieLocations')
       })
     },
   },

@@ -1,12 +1,11 @@
 <template>
   <div>
 
-    <div class="d-flex">
-      <MovieList class="col-3" style="overflow-x: hidden; height: 855px;"/>
-      <MovieInfo class="col-3" style="overflow-x: hidden; height: 855px;"/>
-      <MapView class="col-6"/>
+    <div class="flex-box">
+        <MovieList class="left" style="overflow-x: hidden; height: 800px;"/>
+        <MovieInfo class="mid" style="overflow-x: hidden; height: 800px;"/>
+        <MapView class="right"/>
     </div>
-    <button>asdfasdfsdf</button>
 
   </div>
 </template>
@@ -29,5 +28,28 @@ export default {
 </script>
 
 <style>
+.flex-box {
+  display: flex;
+  margin-top: 61px;
+}
+.left {
+  flex-basis: 25%;
+}
+.mid {
+  flex-basis: 33.33%;
+}
+.right {
+  flex-basis: 41.67%;
+}
 
+/* @media (max-width: 767.98px) {
+  .left {
+    display: none;
+  }
+  .col-md-6 {
+    flex-basis: 100%;
+    max-width: 100%;
+    display: none;
+  }
+} */
 </style>

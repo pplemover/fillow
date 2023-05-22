@@ -56,8 +56,9 @@ export default {
 
 <style>
 .signup {
+  font-family: 'Black Han Sans', sans-serif;
   padding: 93px;
-  background-image: url("@/assets/images/bg_login.jpg");
+  background-color: lightcyan;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;

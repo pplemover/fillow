@@ -1,7 +1,7 @@
 <template>
   <div>
     <gmap-map
-    :zoom="4"
+    :zoom="5"
     :center="center"
     style="width:100%;  height: 100%;"
     >

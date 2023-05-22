@@ -1,9 +1,9 @@
 <template>
   <div class="about">
-    <div style="height: 50%;">
+    <div style="height: 30%;">
       <MovieVideo />
     </div>
-    <div style="height: 50%;">
+    <div style="height: 70%;">
       <MovieDetail/>
     </div>
   </div>

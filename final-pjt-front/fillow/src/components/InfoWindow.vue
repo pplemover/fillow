@@ -68,6 +68,7 @@ export default {
       })
       .finally(()=>{
         this.isUpdating = false
+        this.$store.dispatch('getMovieLocations')
       })
     }
   }

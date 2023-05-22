@@ -52,9 +52,9 @@ export default {
 
 <style>
 .signin {
-  margin-top: 60px;
-  padding: 100px 0 150px;
-  background-image: url("@/assets/images/bg_login.jpg");
+  font-family: 'Black Han Sans', sans-serif;
+  padding: 93px;
+  background-color: lightcyan;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -131,7 +131,6 @@ export default {
 .signin__card .actions a:hover {
   text-decoration: underline;
 }
-
 .movetosignup{
   color: black;
 }

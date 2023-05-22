@@ -9,15 +9,21 @@
       
       <!-- 인증 화면 routing -->
       <div class="user" v-if="!isLogin">
-        <router-link :to="{name:'LoginView'}">
-          <button class="btn_custom btn_custom--darkgreen login">로그인</button>
+        <router-link :to="{name:'LoginView'}" class="user_a">
+          로그인
         </router-link>
-        <router-link :to="{name:'SignUpView'}">
-          <button class="btn_custom btn_custom--darkgreen">회원가입</button>
+        <router-link :to="{name:'SignUpView'}" class="user_a">
+          회원가입
         </router-link>
       </div>
-      <div v-if="isLogin" @click="logout">로그아웃</div>
+      <div v-if="isLogin" @click="logout" class="user_a">
+        로그아웃
+      </div>
     </header>
+
+    <div class="filter-box">
+        test
+    </div>
     
     <router-view/>
   </div>
@@ -71,6 +77,7 @@ export default {
   text-decoration: none;
 }
 
+/* HEADER */
 header {
   position: fixed;
   top: 0;
@@ -80,15 +87,13 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  border-bottom: 1px solid #c8c8c8;
+  border-bottom: 1px solid #528265;
   z-index: 9;
 }
-
 .logo {
   position: relative;
   left: 15px;
 }
-
 .user {
   display: flex;
   align-items: center;
@@ -96,12 +101,27 @@ header {
   position: relative;
   right: 15px;
 }
-
-.login {
-  margin-right: 5px;
+.user_a {
+  margin-right: 10px;
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+  font-family: 'Black Han Sans', sans-serif;
+}
+.user_a:hover {
+  color: lightgreen;
 }
 
-router-view {
-  margin-top: 61px;
+/* FILTER_BOX */
+.filter_box {
+  position: fixed;
+  top: 61px;
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #528265;
+  z-index: 9;
 }
 </style>
