@@ -1,24 +1,24 @@
 <template>
   <div>
     <section class="signin">
-    <h1>로그인</h1>
-    <div class="signin__card">
-      <h2>
-        <strong>Welcome!</strong> Fillow에 오신 것을 환영합니다.
-      </h2>
-      <form>
-        <input type="text" placeholder="아이디를 입력하세요." v-model="username">
-        <input type="password" placeholder="비밀번호를 입력하세요." v-model="password">
-        <input type="submit" value="SignIn" @click.prevent="Login">
-        <router-link :to="{ name: 'SignUpView' }" class="movetosignup">회원가입하기</router-link>
-        <!-- SignUpView.vue 로 이동하는 링크를 생성 -->
-        <hr>
-        <p>
-          * 비밀번호를 타 사이트와 같이 사용할 경우 도용 위험이 있으니,<br>
-          정기적으로 비밀번호를 변경하세요!
-        </p>
-      </form>
-    </div>
+      <h1>로그인</h1>
+      <div class="signin__card">
+        <h2>
+          <strong>Welcome!</strong> Fillow에 오신 것을 환영합니다.
+        </h2>
+        <form>
+          <input type="text" placeholder="아이디를 입력하세요." v-model="username">
+          <input type="password" placeholder="비밀번호를 입력하세요." v-model="password">
+          <input type="submit" value="Sign In" @click.prevent="Login">
+          <router-link :to="{ name: 'SignUpView' }">회원가입하기</router-link>
+          <!-- signinView.vue 로 이동하는 링크를 생성 -->
+          <hr>
+          <p>
+            * 비밀번호를 타 사이트와 같이 사용할 경우 도용 위험이 있으니,<br>
+            정기적으로 비밀번호를 변경하세요!
+          </p>
+        </form>
+      </div>
   </section>
 
 
@@ -52,24 +52,25 @@ export default {
 
 <style>
 .signin {
+  position: relative;
   font-family: 'Black Han Sans', sans-serif;
   padding: 93px;
-  background-color: lightcyan;
-  background-repeat: no-repeat;
+  background-image: url("https://source.unsplash.com/random/?movies");
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
 }
 .signin h1 {
-  color: #528265;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: 30px;
-  font-weight: 700;
-  text-align: center;
+  font-weight: 400;
+  text-align: left;
   margin-bottom: 10px;
 }
 .signin__card {
   width: 500px;
-  margin: 0 auto;
+  left: 0;
   border-radius: 10px;
   background-color: #F6F5F0;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, .3);
@@ -83,12 +84,13 @@ export default {
 }
 
 .signin__card h2 strong {
-  font-weight: 700;
+  font-weight: 400;
   color: #006633;
 }
 
 .signin__card form {
   padding: 30px 22px;
+  margin-bottom: 220px;
 }
 .signin__card form input {
   width: 100%;
@@ -101,15 +103,16 @@ export default {
   font-size: 14px;
 }
 .signin__card form [type="submit"] {
-  background-color: #006633;
+  background-color: #528265;
   border: none;
   color: #fff;
   font-size: 20px;
   cursor: pointer;
 }
 .signin__card form p {
-  font-size: 12px;
-  color: #006633;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: grey;
   text-align: center;
 }
 .signin__card .actions {
@@ -130,8 +133,5 @@ export default {
 }
 .signin__card .actions a:hover {
   text-decoration: underline;
-}
-.movetosignup{
-  color: black;
 }
 </style>

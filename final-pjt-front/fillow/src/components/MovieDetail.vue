@@ -1,23 +1,23 @@
 <template>
   <div>
 
-    
-    <h1>Detail</h1>
     {{ selected_movie_id }}
     
-    {{ detail_data }}
+    {{ detail_data}}
+
+
     <button @click="goAdd">지역 추가</button>
 
     <!-- 지역 추가 폼 -->
     <div v-if="isCreate">
-      <p>지역 이름:<input type="text" v-model="addLocationData.location_name"></p>
-      <p>경?도:<input type="text" v-model="addLocationData.latitude"></p>
-      <p>위?도:<input type="text" v-model="addLocationData.longitude"></p>
-      <p>나라<input type="text" v-model="addLocationData.location_country"></p>
-      <p>유튜브 주소<input type="text" v-model="addLocationData.youtube_url"></p>
-      <p>사진 주소<input type="text" v-model="addLocationData.location_photo_url"></p>
+      <p>지명<input type="text" v-model="addLocationData.location_name"></p>
+      <p>경도<input type="text" v-model="addLocationData.latitude"></p>
+      <p>위도<input type="text" v-model="addLocationData.longitude"></p>
+      <p>국가<input type="text" v-model="addLocationData.location_country"></p>
+      <p>영화장면 유튜브 URL<input type="text" v-model="addLocationData.youtube_url"></p>
+      <p>지역 사진 URL<input type="text" v-model="addLocationData.location_photo_url"></p>
       <p>지역 설명<input type="text" v-model="addLocationData.location_description"></p> 
-      <button @click="createMovieLocation">수정 완료</button>
+      <button @click="createMovieLocation(detail_data.movie_id)">수정 완료</button>
     </div>
 
 
@@ -44,7 +44,6 @@ export default {
         url:`http://127.0.0.1:8000/api/v1/movie/${thisid}/`,
       })
       .then((res)=>{
-        console.log(res.data);
         this.detail_data = res.data
       })
       .catch((err)=>{
@@ -54,7 +53,9 @@ export default {
     goAdd(){
       this.isCreate = true
     },
-    createMovieLocation(){
+    createMovieLocation(movie_id){
+      console.log(movie_id);
+      this.addLocationData.tmdb_id = movie_id
       axios({
         method:'post',
         headers:`Token ${this.$store.state.token}`,
@@ -79,7 +80,7 @@ export default {
       detail_data : null,
       isCreate:false,
       addLocationData:{
-        tmdb_id:               this.$store.getters.selectedmovie,
+        tmdb_id:               null,
         location_name:         null,
         latitude:              null,
         longitude:             null,
@@ -87,7 +88,7 @@ export default {
         youtube_url:           null,
         location_photo_url:    null,
         location_description:  null,
-      }
+      },
     }
   },
 

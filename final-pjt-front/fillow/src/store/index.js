@@ -25,6 +25,9 @@ export default new Vuex.Store({
     selectedmovie(state){
       return state.homemovieselect_id
     },
+    currentLocations(state){
+      return state.movieLocations
+    },
     // =============================getters인증 시스템 관련 =================================
     isLogin(state){
       return state.token ? true : false

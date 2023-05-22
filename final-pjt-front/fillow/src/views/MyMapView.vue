@@ -2,8 +2,8 @@
   <div>
 
     <div class="flex-box">
-        <MovieList class="left" style="overflow-x: hidden; height: 800px;"/>
-        <MovieInfo class="mid" style="overflow-x: hidden; height: 800px;"/>
+        <MovieList class="left" style="overflow-x: hidden; height: calc(100vh - 94px);"/>
+        <MovieInfo class="mid" style="overflow-x: hidden; height: calc(100vh - 94px);"/>
         <MapView class="right"/>
     </div>
 
@@ -30,7 +30,7 @@ export default {
 <style>
 .flex-box {
   display: flex;
-  margin-top: 61px;
+  margin-top: 70px;
 }
 .left {
   flex-basis: 25%;
@@ -42,7 +42,7 @@ export default {
   flex-basis: 41.67%;
 }
 
-/* @media (max-width: 767.98px) {
+@media (max-width: 767.98px) {
   .left {
     display: none;
   }
@@ -51,5 +51,5 @@ export default {
     max-width: 100%;
     display: none;
   }
-} */
+}
 </style>

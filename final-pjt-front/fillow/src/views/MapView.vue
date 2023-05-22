@@ -56,18 +56,13 @@ export default {
     return {
       openedMarkerID: null,
       center: { lat: 37.5642135, lng: 127.0016985 },
-      // locationMarkers: [
-      //   {
-      //     position: { lat: 37.5642135 ,lng: 127.0016985 },
-      //   },
-      // ],
       locPlaces: [],
       existingPlace: null
     };
   },
   computed: {
     locationMarkers() {
-      const MovieLocations = this.$store.state.movieLocations
+      const MovieLocations = this.$store.getters.currentLocations
       console.log(MovieLocations)
       // console.log(MovieLocations[0].latitude)
 

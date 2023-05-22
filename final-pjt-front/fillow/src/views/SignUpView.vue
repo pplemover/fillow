@@ -7,16 +7,11 @@
           <strong>Welcome!</strong> Fillow에 오신 것을 환영합니다.
         </h2>
         <form @submit.prevent="signUp">
-          <label for="username">아이디를 입력하세요 :</label>
-          <input type="text" id="username" v-model="username"><br>
-
-          <label for="password1">비밀번호를 입력하세요 : </label>
-          <input type="password" id="password1" v-model="password1"><br>
-
-          <label for="password2">비밀번호를 재입력하세요 :</label>
-          <input type="password" id="password2" v-model="password2">
+          <input type="text" id="username" v-model="username" placeholder="아이디를 입력하세요."><br>
+          <input type="password" id="password1" v-model="password1" placeholder="비밀번호를 입력하세요."><br>
+          <input type="password" id="password2" v-model="password2" placeholder="비밀번호를 재입력하세요.">
           
-          <input type="submit" value="SignUp">
+          <input type="submit" value="Sign Up">
         </form>
       </div>
     </section>
@@ -56,24 +51,25 @@ export default {
 
 <style>
 .signup {
+  position: relative;
   font-family: 'Black Han Sans', sans-serif;
   padding: 93px;
-  background-color: lightcyan;
-  background-repeat: no-repeat;
+  background-image: url("https://source.unsplash.com/random/?filmlocation,movie,movies");
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
 }
 .signup h1 {
-  color: #528265;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: 30px;
-  font-weight: 700;
-  text-align: center;
+  font-weight: 400;
+  text-align: left;
   margin-bottom: 10px;
 }
 .signup__card {
   width: 500px;
-  margin: 0 auto;
+  left: 0;
   border-radius: 10px;
   background-color: #F6F5F0;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, .3);
@@ -87,12 +83,13 @@ export default {
 }
 
 .signup__card h2 strong {
-  font-weight: 700;
+  font-weight: 400;
   color: #006633;
 }
 
 .signup__card form {
   padding: 30px 22px;
+  margin-bottom: 270px;
 }
 .signup__card form input {
   width: 100%;

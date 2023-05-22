@@ -47,6 +47,22 @@ export default {
     }
   },
   created() {
+    // 내 위치 알아내기=========================================================================
+    console.log(navigator.geolocation.getCurrentPosition(success, error));
+    function success(pos) {
+      var crd = pos.coords;
+      
+      console.log('Your current position is:');
+      console.log(`Latitude : ${crd.latitude}`);
+      console.log(`Longitude: ${crd.longitude}`);
+      console.log(`More or less ${crd.accuracy} meters.`);
+    }
+    
+    function error(err) {
+      console.warn(`ERROR(${err.code}): ${err.message}`);
+    }
+    // 내 위치 알아내기=====================================================================
+    
     this.getMovieLocations()
   },
   methods: {
@@ -82,11 +98,11 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  height: 60px;
   background-color: #528265;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
   border-bottom: 1px solid #528265;
   z-index: 9;
 }
@@ -114,14 +130,12 @@ header {
 
 /* FILTER_BOX */
 .filter_box {
-  position: fixed;
-  top: 61px;
-  height: 50px;
+  position: absolute;
+  height: 60px;
   width: 100%;
   background-color: white;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #528265;
-  z-index: 9;
 }
 </style>
