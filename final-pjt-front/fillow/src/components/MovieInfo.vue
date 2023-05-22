@@ -1,6 +1,6 @@
 <template>
   <div>
-
+    <!-- 아래 이거 없으면 데이터 변경 제대로 반영 안됨 -->
     <div v-show="false">{{ selected_movie_id }}</div>
     
     <div class="MovieVideo">

@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import MyMapView from '@/views/MyMapView'
 import LoginView from '@/views/LoginView.vue'
 import SignUpView from '@/views/SignUpView.vue'
+import RecommendView from '@/views/RecommendView'
 
 Vue.use(VueRouter)
 
@@ -13,6 +14,11 @@ const routes = [
   //   name: 'mapView',
   //   component: MapView
   // },
+  {
+    path: '/RecommendView',
+    name: 'RecommendView',
+    component: RecommendView
+  },
   {
     path: '/',
     name: 'MyMapView',
@@ -25,7 +31,7 @@ const routes = [
     },
   },
   {
-    path: '/',
+    path: '/login',
     name: 'LoginView',
     component: LoginView,
     meta: {
@@ -36,7 +42,7 @@ const routes = [
     },
   },
   {
-    path: '/',
+    path: '/signup',
     name: 'SignUpView',
     component: SignUpView,
     meta: {

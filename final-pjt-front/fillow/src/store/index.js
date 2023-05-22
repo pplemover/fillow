@@ -49,7 +49,6 @@ export default new Vuex.Store({
     GET_MY_LOCATION(state, payload){
       // console.log(payload);
       state.my_location = payload
-      console.log(state.my_location);
     },
 
     // =============================mutations 인증 시스템 관련 =================================

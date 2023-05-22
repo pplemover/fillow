@@ -4,6 +4,7 @@
     :zoom="5"
     :center="center"
     style="width:100%;  height: 100%;"
+    @click="getCoordinate"
     >
 
     <div
@@ -49,7 +50,11 @@ export default {
     openMarker(id) {
       console.log(id);
       this.openedMarkerID = id
-    }
+    },
+    getCoordinate(event){
+      console.log(event.latLng.lat());
+      console.log(event.latLng.lng());
+    },
   },
   // InfoWindow 수정중...............................................
   data() {

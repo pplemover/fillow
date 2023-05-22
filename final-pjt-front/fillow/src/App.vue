@@ -45,7 +45,7 @@ export default {
   },
   created() {
     // 내 위치 알아내기=========================================================================
-    console.log(navigator.geolocation.getCurrentPosition(success, error));
+    navigator.geolocation.getCurrentPosition(success, error);
     let payload = {
       lat:null,
       lng:null,
@@ -53,10 +53,10 @@ export default {
     function success(pos) {
       var crd = pos.coords;
       
-      console.log('Your current position is:');
-      console.log(`Latitude : ${crd.latitude}`);
-      console.log(`Longitude: ${crd.longitude}`);
-      console.log(`More or less ${crd.accuracy} meters.`);
+      // console.log('Your current position is:');
+      // console.log(`Latitude : ${crd.latitude}`);
+      // console.log(`Longitude: ${crd.longitude}`);
+      // console.log(`More or less ${crd.accuracy} meters.`);
       payload.lat = crd.latitude
       payload.lng = crd.longitude
     }

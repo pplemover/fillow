@@ -34,29 +34,13 @@ import axios from 'axios'
 export default {
   name:'MovieDetail',
   computed:{
-    // selected_movie_id(){
-    //   // const cur_id = this.$store.getters.selectedmovie
-    //   this.getMovieDetail(this.$store.getters.selectedmovie)
-    //   return this.$store.getters.selectedmovie
-    // }
+
   },
   props:{
     detail_data:Object,
   },
   methods:{
-    // getMovieDetail(thisid){
-    //   // const cur_id = this.selected_movie_id
-    //   axios({
-    //     methods:'get',
-    //     url:`http://127.0.0.1:8000/api/v1/movie/${thisid}/`,
-    //   })
-    //   .then((res)=>{
-    //     this.detail_data = res.data
-    //   })
-    //   .catch((err)=>{
-    //     console.log(err);
-    //   })
-    // },
+
     goAdd(){
       this.isCreate = !this.isCreate
     },
