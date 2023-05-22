@@ -65,11 +65,18 @@ def movie_list(request):
             'title': movie['title'],
             'release_date': movie['release_date'],
             'popularity': movie['popularity'],
+            'vote_count': movie['vote_count'],
             'vote_avg': movie['vote_average'],
             'overview': movie['overview'],
             'poster_path': movie['poster_path'],
             # 'genres': {id:12, id:14},
-            'vote_count': movie['vote_count'],
+            'adult': movie['adult'],
+            'backdrop_path': movie['backdrop_path'],
+            'original_language': movie['original_language'],
+            'original_title': movie['original_title'],
+            'revenue': movie['revenue'],
+            'runtime': movie['runtime'],
+            'tagline': movie['tagline'],
         }
         query_dict = QueryDict('', mutable=True)
         query_dict.update(mydict)

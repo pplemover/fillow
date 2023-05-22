@@ -2,21 +2,22 @@
   <div>
 
     <!-- 기본 보여주는 폼 -->
-    <div v-if="!isUpdating">
-      <h1>infowindow</h1>
-      {{movieLocationItem}}
+    <div v-if="!isUpdating" class="info_card">
       <img :src="movieLocationItem.location_photo_url" alt="" width="200px" height="150px">
-      <button @click="goUpdate">수정</button>
+      <div>
+        {{movieLocationItem}}
+        <button @click="goUpdate">수정</button>
+      </div>
     </div>
 
     <!-- 업데이트 할떄 -->
     <div v-if="isUpdating">
-      <p>지역 이름:<input type="text" v-model="updatingData.location_name"></p>
-      <p>경?도:<input type="text" v-model="updatingData.latitude"></p>
-      <p>위?도:<input type="text" v-model="updatingData.longitude"></p>
-      <p>나라<input type="text" v-model="updatingData.location_country"></p>
-      <p>유튜브 주소<input type="text" v-model="updatingData.youtube_url"></p>
-      <p>사진 주소<input type="text" v-model="updatingData.location_photo_url"></p>
+      <p>지명:<input type="text" v-model="updatingData.location_name"></p>
+      <p>경도:<input type="text" v-model="updatingData.latitude"></p>
+      <p>위도:<input type="text" v-model="updatingData.longitude"></p>
+      <p>국가<input type="text" v-model="updatingData.location_country"></p>
+      <p>영화장면 유튜브 URL<input type="text" v-model="updatingData.youtube_url"></p>
+      <p>지역 사진 URL<input type="text" v-model="updatingData.location_photo_url"></p>
       <p>지역 설명<input type="text" v-model="updatingData.location_description"></p> 
       <button @click="updateMovieLocation">수정 완료</button>
     </div>
@@ -76,5 +77,13 @@ export default {
 </script>
 
 <style>
-
+.info_card {
+  position: relative;
+  font-family: 'Black Han Sans', sans-serif;
+  padding: 0px;
+  background-color: #282828;
+  color: white;
+  
+  display: flex;
+}
 </style>

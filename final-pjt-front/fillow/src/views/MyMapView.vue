@@ -23,6 +23,9 @@ export default {
     MovieList,
     MovieInfo,
   },
+  methods:{
+    
+  },
 
 }
 </script>
@@ -30,13 +33,14 @@ export default {
 <style>
 .flex-box {
   display: flex;
-  margin-top: 70px;
 }
 .left {
   flex-basis: 25%;
+  margin-top: -15px;
 }
 .mid {
   flex-basis: 33.33%;
+  margin-top: -7px;
 }
 .right {
   flex-basis: 41.67%;

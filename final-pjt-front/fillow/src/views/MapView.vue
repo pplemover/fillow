@@ -63,7 +63,7 @@ export default {
   computed: {
     locationMarkers() {
       const MovieLocations = this.$store.getters.currentLocations
-      console.log(MovieLocations)
+      // console.log(MovieLocations)
       // console.log(MovieLocations[0].latitude)
 
       let latlngs = [] 
@@ -81,7 +81,7 @@ export default {
     }
   },
   created() {
-    console.log(this.locationMarkers)
+    // console.log(this.locationMarkers)
   }
 };
 </script>

@@ -12,7 +12,9 @@ const DJANGO_URL = 'http://127.0.0.1:8000'
 
 export default new Vuex.Store({
   plugins: [
-    createPersistedState(),
+    createPersistedState({
+      paths:['homemovieselect_id', 'token', 'my_location',]
+    }),
   ],
   state: {
     movieLocations: [
@@ -20,6 +22,7 @@ export default new Vuex.Store({
     homemovieselect_id: 11,
     // 초기값 11 (스타워즈)
     token:null,
+    my_location:null,
   },
   getters: {
     selectedmovie(state){
@@ -42,6 +45,11 @@ export default new Vuex.Store({
     },
     SELECT_THIS_ITEM(state, index){
       state.homemovieselect_id = index
+    },
+    GET_MY_LOCATION(state, payload){
+      // console.log(payload);
+      state.my_location = payload
+      console.log(state.my_location);
     },
 
     // =============================mutations 인증 시스템 관련 =================================
@@ -74,6 +82,9 @@ export default new Vuex.Store({
     selectThisItem(context, index){
       // console.log(index,'store');
       context.commit('SELECT_THIS_ITEM', index)
+    },
+    getMyLocation(context, payload){
+      context.commit('GET_MY_LOCATION', payload)
     },
 
     // =============================actions 인증 시스템 관련 =================================

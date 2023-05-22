@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>맨 왼쪽 영화목록</h1>
+    <hr>
     <MovieListItem
     v-for="homemovieitem in homemovielist"
     :key="homemovieitem.movie_id"
