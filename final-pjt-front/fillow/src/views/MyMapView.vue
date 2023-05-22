@@ -2,10 +2,11 @@
   <div>
 
     <div class="d-flex">
-      <MovieList class="col-2" style="overflow-x: hidden; height: 855px;"/>
-      <MovieInfo class="col-2" style="overflow-x: hidden; height: 855px;"/>
-      <MapView class="col-8"/>
+      <MovieList class="col-3" style="overflow-x: hidden; height: 855px;"/>
+      <MovieInfo class="col-3" style="overflow-x: hidden; height: 855px;"/>
+      <MapView class="col-6"/>
     </div>
+    <button>asdfasdfsdf</button>
 
   </div>
 </template>

@@ -9,7 +9,7 @@
       <form>
         <input type="text" placeholder="아이디를 입력하세요." v-model="username">
         <input type="password" placeholder="비밀번호를 입력하세요." v-model="password">
-        <input type="submit" value="SignIn" @click="Login">
+        <input type="submit" value="SignIn" @click.prevent="Login">
         <router-link :to="{ name: 'SignUpView' }" class="movetosignup">회원가입하기</router-link>
         <!-- SignUpView.vue 로 이동하는 링크를 생성 -->
         <hr>
