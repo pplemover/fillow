@@ -23,6 +23,7 @@ export default new Vuex.Store({
     // 초기값 11 (스타워즈)
     token:null,
     my_location:null,
+    moveto: null,
   },
   getters: {
     selectedmovie(state){

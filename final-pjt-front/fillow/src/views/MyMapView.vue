@@ -49,6 +49,11 @@ export default {
   .left {
     display: none;
   }
+  .mid {
+    flex-basis: auto; /* 유연한 너비로 설정하여 감소하지 않도록 유지 */
+    max-width: none; /* 최대 너비 제한 해제 */
+    display: block; /* 블록 레벨 요소로 변경 */
+  }
   .col-md-6 {
     flex-basis: 100%;
     max-width: 100%;

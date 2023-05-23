@@ -6,14 +6,19 @@
       <div class="detail_card_wrapper">
         <img :src="`https://image.tmdb.org/t/p/original/${detail_data.backdrop_path}`" alt="bdi" class="backdropimage">
         <div class="detail_card">
-          {{ detail_data }}
+
+          <!-- 지역 이동 버튼, 적어도 한개 이상의 지역이 있을 때 -->
+          <div>{{ detail_data.movielocation_set.length }}</div>
+          <div id="next" v-if="detail_data.movielocation_set.length > 0" @click="moveTo">
+            <div class="material-icons">NEXT</div>
+          </div>
+
+
+          {{ detail_data.movielocation_set }}
         </div>
       </div>
 
     </div>
-
-    
-    
 
 
     <button @click="goAdd">지역 추가</button>
@@ -46,6 +51,11 @@ export default {
     detail_data: Object,
   },
   methods:{
+    moveTo(){
+      this.current_location += 1
+      this.current_location = this.current_location % this.detail_data.movielocation_set.length
+      console.log(this.current_location);
+    },
 
     goAdd(){
       this.isCreate = !this.isCreate
@@ -69,6 +79,8 @@ export default {
       .finally(()=>{
         this.isCreate = false
         this.$store.dispatch('getMovieLocations')
+        // 
+        this.$emit('updateData')
       })
     },
   },
@@ -76,6 +88,7 @@ export default {
     return{
       backdrop_path: '{{}}',
       isCreate:false,
+      current_location:0,
       addLocationData:{
         tmdb_id:               null,
         location_name:         null,
@@ -95,17 +108,32 @@ export default {
 <style>
 .detail_card_wrapper {
   position: relative;
+  overflow-y: auto;
+  max-height: 400x;
 }
 .backdropimage {
   position: absolute;
-  width: 100%;
   height: 100%;
-  object-fit: cover;
+  background-size: contain;
   left: 0px;
   opacity: 50%;
 }
 .detail_card {
   text-align: center;
   color: black;
+}
+
+#next {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

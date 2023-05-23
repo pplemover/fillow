@@ -1,7 +1,7 @@
 <template>
   <div @scroll="ScrollEvent" ref="scrollContainer">
 
-    <div class="func_btns">
+    <div class="func_menu">
       <input type="input" placeholder="영화 검색" name="text" class="input" @keyup.enter="getAnotherMovie" v-model.trim="query">
       <div @click="goAddMovie" class="func_btn">영화 추가</div>
       <div @click="goRecommend" class="func_btn">내 위치를 기반으로 추천받기</div>
@@ -108,13 +108,14 @@ export default {
 
 <style>
 /* 상단 메뉴 버튼 (위치 기반 추천 버튼, 영화추가 버튼) */
-.func_btns {
+.func_menu {
   position: fixed;
   display: flex;
   left: 10px;
-  right: 10px;
+  right: 15px;
   width: 490px;
   cursor: pointer;
+  background-color: white;
 }
 .func_btn {
   --bg: #3B9E83;
@@ -123,7 +124,7 @@ export default {
   --hover-text: black;
   --main-color: #323232;
 
-  margin: 5px 10px 5px;
+  margin: 5px 5px 5px;
   padding: 0.5em 0.5em;
 
   height: 40px;

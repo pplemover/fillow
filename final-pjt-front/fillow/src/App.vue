@@ -117,7 +117,7 @@ export default {
   height: 100%;
 }
 
-/* HEADER */
+/* HEADER */ 
 header {
   position: fixed;
   top: 0;

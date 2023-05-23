@@ -24,19 +24,12 @@ export default {
 
 <style>
 .video_wrapper {
-  position: relative;
+  /* position: fixed; */
   background-color: black;
-  height: 100%;
-  width: 100%;
-}
-
-.video_box {
-  position: absolute;
-  height: 600px;
-  width: 100%;
 }
 .video_ratio {
+  width: 640px;
+  height: 400px;
   padding: 2px 5px;
-  margin: 4px 10px;
 }
 </style>

@@ -3,11 +3,14 @@
     <!-- selected movie id 가 없으면 데이터 변경 제대로 반영 안됨 -->
     <div v-show="false">{{ selected_movie_id }}</div>
     
-    <div class="MovieVideo">
-        <MovieVideo :detail_data="detail_data"/>
-    </div>
-    <div class="MovieDetail">
-        <MovieDetail :detail_data="detail_data"/>
+    <div class="MovieInfo">
+      <div class="MovieVideo">
+          <MovieVideo :detail_data="detail_data"/>
+      </div>
+      <div class="MovieDetail">
+          <MovieDetail :detail_data="detail_data" 
+          @updateData = "childToUpdate"/>
+      </div>
     </div>
 
 
@@ -36,6 +39,9 @@ export default {
     }
   },
   methods:{
+    childToUpdate(){
+      this.getMovieDetail(this.$store.getters.selectedmovie)
+    },
     getMovieDetail(thisid){
       // const cur_id = this.selected_movie_id
       axios({
@@ -60,6 +66,9 @@ export default {
 
 <style>
 .MovieVideo {
-  height: 400px;
+  position: relative;
+}
+.MovieDetail {
+  margin-top: 0px;
 }
 </style>

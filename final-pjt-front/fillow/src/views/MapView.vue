@@ -5,6 +5,7 @@
     :center="center"
     style="width:100%;  height: 100%;"
     @click="getCoordinate"
+    ref="map"
     >
 
     <div
@@ -47,6 +48,20 @@ export default {
     InfoWindowVue,
   },
   methods:{
+    moveTo(){
+      const targetCoordinates = { lat: 32.7128, lng: -81.0060 };
+      const targetzoom = 8
+
+      // Access the map instance and pan to the new coordinates
+      const map = this.$refs.map.$mapPromise;
+      map.then((mapInstance) => {
+        mapInstance.setZoom(targetzoom);
+        mapInstance.panTo(targetCoordinates);
+      });
+
+      // Update the center and zoom values for smooth transition
+      // this.center = targetCoordinates;
+    },
     openMarker(id) {
       console.log(id);
       this.openedMarkerID = id

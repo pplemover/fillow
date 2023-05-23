@@ -10,6 +10,8 @@ import * as VueGoogleMaps from "vue2-google-maps" // Import package
 
 import '@/styles/global.css' // scrollbar customizing css
 
+import '@mdi/font/css/materialdesignicons.css'
+
 Vue.config.productionTip = false
 
 Vue.use(VueGoogleMaps, {
