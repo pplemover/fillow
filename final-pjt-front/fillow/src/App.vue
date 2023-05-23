@@ -6,6 +6,11 @@
       <router-link to="/">
         <a href="/" class="logo"><img src="@/assets/images/header_fillow.png" alt="logo" style="width: 100px; height: auto;"></a>
       </router-link>
+
+      <div class="header_menu">
+        <div @click="goAddMovie" class="func_btn">내가 좋아하는 영화 추가하기</div>
+        <div @click="goRecommend" class="func_btn">내 위치를 기반으로 추천받기</div>
+     </div>
       
       <!-- 인증 화면 routing -->
       <div class="user" v-if="!isLogin">
@@ -23,21 +28,6 @@
     </header>
     
     <router-view/>
-
-    <footer class="footer">
-      <p class="copyright">&copy; Fillow. All Rights Reserved.</p>
-      <ul class="menu">
-        <li><a href="javascript:void(0)" class="green">개인정보처리방침</a></li>
-        <li><a href="javascript:void(0)">위치정보 이용약관</a></li>
-      </ul>
-      <div class="info">
-        <span>최종 프로젝트 [임휘진, 김동욱]</span>
-        <span>개인정보 책임자 : 임휘진</span>
-      </div>
-      
-      <img src="@/assets/images/header_fillow.png" alt="logo" class="logo" />
-    </footer>
-
   </div>
 </template>
 
@@ -86,6 +76,12 @@ export default {
     this.getMovieLocations()
   },
   methods: {
+    goRecommend(){
+      this.$router.push({name:'RecommendView'})
+    },
+    goAddMovie(){
+      this.$router.push({name:'AddMovieView'})
+    },
     getMovieLocations() {
       // console.log(this.$store.state.movieLocations.length)
       if (!this.$store.state.movieLocations.length){
@@ -144,7 +140,6 @@ header {
   font-size: 25px;
   text-decoration: none;
   color: white;
-  font-family: 'Do Hyeon', sans-serif;
   font-weight: 400;
   cursor: pointer;
 }
@@ -164,17 +159,22 @@ header {
   background: var(--bg);
   transition: 0.2s;
 }
-
 .log_btn:hover {
   color: var(--hover-text);
   transform: translate(-0.25rem,-0.25rem);
   background: var(--hover-bg);
   box-shadow: 0.25rem 0.25rem var(--bg);
 }
-
 .log_btn:active {
   transform: translate(0);
   box-shadow: none;
+}
+
+.header_menu {
+  display: flex;
+  position: fixed;
+  left: 125px;
+  cursor: pointer;
 }
 
 /* SIGN CARD */
@@ -261,66 +261,5 @@ header {
 }
 .sign__card .actions a:hover {
   text-decoration: underline;
-}
-
-/*FOOTER*/
-footer {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: #272727;
-  border-top: 1px solid #032c16;
-}
-footer .menu {
-  display: flex;
-  justify-content: center;
-}
-footer .menu li {
-  position: relative;
-}
-footer .menu li::before {
-  content: "";
-  width: 3px;
-  height: 3px;
-  background-color: #555;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: -1px;
-  margin: auto;
-}
-footer .menu li:last-child::before {
-  display: none;
-}
-footer .menu li a {
-  display: block;
-  color: #CCC;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 15px;
-}
-footer .menu li a.green {
-  color: #528265;
-}
-footer .info {
-  margin-top: 10px;
-  text-align: center;
-}
-footer .info span {
-  margin-right: 20px;
-  color: #999;
-  font-size: 12px;
-}
-footer .info span:last-child {
-  margin-right: 0;
-}
-footer .copyright {
-  color: #999;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 5px;
-}
-footer .logo {
-  margin: 5px;
 }
 </style>

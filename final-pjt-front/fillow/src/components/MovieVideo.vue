@@ -1,6 +1,6 @@
 <template>
   <div class="video_wrapper">
-    <div class="video_box" v-if="detail_data">
+    <div class="video_box" v-if="detail_data.movielocation_set.length !== 0">
       <div class="video_ratio">
         <iframe width="100%" height="100%" :src="detail_data.movielocation_set[0].youtube_url"
           title="YouTube video player" 
@@ -24,12 +24,12 @@ export default {
 
 <style>
 .video_wrapper {
-  /* position: fixed; */
   background-color: black;
+  position: relative;
 }
 .video_ratio {
-  width: 640px;
-  height: 400px;
+  width: 100%;
+  height: 350px;
   padding: 2px 5px;
 }
 </style>

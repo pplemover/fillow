@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="flex-box">
-      <MovieList class="left" style="overflow-x: hidden; height: calc(100vh - 94px);"/>
-      <MovieInfo class="mid" style="overflow-x: hidden; height: calc(100vh - 94px);"/>
+      <MovieList class="left" style="overflow-x: hidden; height: calc(100vh);"/>
+      <MovieInfo class="mid" style="overflow-x: hidden; height: calc(100vh);"/>
       <MapView class="right"/>
     </div>
 

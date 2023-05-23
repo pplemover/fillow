@@ -21,15 +21,6 @@
   }
 
   /* 커스텀버튼 */
-  .func_menu {
-    position: fixed;
-    display: flex;
-    left: 10px;
-    right: 15px;
-    width: 490px;
-    cursor: pointer;
-    background-color: white;
-  }
   .func_btn {
     --bg: #3B9E83;
     --hover-bg: #0fca66;
@@ -37,7 +28,7 @@
     --hover-text: black;
     --main-color: #323232;
   
-    margin: 5px 5px 5px;
+    margin: 5px;
     padding: 0.5em 0.5em;
   
     height: 40px;

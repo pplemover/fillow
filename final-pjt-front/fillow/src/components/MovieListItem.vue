@@ -52,20 +52,23 @@ export default {
 .item-box {
   position: relative;
   width: 100%;
-  height: 140px;
-  border-bottom: 0.5px solid black;
+  /* height: 140px; */
+  border-bottom: 0.1px solid grey;
   padding: 10px;
 
   line-height: 30px;
   text-align: left;
   color: #78797a;
 
-  background-color: white;
+  /* background-color: white; */
   border-radius: 2px;
   cursor: pointer;
 
   display: flex;
   align-items: space-between;
+}
+.item-box:hover {
+  background-color: #f8f4f4;
 }
 
 .movie_title {
@@ -88,7 +91,7 @@ export default {
 }
 
 .movie_poster_container {
-  position: absolute;
+  /* position: absolute; */
   right: 5px;
 }
 .movie_poster {
