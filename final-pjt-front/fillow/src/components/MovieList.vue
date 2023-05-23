@@ -108,7 +108,7 @@ export default {
 
 <style>
 /* 상단 메뉴 버튼 (위치 기반 추천 버튼, 영화추가 버튼) */
-.func_menu {
+/* .func_menu {
   position: fixed;
   display: flex;
   left: 10px;
@@ -146,7 +146,7 @@ export default {
 .func_btn:active {
   transform: translate(0);
   box-shadow: none;
-}
+} */
 
 /* 검색창 */
 .input {

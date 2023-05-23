@@ -3,19 +3,16 @@
 
     <!-- {{ detail_data }} -->
     <div v-if="detail_data">
-      <div class="detail_card_wrapper">
-        <img :src="`https://image.tmdb.org/t/p/original/${detail_data.backdrop_path}`" alt="bdi" class="backdropimage">
-        <div class="detail_card">
-
+      <div class="detail_card_wrapper" :style="`background-image: url('https://image.tmdb.org/t/p/original/${detail_data.backdrop_path}')`"></div>
+      
+      <div class="detail_card">
           <!-- 지역 이동 버튼, 적어도 한개 이상의 지역이 있을 때 -->
           <div>{{ detail_data.movielocation_set.length }}</div>
-          <div id="next" v-if="detail_data.movielocation_set.length > 0" @click="moveTo">
-            <div class="material-icons">NEXT</div>
+          <div class="next_btn" v-if="detail_data.movielocation_set.length > 0" @click="moveTo"> 
+            <div class="func_btn">Move To this Location</div>
           </div>
 
-
           {{ detail_data.movielocation_set }}
-        </div>
       </div>
 
     </div>
@@ -41,12 +38,10 @@
 
 <script>
 import axios from 'axios'
+// import { mapState } from "vuex";
 
 export default {
   name:'MovieDetail',
-  computed:{
-
-  },
   props:{
     detail_data: Object,
   },
@@ -54,7 +49,11 @@ export default {
     moveTo(){
       this.current_location += 1
       this.current_location = this.current_location % this.detail_data.movielocation_set.length
-      console.log(this.current_location);
+      const payload = {
+        lat:this.detail_data.movielocation_set[this.current_location].latitude,
+        lng:this.detail_data.movielocation_set[this.current_location].longitude,
+      }
+      this.$store.dispatch('moveTo', payload)
     },
 
     goAdd(){
@@ -108,29 +107,21 @@ export default {
 <style>
 .detail_card_wrapper {
   position: relative;
-  overflow-y: auto;
-  max-height: 400x;
-}
-.backdropimage {
-  position: absolute;
   height: 100%;
-  background-size: contain;
-  left: 0px;
-  opacity: 50%;
+  background-size: cover;
+  background-position: center;
 }
 .detail_card {
   text-align: center;
   color: black;
 }
 
-#next {
-  position: relative;
-  width: 100px;
+.next_btn {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 0px;
   height: 50px;
-  background-color: #333;
-  color: #fff;
-  border: 2px solid #fff;
-  border-radius: 10px;
   cursor: pointer;
   display: flex;
   justify-content: center;

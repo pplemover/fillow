@@ -24,20 +24,17 @@
     
     <router-view/>
 
-    <footer>
+    <footer class="footer">
+      <p class="copyright">&copy; Fillow. All Rights Reserved.</p>
       <ul class="menu">
         <li><a href="javascript:void(0)" class="green">개인정보처리방침</a></li>
         <li><a href="javascript:void(0)">위치정보 이용약관</a></li>
       </ul>
-
       <div class="info">
         <span>최종 프로젝트 [임휘진, 김동욱]</span>
         <span>개인정보 책임자 : 임휘진</span>
       </div>
-
-      <p class="copyright">
-        &copy; <span class="this-year"></span> Fillow. All Rights Reserved.
-      </p>
+      
       <img src="@/assets/images/header_fillow.png" alt="logo" class="logo" />
     </footer>
 
@@ -270,6 +267,7 @@ header {
 footer {
   position: fixed;
   width: 100%;
+  height: 100%;
   background-color: #272727;
   border-top: 1px solid #032c16;
 }

@@ -3,12 +3,17 @@
 
     <div class="item-box" @click="selectThisItem">
       <div>
-        <!-- 영화제목 -->
+
         <div class="movie_title">{{movieitem.title}}</div>
-        <!-- Tagline -->
+        <div class="movie_release_year">{{movieitem.release_date.slice(0, 4)}}</div>
+
         <div class="movie_tagline">{{movieitem.tagline}}</div>
-        <!-- TMDB Score · 개봉년월일 · 언어 -->
-        <div class="movie_bitinfo">{{movieitem.vote_avg}} · {{ movieitem.release_date }} · {{ movieitem.original_language }}</div>
+
+        <span v-for="index in 5" :key="index" :class="{'filled': index <= rating}" @click="setRating(index)">&#9733;</span>
+        <div class="tmdb_score smlet">({{((movieitem.vote_avg)/2).toFixed(1)}})</div>
+
+        <div class="smlet">{{movieitem.original_language}}</div>
+
       </div>
 
       <div class="movie_poster_container">
@@ -30,8 +35,16 @@ export default {
     selectThisItem(){
       // console.log(this.movieitem.movie_id);
       this.$store.dispatch('selectThisItem', this.movieitem.movie_id)
-    } 
-  }
+    },
+    setRating(index) {
+      this.rating = index;
+    }
+  },
+  data() {
+    return {
+      rating: (this.movieitem.vote_avg) / 2
+    }
+  },
 }
 </script>
 
@@ -60,9 +73,18 @@ export default {
   font-weight: 600;
   color: black;
 }
+.movie_title, .movie_release_year, .tmdb_score {
+  display: inline-block;
+  margin-right: 8px;
+}
 .movie_tagline {
   font-size: 14px;
-  font-weight: 100;
+  font-weight: 200;
+}
+.smlet {
+  font-size: 13px;
+  margin-left: 1px;
+  margin-right: 1px;
 }
 
 .movie_poster_container {
@@ -71,7 +93,11 @@ export default {
 }
 .movie_poster {
   border-radius: 5px;
-  width: 80px;
+  width: 85px;
   background-size: cover;
+}
+
+.filled {
+  color: gold; 
 }
 </style>

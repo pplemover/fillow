@@ -5,12 +5,13 @@ import router from './router'
 
 import "bootstrap";
 import"bootstrap/dist/css/bootstrap.min.css"
+import '@mdi/font/css/materialdesignicons.css'
+import VueStarRating from 'vue-star-rating';
 
 import * as VueGoogleMaps from "vue2-google-maps" // Import package
 
 import '@/styles/global.css' // scrollbar customizing css
 
-import '@mdi/font/css/materialdesignicons.css'
 
 Vue.config.productionTip = false
 
@@ -21,6 +22,8 @@ Vue.use(VueGoogleMaps, {
     region: "KR" 
   }
 });
+
+Vue.use(VueStarRating);
 
 new Vue({
   store,

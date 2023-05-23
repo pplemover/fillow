@@ -21,43 +21,43 @@
   }
 
   /* 커스텀버튼 */
-  .btn_custom {
-    width: 80px;
-    padding: 5px;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 700;
-    text-align: center;
+  .func_menu {
+    position: fixed;
+    display: flex;
+    left: 10px;
+    right: 15px;
+    width: 490px;
     cursor: pointer;
-    box-sizing: border-box;
-    display: block;
-    transition: .3s;
+    background-color: white;
   }
-  .btn_custom:hover{
-    background-color: #333;
-    color: #fff;
+  .func_btn {
+    --bg: #3B9E83;
+    --hover-bg: #0fca66;
+    --bg-color: #3B9E83;
+    --hover-text: black;
+    --main-color: #323232;
+  
+    margin: 5px 5px 5px;
+    padding: 0.5em 0.5em;
+  
+    height: 40px;
+    color: whitesmoke; 
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+  
+    font-size: 15px;
+    font-weight: 400;
   }
-  .btn_custom.btn_custom--darkgreen {
-    color: white;
-    background-color: #809592;
+  .func_btn:hover {
+    color: var(--hover-text);
+    transform: translate(-0.25rem,-0.25rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem var(--bg);
   }
-  .btn_custom.btn_custom--darkgreen:hover {
-    color: #528265;
-    border-color: #528265;
+  .func_btn:active {
+    transform: translate(0);
+    box-shadow: none;
   }
-  .btn_custom.btn_custom--transparent {
-    color: #528265;
-    border-color: #528265;
-  }
-  .btn_custom.btn_custom--transparent:hover {
-    color: #809592;
-    background-color: #528265;
-  }
-  .btn_custom.btn_custom--white {
-    color: #FFF;
-    border-color: #FFF;
-  }
-  .btn_custom.btn_custom--white:hover {
-    color: #333;
-    background-color: #FFF;
-  }
+

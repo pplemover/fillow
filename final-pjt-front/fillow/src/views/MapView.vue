@@ -23,7 +23,7 @@
         @keyup.esc="openMarker(null)"
         :opened="openedMarkerID === m.id"
         >
-        
+
           <InfoWindowVue
           :movie-location-item="m.data"
           />
@@ -40,6 +40,7 @@
 <script>
 // InfoWindow 수정중...............................................
 import InfoWindowVue from '@/components/InfoWindow.vue';
+import { mapState } from "vuex";
 
 export default {
   name: "MapView",
@@ -48,9 +49,13 @@ export default {
     InfoWindowVue,
   },
   methods:{
-    moveTo(){
-      const targetCoordinates = { lat: 32.7128, lng: -81.0060 };
-      const targetzoom = 8
+    moveTo(data){
+      console.log(typeof data.lat);
+      const targetCoordinates = {
+        lat:parseFloat(data.lat),
+        lng:parseFloat(data.lng),
+      }
+      const targetzoom = 5
 
       // Access the map instance and pan to the new coordinates
       const map = this.$refs.map.$mapPromise;
@@ -80,7 +85,14 @@ export default {
       existingPlace: null
     };
   },
+  watch:{
+    moveto(data){
+      console.log(data);
+      this.moveTo(data)
+    }
+  },
   computed: {
+    ...mapState(['moveto']),
     locationMarkers() {
       const MovieLocations = this.$store.getters.currentLocations
       // console.log(MovieLocations)
@@ -105,3 +117,7 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+
+</style>

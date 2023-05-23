@@ -51,6 +51,9 @@ export default new Vuex.Store({
       // console.log(payload);
       state.my_location = payload
     },
+    MOVE_TO(state, payload){
+      state.moveto = payload
+    },
 
     // =============================mutations 인증 시스템 관련 =================================
     SAVE_TOKEN(state, token){
@@ -85,6 +88,10 @@ export default new Vuex.Store({
     },
     getMyLocation(context, payload){
       context.commit('GET_MY_LOCATION', payload)
+    },
+    moveTo(context, payload){
+      console.log(payload);
+      context.commit('MOVE_TO', payload)
     },
 
     // =============================actions 인증 시스템 관련 =================================
