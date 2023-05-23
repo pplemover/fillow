@@ -43,10 +43,11 @@ export default {
   width: 100%;
   height: 140px;
   margin: 10px;
+  padding: 10px;
   line-height: 30px;
   text-align: center;
 
-  background-color: green;
+  background-color: grey;
 
   display: flex;
   align-items: space-between;

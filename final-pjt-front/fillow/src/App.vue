@@ -159,4 +159,164 @@ header {
   transform: translate(0);
   box-shadow: none;
 }
+
+/* SIGN CARD */
+.sign {
+  position: relative;
+  font-family: 'Do Hyeon', sans-serif;
+  padding: 93px;
+  background-image: url("https://source.unsplash.com/random/?movies");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-top: 61px;
+}
+.sign h1 {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 30px;
+  font-weight: 400;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.sign__card {
+  width: 500px;
+  left: 0;
+  border-radius: 10px;
+  background-color: #F6F5F0;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, .3);
+  color: #555;
+}
+.sign__card h2 {
+  padding: 30px;
+  font-size: 18px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.sign__card h2 strong {
+  font-weight: 400;
+  color: #006633;
+}
+
+.sign__card form {
+  padding: 30px 22px;
+  margin-bottom: 25px;
+}
+.sign__card form input {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.sign__card form [type="submit"] {
+  background-color: #528265;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.sign__card form p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: grey;
+  text-align: center;
+}
+.sign__card .actions {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+.sign__card .actions a {
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: center;
+  padding: 20px;
+  color: #555;
+  font-size: 14px;
+  border-right: 1px solid #ddd; 
+}
+.sign__card .actions a:last-child {
+  border-right: none;
+}
+.sign__card .actions a:hover {
+  text-decoration: underline;
+}
+
+
+/*FOOTER*/
+footer {
+  background-color: #272727;
+  border-top: 1px solid white;
+}
+footer .inner {
+  padding: 40px 0 60px 0;
+}
+footer .menu {
+  display: flex;
+  justify-content: center;
+}
+footer .menu li {
+  position: relative;
+}
+footer .menu li::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #555;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  margin: auto;
+}
+footer .menu li:last-child::before {
+  display: none;
+}
+footer .menu li a {
+  display: block;
+  color: #CCC;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 15px;
+}
+footer .menu li a.green {
+  color: #669900;
+}
+footer .btn-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+footer .btn-group .btn {
+  font-size: 12px;
+  margin-right: 10px;
+}
+footer .btn-group .btn:last-child {
+  margin-right: 0;
+}
+footer .info {
+  margin-top: 30px;
+  text-align: center;
+}
+footer .info span {
+  margin-right: 20px;
+  color: #999;
+  font-size: 12px;
+}
+footer .info span:last-child {
+  margin-right: 0;
+}
+footer .copyright {
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}
+footer .logo {
+  margin: 30px auto 0;
+}
 </style>

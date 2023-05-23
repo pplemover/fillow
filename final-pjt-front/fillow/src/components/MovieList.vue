@@ -49,7 +49,7 @@ export default {
 
 <style>
 .recommend_btn {
-  --bg: #528265;
+  --bg: #3B9E83;
   --hover-bg: #0fca66;
   --hover-text: black;
   margin: 5px 10px 5px;
