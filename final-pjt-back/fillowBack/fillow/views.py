@@ -5,8 +5,10 @@ from rest_framework.response import Response
 from .models import MovieLocation, Movie
 from .serializers import MovieLocationSerializer, MovieSerializer, MovieDetailSerializer, MovieCreateSerializer
 
+from rest_framework.pagination import PageNumberPagination
 from rest_framework import status
 from django.http import QueryDict
+from django.db.models import Q
 
 #=========================요청==============
 import requests
@@ -49,9 +51,28 @@ def update_location(request, location_pk):
 def movie_list(request):
     # get method는 모든 목록을 달라고 할때
     if request.method == "GET":
-        movies = get_list_or_404(Movie)
-        serializer = MovieSerializer(movies, many=True)
-        return Response(serializer.data)
+        # pagination 설정
+        pagination_class = PageNumberPagination()
+        pagination_class.page_size = 10
+        # pagination 설정
+        
+        query = request.GET.get('query')
+        
+        # 쿼리문이 있을때와 없을때 구분
+        if query:
+            # Perform the search using the name field and the query string
+            movies = Movie.objects.filter(Q(title__icontains=query))
+            paginated_queryset = pagination_class.paginate_queryset(movies, request)
+            serializer = MovieSerializer(paginated_queryset, many=True)
+            return Response(serializer.data)
+        else:
+            movies = get_list_or_404(Movie)
+            paginated_queryset = pagination_class.paginate_queryset(movies, request)
+            serializer = MovieSerializer(paginated_queryset, many=True)
+            return Response(serializer.data)
+        
+    
+    # 여기는 영화 추가하기========================================================================================
     if request.method == "POST":
         # print(request.GET.get('id'), '##############################')  # 아이디 받아옴
         movie_pk = request.GET.get('id')

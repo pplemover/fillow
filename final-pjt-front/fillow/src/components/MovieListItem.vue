@@ -4,8 +4,8 @@
     <!-- 개봉년월일 -->
     <!-- 장르, 상영시간 -->
     <!-- 촬영장소 -->
-    <div class="item-box">
-      <div @click="selectThisItem">
+    <div class="item-box" @click="selectThisItem">
+      <div>
         <!-- 영화제목 -->
         <div>{{movieitem.title}}</div>
         <!-- Tagline -->
@@ -15,10 +15,9 @@
       </div>
       <div>
         <!-- 영화 포스터 -->
-        <img :src="`https://image.tmdb.org/t/p/original/${movieitem.poster_path}`" alt="" width="100px" height="150px">
+        <img :src="`https://image.tmdb.org/t/p/original/${movieitem.poster_path}`" alt="" class="movie_poster">
       </div>
     </div>
-    <hr>
 
   </div>
 </template>
@@ -42,14 +41,21 @@ export default {
 .item-box {
   width: 100%;
   height: 140px;
-  margin: 10px;
+  border-bottom: 0.5px solid black;
   padding: 10px;
+
   line-height: 30px;
   text-align: center;
 
-  background-color: grey;
+  background-color: white;
+  border-radius: 2px;
 
   display: flex;
   align-items: space-between;
+}
+.movie_poster {
+  border-radius: 5px;
+  width: 80px;
+  background-size: cover;
 }
 </style>

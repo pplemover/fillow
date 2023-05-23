@@ -20,7 +20,7 @@ import RecommendItem from "@/components/RecommendItem.vue";
 export default {
   name:'RecommendView',
   created(){
-    this.$store.dispatch('getMovieLocations')
+    // this.$store.dispatch('getMovieLocations')
     // 타이밍 때문에 시간 걸어줌
     setTimeout(() => {
       this.calculate()

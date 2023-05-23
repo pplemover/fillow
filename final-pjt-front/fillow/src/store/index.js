@@ -144,6 +144,28 @@ export default new Vuex.Store({
         console.log(err);
       })
     },
+    ChangePassword(context, payload){
+      const password1 = payload.password1
+      const password2 = payload.password2
+
+      axios({
+        method:'post',
+        url:`${DJANGO_URL}/accounts/password/change/`,
+        headers:{
+          Authorization: `Token ${payload.token}`
+        },
+        data:{
+          password1: password1,
+          password2: password2,
+        }
+      })
+      .then((res)=>{
+        console.log(res);
+      })
+      .catch((err)=>{
+        console.log(err);
+      })
+    }
     // =============================actions 인증 시스템 관련 =================================
   },
   modules: {

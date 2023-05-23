@@ -23,6 +23,24 @@
     </header>
     
     <router-view/>
+
+    <footer>
+      <ul class="menu">
+        <li><a href="javascript:void(0)" class="green">개인정보처리방침</a></li>
+        <li><a href="javascript:void(0)">위치정보 이용약관</a></li>
+      </ul>
+
+      <div class="info">
+        <span>최종 프로젝트 [임휘진, 김동욱]</span>
+        <span>개인정보 책임자 : 임휘진</span>
+      </div>
+
+      <p class="copyright">
+        &copy; <span class="this-year"></span> Fillow. All Rights Reserved.
+      </p>
+      <img src="@/assets/images/header_fillow.png" alt="logo" class="logo" />
+    </footer>
+
   </div>
 </template>
 
@@ -96,6 +114,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   text-decoration: none;
+  height: 100%;
 }
 
 /* HEADER */
@@ -108,7 +127,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #528265;
+  border-top: 1px solid #032c16;
+  border-bottom: 2px solid #032c16;
   z-index: 9;
 }
 .logo {
@@ -169,7 +189,7 @@ header {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  margin-top: 61px;
+  margin-top: 60px;
 }
 .sign h1 {
   color: white;
@@ -246,14 +266,12 @@ header {
   text-decoration: underline;
 }
 
-
 /*FOOTER*/
 footer {
+  position: fixed;
+  width: 100%;
   background-color: #272727;
-  border-top: 1px solid white;
-}
-footer .inner {
-  padding: 40px 0 60px 0;
+  border-top: 1px solid #032c16;
 }
 footer .menu {
   display: flex;
@@ -284,22 +302,10 @@ footer .menu li a {
   padding: 15px;
 }
 footer .menu li a.green {
-  color: #669900;
-}
-footer .btn-group {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-}
-footer .btn-group .btn {
-  font-size: 12px;
-  margin-right: 10px;
-}
-footer .btn-group .btn:last-child {
-  margin-right: 0;
+  color: #528265;
 }
 footer .info {
-  margin-top: 30px;
+  margin-top: 10px;
   text-align: center;
 }
 footer .info span {
@@ -314,9 +320,9 @@ footer .copyright {
   color: #999;
   font-size: 12px;
   text-align: center;
-  margin-top: 12px;
+  margin-top: 5px;
 }
 footer .logo {
-  margin: 30px auto 0;
+  margin: 5px;
 }
 </style>

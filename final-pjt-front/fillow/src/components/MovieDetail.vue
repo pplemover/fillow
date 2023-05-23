@@ -1,12 +1,18 @@
 <template>
   <div>
 
-    <!-- {{ selected_movie_id }} -->
-    <!-- 기본 데이터들 -->
+    <!-- {{ detail_data }} -->
     <div v-if="detail_data">
-      {{ detail_data }}
-      {{ detail_data.movie_id}}
+      <div class="detail_card_wrapper">
+        <img :src="`https://image.tmdb.org/t/p/original/${detail_data.backdrop_path}`" alt="bdi" class="backdropimage">
+        <div class="detail_card">
+          {{ detail_data }}
+        </div>
+      </div>
+
     </div>
+
+    
     
 
 
@@ -37,7 +43,7 @@ export default {
 
   },
   props:{
-    detail_data:Object,
+    detail_data: Object,
   },
   methods:{
 
@@ -87,5 +93,19 @@ export default {
 </script>
 
 <style>
-
+.detail_card_wrapper {
+  position: relative;
+}
+.backdropimage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  left: 0px;
+  opacity: 50%;
+}
+.detail_card {
+  text-align: center;
+  color: black;
+}
 </style>

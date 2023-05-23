@@ -2,7 +2,7 @@ import requests
 import json
 import pandas as pd
 
-TMDB_API_KEY = '6aee34be99bb1d1b3fa358b709332b7e'  # .env 파일에서 불러옴.
+TMDB_API_KEY = '6aee34be99bb1d1b3fa358b709332b7e'  # .env 파일에서 불러옴. 귀찮아서 그냥 할래
 
 def get_movie_datas():
     total_data = []
@@ -97,7 +97,7 @@ def edit_json():
     
 # edit_json()
 
-get_movie_datas()
+# get_movie_datas()
 # get_genre_datas()
 
 # readcsv = pd.read_csv('helloworld.csv',engine='python',encoding='CP949')

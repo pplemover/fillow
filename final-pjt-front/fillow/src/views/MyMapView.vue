@@ -33,7 +33,7 @@ export default {
 /* MovieListView, MovieInfoView, MapView */
 .flex-box {
   display: flex;
-  margin-top: 61px;
+  margin-top: 60px;
 }
 .left {
   flex-basis: 25%;

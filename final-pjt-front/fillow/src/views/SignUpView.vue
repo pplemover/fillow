@@ -15,32 +15,6 @@
         </form>
       </div>
     </section>
-
-    <footer>
-      <ul class="menu">
-        <li><a href="javascript:void(0)" class="green">개인정보처리방침</a></li>
-        <li><a href="javascript:void(0)">영상정보처리기기 운영관리 방침</a></li>
-        <li><a href="javascript:void(0)">홈페이지 이용약관</a></li>
-        <li><a href="javascript:void(0)">위치정보 이용약관</a></li>
-        <li><a href="javascript:void(0)">윤리경영 핫라인</a></li>
-      </ul>
-
-      <div class="btn-group">
-        <a href="javascript:void(0)" class="btn btn--white">찾아오시는 길</a>
-        <a href="javascript:void(0)" class="btn btn--white">사이트 맵</a>
-      </div>
-
-      <div class="info">
-        <span>1학기 최종 프로젝트</span>
-        <span>개인정보 책임자 : 임휘진</span>
-      </div>
-
-      <p class="copyright">
-        &copy; <span class="this-year"></span> Starbucks Coffee Company. All Rights Reserved.
-      </p>
-      <!-- <img src="@/assets/images/logo.png" alt="logo" class="logo" /> -->
-    </footer>
-
   </div>
 </template>
 

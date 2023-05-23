@@ -5,6 +5,8 @@ import MyMapView from '@/views/MyMapView'
 import LoginView from '@/views/LoginView.vue'
 import SignUpView from '@/views/SignUpView.vue'
 import RecommendView from '@/views/RecommendView'
+import AddMovieView from '@/views/AddMovieView'
+import ChangePasswordView from '@/views/ChangePasswordView'
 
 Vue.use(VueRouter)
 
@@ -18,6 +20,16 @@ const routes = [
     path: '/RecommendView',
     name: 'RecommendView',
     component: RecommendView
+  },
+  {
+    path: '/ChangePasswordView',
+    name: 'ChangePasswordView',
+    component: ChangePasswordView
+  },
+  {
+    path: '/AddMovieView',
+    name: 'AddMovieView',
+    component: AddMovieView
   },
   {
     path: '/',
@@ -52,6 +64,12 @@ const routes = [
       ogUrl: 'https://starbucks.co.kr',
     },
   },
+  // 404 띄울 곳
+  // {
+  //   path: '*',
+  //   name: '*',
+  //   component: MyMapView
+  // },
 ]
 
 const router = new VueRouter({

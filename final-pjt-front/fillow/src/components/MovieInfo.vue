@@ -1,16 +1,15 @@
 <template>
   <div>
-    <!-- 아래 이거 없으면 데이터 변경 제대로 반영 안됨 -->
+    <!-- selected movie id 가 없으면 데이터 변경 제대로 반영 안됨 -->
     <div v-show="false">{{ selected_movie_id }}</div>
     
     <div class="MovieVideo">
-      <MovieVideo :detail_data="detail_data"/>
-      <div class="MovieDetail">
+        <MovieVideo :detail_data="detail_data"/>
+    </div>
+    <div class="MovieDetail">
         <MovieDetail :detail_data="detail_data"/>
     </div>
-    </div>
 
-    
 
   </div>
 </template>
@@ -61,10 +60,6 @@ export default {
 
 <style>
 .MovieVideo {
-  position: fixed;
-}
-.MovieDetail {
-  position: relative;
-  top: 5px;
+  height: 400px;
 }
 </style>
