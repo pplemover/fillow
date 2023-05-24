@@ -39,7 +39,7 @@
             <!-- 영화 촬영지-->
             <span style="color: lightcoral">영화 촬영지</span>
             <div class="m_location" v-if="detail_data.movielocation_set.length !== 0">
-              {{ detail_data.title }} 의 대표적인 촬영지는
+              &lt;{{ detail_data.title }}&gt; 의 대표적인 촬영지는
               {{detail_data.movielocation_set[current_location ].location_country}}의 
               {{detail_data.movielocation_set[current_location ].location_name}}입니다.
 
@@ -60,18 +60,8 @@
             <!-- 영화 촬영지 지역 추가 폼 -->
             <div class="submit_wrapper">
               <div class="moveto_btn" @click="goAdd">
-                내가 아는 다른 {{ detail_data.title }} 영화 촬영지 추가하기
+                내가 아는 다른 &lt;{{ detail_data.title }}&gt; 영화 촬영지 추가하기
               </div>
-              <!-- <div class="flip=card" v-if="isCreate">
-                <p class="flip-card__input">지명<input type="text" v-model="addLocationData.location_name"></p>
-                <p class="flip-card__input">경도<input type="text" v-model="addLocationData.longitude"></p>
-                <p class="flip-card__input">위도<input type="text" v-model="addLocationData.latitude"></p>
-                <p class="flip-card__input">국가<input type="text" v-model="addLocationData.location_country"></p>
-                <p class="flip-card__input">영화장면 유튜브 URL<input type="text" v-model="addLocationData.youtube_url"></p>
-                <p class="flip-card__input">지역 사진 URL<input type="text" v-model="addLocationData.location_photo_url"></p>
-                <p class="flip-card__input">지역 설명<input type="text" v-model="addLocationData.location_description"></p> 
-              </div> -->
-
               <div class="form" v-if="isCreate">
                 <div class="group">
                   <input required="true" class="main-input" type="text" v-model="addLocationData.location_name">
@@ -358,7 +348,7 @@ span {
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 15px;
-  margin: 5px 20px;
+  margin: 5px 2px 5px 30px;
   background-color: black;
   border-radius: 5px;
   position: relative;

@@ -79,7 +79,6 @@ export default {
 <style>
 .MovieInfo {
   background-color: black;
-  height: 100vh;
 }
 .MovieVideo {
   position: relative;
