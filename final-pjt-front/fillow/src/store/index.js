@@ -100,7 +100,8 @@ export default new Vuex.Store({
       })
     },
     selectThisItem(context, index){
-      // console.log(index,'store');
+      // console.log('in the store');
+      console.log(index,'store');
       context.commit('SELECT_THIS_ITEM', index)
     },
     getMyLocation(context, payload){

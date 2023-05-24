@@ -12,8 +12,8 @@
     >
 
     <div
-    :key="index"
-    v-for="(m, index) in locationMarkers"
+    v-for="m in locationMarkers"
+    :key="m.id"
     >
       <gmap-marker
       v-if="$store.getters.selectedmovie === m.data.tmdb_id"
@@ -121,7 +121,7 @@ export default {
     }
   },
   created() {
-    // console.log(this.locationMarkers)
+    console.log(this.locationMarkers)
   }
 };
 </script>

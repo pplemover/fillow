@@ -38,6 +38,7 @@ export default {
   },
   methods:{
     getAnotherMovie(){
+      this.beforequery = null
       this.homemovielist = null
       this.page = 1
       this.getMovieList(this.page)
@@ -48,7 +49,7 @@ export default {
       const scrollHeight = container.scrollHeight;
       // console.log(scrollPosition, scrollHeight, '##################');
       // 컴포넌트 안에서 아래쪽에 닿았는지 확인 해야 됨.
-      if (scrollPosition >= scrollHeight) {
+      if (scrollPosition+0.5 >= scrollHeight) {
         console.log(true);
         this.page+=1
         this.getMovieList(this.page)

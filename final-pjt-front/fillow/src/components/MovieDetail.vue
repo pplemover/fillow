@@ -144,15 +144,49 @@ export default {
     detail_data: Object,
   },
   watch:{
-    detail_data(){
-      this.moveTo()
+    // 이게 진짜 있네?
+    detail_data(newValue,oldValue){
+      if (newValue && oldValue) {  // 전, 후 둘다 있으면(없으면 생성시에 오류 뜸)
+        console.log(newValue, oldValue);
+        if (newValue.movie_id !== oldValue.movie_id) {  // 만약 선택 영화가 바뀐 경우
+          this.current_location = this.detail_data.movielocation_set.length-1
+          this.moveTo()
+          this.isCreate = false
+        // 영화 장소 리스트 길이가 바뀐 경우(추가되거나 삭제된 경우 똑같이 시행)
+        } else if(newValue.movielocation_set.length !== oldValue.movielocation_set.length){ 
+          this.current_location = this.detail_data.movielocation_set.length-1
+          this.moveTo()
+          this.isCreate = false
+        } else{  // 그대로인 경우(데이터가 바뀌었는데 길이는 그대로 === 수정된 경우)
+          // console.log(123);
+          let update_index = 0
+          for (let index = 0; index < newValue.movielocation_set.length; index++) {
+            // console.log(newValue.movielocation_set[index]);
+            if (JSON.stringify(newValue.movielocation_set[index]) !== JSON.stringify(oldValue.movielocation_set[index])) {
+              update_index = index
+              break
+            }
+          }
+          this.current_location = update_index
+          console.log(this.current_location);
+          this.moveTo()
+          this.isCreate = false
+        }
+      }
+      // console.log(123);
+      // detail data 변경, 즉 이 폼 채우는 데이터 변경 감지되서 실행되면 데이터가 가진 마지막 location_set 요소 가져오게 해서 지도 이동
+      // 데이터 수정시에도 시행되서 역시 마지막 데이터로 이동
+      // 수정된 데이터로 이동할 수 있는 방법???????
+      else{
+        this.current_location = this.detail_data.movielocation_set.length-1
+        this.moveTo()
+        this.isCreate = false
+      }
     }
   },
   methods:{
     moveTo(){
       if (this.detail_data.movielocation_set.length !== 0) {
-        this.current_location += 1
-        this.current_location = this.current_location % this.detail_data.movielocation_set.length
         const payload = {
           lat:this.detail_data.movielocation_set[this.current_location].latitude,
           lng:this.detail_data.movielocation_set[this.current_location].longitude,
@@ -162,6 +196,10 @@ export default {
         // console.log(this.current_location);
         // console.log('#######################################################');
         this.$store.dispatch('moveTo', payload)
+        // 순환
+        this.current_location += 1
+        this.current_location = this.current_location % this.detail_data.movielocation_set.length
+        // 순환
       }
     },
 

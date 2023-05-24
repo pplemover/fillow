@@ -40,7 +40,8 @@ export default {
     },
   },
   created(){
-    this.getMovieDetail(this.$store.getters.selectedmovie)
+    // 아래 컴퓨티드에서 변경 감지되서 created에서 데이터 요청 일단 필요 없음
+    // this.getMovieDetail(this.$store.getters.selectedmovie)
   },
   computed:{
     selected_movie_id(){
