@@ -43,7 +43,7 @@
   "fields": {
    "tmdb_id": 857,
    "location_country": "아일랜드",
-   "location_name": "커라클로 비치(Curracloe Beach)",
+   "location_name": "커라클로 해변(Curracloe Beach)",
    "latitude": 52.38869874,
    "longitude": -6.362141548,
    "youtube_url": "https://www.youtube.com/embed/n0YGJ5D8VZk",
@@ -186,7 +186,7 @@
   "fields": {
    "tmdb_id": 49026,
    "location_country": "인도",
-   "location_name": "메랑가르 포르(Mehrangarh Fort)",
+   "location_name": "메랑가르 포트(Mehrangarh Fort)",
    "latitude": 26.29970276,
    "longitude": 73.01949171,
    "youtube_url": "https://www.youtube.com/embed/LdrZeSewhB0",
@@ -238,7 +238,7 @@
   "fields": {
    "tmdb_id": 11631,
    "location_country": "그리스",
-   "location_name": "스키아토스(Skiathos)",
+   "location_name": "스키아토스 섬(Skiathos)",
    "latitude": 39.17284577,
    "longitude": 23.45086989,
    "youtube_url": "https://www.youtube.com/embed/05qid4p_cfw",
@@ -264,7 +264,7 @@
   "fields": {
    "tmdb_id": 68734,
    "location_country": "터키",
-   "location_name": "그랜드 바자르(Grand Bazaar at Istanbul)",
+   "location_name": "그랜드 바자르(Grand Bazaar)",
    "latitude": 41.01087907,
    "longitude": 28.96805737,
    "youtube_url": "https://www.youtube.com/embed/t2NytKIhd68",
@@ -316,7 +316,7 @@
   "fields": {
    "tmdb_id": 13448,
    "location_country": "이탈리아",
-   "location_name": "콰트로 피우미 분수(the Fountain of the Four Rivers, Piazza Navona, Rome)",
+   "location_name": "콰트로 피우미 분수(the Fountain of the Four Rivers)",
    "latitude": 41.89910238,
    "longitude": 12.47315939,
    "youtube_url": "https://www.youtube.com/embed/Pw0CzPQdaE4",
@@ -329,7 +329,7 @@
   "fields": {
    "tmdb_id": 72190,
    "location_country": "스코틀랜드",
-   "location_name": "조지 광장(George Square in Glasgow, Scotland)",
+   "location_name": "조지 광장(George Square in Glasgow)",
    "latitude": 55.86087645,
    "longitude": -4.250341089,
    "youtube_url": "https://www.youtube.com/embed/e9ys-ArvLmk",
@@ -342,7 +342,7 @@
   "fields": {
    "tmdb_id": 99861,
    "location_country": "한국",
-   "location_name": "MBC 문화방송 본사",
+   "location_name": "MBC 본사(MBC Broadcasting Station Building)",
    "latitude": 37.581217,
    "longitude": 126.891014,
    "youtube_url": "https://www.youtube.com/embed/cg1rtWXHSKU",
@@ -368,7 +368,7 @@
   "fields": {
    "tmdb_id": 284054,
    "location_country": "한국",
-   "location_name": "부산 자갈치 시장",
+   "location_name": "부산 자갈치 시장(Jagalchi Market)",
    "latitude": 35.09662,
    "longitude": 129.030459,
    "youtube_url": "https://www.youtube.com/embed/JjE9NnBC6v8",
@@ -381,7 +381,7 @@
   "fields": {
    "tmdb_id": 671,
    "location_country": "영국",
-   "location_name": "크라이스트 처치(Christ Church College, Oxford)",
+   "location_name": "옥스퍼드대 크라이스트 처치(Christ Church, Oxford University)",
    "latitude": 51.74999283,
    "longitude": -1.255801687,
    "youtube_url": "https://www.youtube.com/embed/z4K2F_OALPQ",
@@ -420,7 +420,7 @@
   "fields": {
    "tmdb_id": 68718,
    "location_country": "미국",
-   "location_name": "멜로디 무비 랜치(Melody Ranch, Santa Clarita, California)",
+   "location_name": "멜로디 무비 랜치(Melody Ranch)",
    "latitude": 34.38361994,
    "longitude": -118.510315,
    "youtube_url": "https://www.youtube.com/embed/t1beG9Y6I9c",
@@ -472,7 +472,7 @@
   "fields": {
    "tmdb_id": 10138,
    "location_country": "미국",
-   "location_name": "랜디스 도넛(Randy's Donuts, Los Angeles, California)",
+   "location_name": "랜디스 도넛(Randy's Donuts, LA)",
    "latitude": 33.96198385,
    "longitude": -118.3703721,
    "youtube_url": "https://www.youtube.com/embed/OVGbAFy36xM",
@@ -485,7 +485,7 @@
   "fields": {
    "tmdb_id": 313369,
    "location_country": "미국",
-   "location_name": "110번 고속도로(The Harbor Freeway, Los Angeles, California)",
+   "location_name": "110번 고속도로(The Harbor Freeway, LA)",
    "latitude": 33.89513215,
    "longitude": -118.28574,
    "youtube_url": "https://www.youtube.com/embed/7CVfTd-_qbc",
@@ -498,7 +498,7 @@
   "fields": {
    "tmdb_id": 607,
    "location_country": "미국",
-   "location_name": "구겐하임 미술관(Guggenheim Museum)",
+   "location_name": "구겐하임 미술관(Guggenheim Museum, NYC)",
    "latitude": 40.95448213,
    "longitude": -73.99452129,
    "youtube_url": "https://www.youtube.com/embed/bXmo6M2k4Ws",
@@ -602,7 +602,7 @@
   "fields": {
    "tmdb_id": 2454,
    "location_country": "뉴질랜드",
-   "location_name": "커시드럴코브(Cathedral Cove)",
+   "location_name": "커시드럴 코브(Cathedral Cove)",
    "latitude": -36.82877,
    "longitude": 175.790573,
    "youtube_url": "https://www.youtube.com/embed/9iJh40S_GfM",
@@ -615,7 +615,7 @@
   "fields": {
    "tmdb_id": 207703,
    "location_country": "영국",
-   "location_name": "헌츠맨 양장점(11 Savile Row, London W1)",
+   "location_name": "헌츠맨 양장점(11 Savile Row Building)",
    "latitude": 52.74776557,
    "longitude": -1.161821329,
    "youtube_url": "https://www.youtube.com/embed/fuwE3Lvysvs",

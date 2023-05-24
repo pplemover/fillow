@@ -3,12 +3,13 @@
 
     <div class="black-box"></div>
     
-    <div class="addmovie_wrapper">
+    <div class="addmovie_container">
         <h1>내가 좋아하는 영화 추가하기</h1>
         <div class="search-box" @keyup.enter="CheckMovie">
           <input type="input" placeholder="영화 검색" name="text" class="input"  v-model="query">
           <button class="check_btn" @click="CheckMovie">확인</button>
         </div>
+
 
         <div v-if="search_result">
           <div v-if="!search_result.poster_path">
@@ -90,7 +91,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 /*  ================================================================================================================================== */
 .three-body {
  --uib-size: 35px;
@@ -196,17 +197,14 @@ export default {
 }
 /*  ================================================================================================================================== */
 
-.addmovie_wrapper {
-  width: 500px;
+.addmovie_container {
+  max-width: 500px;
   margin: 0 auto;
   position: relative;
   background-color: black;
-  min-height: 100vh;
-}
-
-.search-box {
-  display: flex;
-  position: static;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .input {

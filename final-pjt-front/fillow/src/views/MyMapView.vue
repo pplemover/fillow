@@ -45,7 +45,7 @@ export default {
 /* MovieListView, MovieInfoView, MapView */
 .flex-box {
   display: flex;
-  /* margin-top: 60px; */
+  flex-wrap: wrap;
 }
 .left {
   flex-basis: 25%;
@@ -57,22 +57,26 @@ export default {
   flex-basis: 41.67%;
 }
 
-@media (max-width: 767.98px) {
-  .left {
-    display: none;
-  }
-  .mid {
-    flex-basis: auto; /* 유연한 너비로 설정하여 감소하지 않도록 유지 */
-    max-width: none; /* 최대 너비 제한 해제 */
-    display: block; /* 블록 레벨 요소로 변경 */
-  }
-  .col-md-6 {
-    flex-basis: 100%;
-    max-width: 100%;
-    display: none;
-  }
+@media (max-width: 900.98px) {
+  .left,
+  .mid,
   .right {
-    display: none;
+    flex-basis: 100%;
+  }
+
+  .left {
+    height: 10vh;
+    order: 1;
+  }
+
+  .mid {
+    height: 80vh;
+    order: 2;
+  }
+
+  .right {
+    height: 10vh;
+    order: 3;
   }
 }
 </style>

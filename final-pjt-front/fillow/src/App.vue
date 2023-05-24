@@ -7,9 +7,18 @@
         <a href="/" class="logo"><img src="@/assets/images/header_fillow.png" alt="logo" style="width: 100px; height: auto;"></a>
       </router-link>
 
-      <div class="header_menu">
-        <div @click="goAddMovie" class="func_btn">내가 좋아하는 영화 추가하기</div>
-        <div @click="goRecommend" class="func_btn">내 위치를 기반으로 추천받기</div>
+      <div class="header_menu"> <!-- toggle switch 값에 따라 menu-items 요소의 가시성을 조절하기 위해 Vue.js에서 v-show 디렉티브를 사용 -->
+        <div class="toggle-items">
+          <div class="white">메뉴 ON</div>
+          <label class="switch">
+            <input class="toggle" type="checkbox" v-model="menuVisible">
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="menu-items" v-show="menuVisible">
+            <div @click="goAddMovie" class="func_btn">내가 좋아하는 영화 추가하기</div>
+            <div @click="goRecommend" class="func_btn">내 위치를 기반으로 추천받기</div>
+        </div>
      </div>
       
       <!-- 인증 화면 routing -->
@@ -43,6 +52,11 @@ export default {
     // MovieList,
     // MovieInfo,
   },
+  data (){
+      return {
+      menuVisible: false, // 초기값은 메뉴 숨김 상태로 설정
+    };
+  },
   computed:{
     isLogin(){
       return this.$store.getters.isLogin
@@ -56,8 +70,7 @@ export default {
       lng:null,
     }
     function success(pos) {
-      var crd = pos.coords;
-      
+      var crd = pos.coords;      
       // console.log('Your current position is:');
       // console.log(`Latitude : ${crd.latitude}`);
       // console.log(`Longitude: ${crd.longitude}`);
@@ -107,7 +120,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   text-decoration: none;
-  height: 100%;
 }
 
 /* HEADER */ 
@@ -171,10 +183,74 @@ header {
 }
 
 .header_menu {
-  display: flex;
   position: fixed;
-  left: 125px;
+  left: 130px;
+  width: 425px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.switch {
+  --input-focus: #8AB97C;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --bg-color-alt: #666;
+  --main-color: #323232;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 50px;
+  height: 20px;
+}
+.toggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  position: absolute;
   cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-colorcolor);
+  transition: 0.3s;
+}
+.slider:before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  left: -2px;
+  bottom: 2px;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 0 var(--main-color);
+  transition: 0.3s;
+}
+
+.toggle:checked + .slider {
+  background-color: var(--input-focus);
+}
+.toggle:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+.menu-items {
+  display: flex;
+  left: 50px;
 }
 
 /* SIGN CARD */
