@@ -78,6 +78,7 @@ export default new Vuex.Store({
     },
     DELETE_TOKEN(state){
       state.token = null
+      state.user_detail = null
     },
     // =============================mutations 인증 시스템 관련 =================================
   },

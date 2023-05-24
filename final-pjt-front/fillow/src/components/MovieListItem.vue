@@ -10,10 +10,20 @@
           <div class="movie_tagline">{{movieitem.tagline}}</div>
 
           <span v-for="index in 5" :key="index" :class="{'filled': index <= rating}" @click="setRating(index)">&#9733;</span>
-          <div class="tmdb_score smlet">({{((movieitem.vote_avg)/2).toFixed(1)}})</div>
+          <div class="tmdb_score smlet">({{((movieitem.vote_avg)/2).toFixed(1)}}) · ({{ movieitem.vote_count }})</div>
 
-          <div class="smlet">{{movieitem.original_language | languageFilter }}</div>
-          <!-- movieitem.original_language 변수를 languageFilter 필터를 통해 변환한 결과를 출력 -->
+          <div class="movielistitem_info smlet">
+            <div>{{movieitem.original_language | languageFilter }}<span> · </span></div>
+            <!-- movieitem.original_language 변수를 languageFilter 필터를 통해 변환한 결과를 출력 -->
+            <div>{{ movieitem.runtime }}분<span> · </span></div>
+            <div v-for="(genre, index) in movieitem.genres" :key="genre.id">
+              <div>
+                {{ genre.name }}
+                <span v-if="index !== movieitem.genres.length - 1">-</span>
+              </div>
+            </div>
+          </div>
+          
         </div>
 
         <div class="movie_poster_container">
@@ -71,6 +81,10 @@ export default {
   background-color: #f8f4f4;
 }
 
+.movielistitem_info {
+  display: flex;
+}
+
 .movie_title {
   font-size: 20px;
   font-weight: 600;
@@ -87,7 +101,7 @@ export default {
 .smlet {
   font-size: 13px;
   margin-left: 1px;
-  margin-right: 1px;
+  margin-right: 2px;
 }
 
 .movie_poster_container {

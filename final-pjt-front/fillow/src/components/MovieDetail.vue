@@ -4,78 +4,130 @@
     
     <!-- {{ detail_data }} -->
     <div v-if="detail_data">
-      <div class="detail_card_wrapper" 
+      <div class="detail_card_wrapper"
       :style="{backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(https://image.tmdb.org/t/p/w780${detail_data.backdrop_path})`}"
       >
         <div class="detail_card">
           
-          
-          
-          <div class="m_title">{{ detail_data.title }}</div>     <!--영화 제목--> 
-          <div class="various_info_box">
-            <div class="row1">
-              <div class="m_original_title"><span>원제       </span>{{ detail_data.original_title }}</div> <!-- 영화 원제-->
-              <div class="m_release_date"><span>개봉일      </span>{{ detail_data.release_date }}  </div> <!-- 영화 개봉일-->
-            </div>
-            <div class="row2">
-              <div class="m_runtime"><span>상영시간     </span>{{ detail_data.runtime }}분</div> <!-- 영화 러닝타임-->
-              <div>
-                <span>장르      </span> 
-                <div class="m_genre" v-for="(genre, index) in detail_data.genres" :key="genre.id"> <!-- v-for로 genres 배열을 순회하면서 각 genre 출력 -->
-                  <div>
-                    {{ genre.name }}
-                    <!-- {{ detail_data.genres.length }} -->
-                    <span v-if="index !== detail_data.genres.length - 1">·</span>  <!-- v-if 로 마지막 genre인 경우에만 '·'이 나타나도록 함.--> 
-                  </div>
-                </div>
-              </div> 
-            </div>
-          </div>
-          <hr>
-          <div class="m_summary">  {{ detail_data.overview }}</div> <!-- 영화 줄거리-->
-          <hr>
-          
-          <span>영화 촬영지</span>
-          <div class="m_location">
-            {{ detail_data.title }} 의 대표적인 촬영지는
-            {{detail_data.movielocation_set[current_location ].location_country}}의 
-            {{detail_data.movielocation_set[current_location ].location_name}}입니다.
-          </div>
-          <div @click="moveTo" v-if="detail_data.movielocation_set.length > 1">  <!-- 지역 이동 버튼 (적어도 하나 이상의 지역이 있어야 함)-->
-            <div class="moveto_btn">
-              <div v-if="(detail_data.movielocation_set.length)-1">
-                다른 {{(detail_data.movielocation_set.length)-1}}곳 보기
+            <div class="m_title">{{ detail_data.title }}</div>     <!--영화 제목--> 
+            <div class="various_info_box">
+              <div class="row1">
+                <div class="m_original_title"><span>원제       </span>{{ detail_data.original_title }}</div> <!-- 영화 원제-->
+                <div class="m_release_date"><span>개봉일      </span>{{ detail_data.release_date }}  </div> <!-- 영화 개봉일-->
               </div>
-            </div>
-          </div>
-
-          <!-- 영화 촬영 지 지역 추가 폼 -->
-          <div class="flip-card-wrapper">
-            <div class="card-switch">
-                <label class="switch">
-                  <span class="slider"></span>
-                  <span class="card-side"></span>
-                  <div class="flip-card__inner">
-                    <div class="flip-card__front">
-                      <div class="moveto_btn toggle" @click="goAdd">
-                        내가 아는 {{ detail_data.title }} 영화 촬영지 추가하기
-                      </div>
-                      <div class="flip=card" v-if="isCreate">
-                        <p class="flip-card__input">지명<input type="text" v-model="addLocationData.location_name"></p>
-                        <p class="flip-card__input">경도<input type="text" v-model="addLocationData.longitude"></p>
-                        <p class="flip-card__input">위도<input type="text" v-model="addLocationData.latitude"></p>
-                        <p class="flip-card__input">국가<input type="text" v-model="addLocationData.location_country"></p>
-                        <p class="flip-card__input">영화장면 유튜브 URL<input type="text" v-model="addLocationData.youtube_url"></p>
-                        <p class="flip-card__input">지역 사진 URL<input type="text" v-model="addLocationData.location_photo_url"></p>
-                        <p class="flip-card__input">지역 설명<input type="text" v-model="addLocationData.location_description"></p> 
-                        <button class="submit__btn" @click="createMovieLocation(detail_data.movie_id)">제출하기</button>
-                      </div>
+              <div class="row2">
+                <div class="m_runtime"><span>상영시간     </span>{{ detail_data.runtime }}분</div> <!-- 영화 러닝타임-->
+                <div>
+                  <span>장르      </span> 
+                  <div class="m_genre" v-for="(genre, index) in detail_data.genres" :key="genre.id"> <!-- v-for로 genres 배열을 순회하면서 각 genre 출력 -->
+                    <div>
+                      {{ genre.name }}
+                      <!-- {{ detail_data.genres.length }} -->
+                      <span v-if="index !== detail_data.genres.length - 1">·</span>  <!-- v-if 로 마지막 genre인 경우에만 '·'이 나타나도록 함.--> 
                     </div>
                   </div>
-                </label>
-            </div>   
+                </div> 
+              </div>
+            </div>
+
+            <!-- 영화 줄거리-->
+            <hr>
+            <span style="color: lightcoral">영화 줄거리</span>
+            <div class="m_summary">  {{ detail_data.overview }}</div> 
+            <hr>
+            
+            <!-- 영화 촬영지-->
+            <span style="color: lightcoral">영화 촬영지</span>
+            <div class="m_location" v-if="detail_data.movielocation_set.length !== 0">
+              {{ detail_data.title }} 의 대표적인 촬영지는
+              {{detail_data.movielocation_set[current_location ].location_country}}의 
+              {{detail_data.movielocation_set[current_location ].location_name}}입니다.
+
+              <div class="m_summary" v-if="(detail_data.movielocation_set[current_location].location_description)">
+                {{ detail_data.movielocation_set[current_location ].location_description }}
+              </div>
+            </div>
+
+            <!-- 지역 이동 버튼 -->
+            <div @click="moveTo" v-if="detail_data.movielocation_set.length > 1">
+              <div class="moveto_btn">
+                <div v-if="(detail_data.movielocation_set.length)-1">
+                  다른 {{ detail_data.title }} 촬영지 {{(detail_data.movielocation_set.length)-1}}곳 보기
+                </div>
+              </div>
+            </div>
+
+            <!-- 영화 촬영지 지역 추가 폼 -->
+            <div class="submit_wrapper">
+              <div class="moveto_btn" @click="goAdd">
+                내가 아는 다른 {{ detail_data.title }} 영화 촬영지 추가하기
+              </div>
+              <!-- <div class="flip=card" v-if="isCreate">
+                <p class="flip-card__input">지명<input type="text" v-model="addLocationData.location_name"></p>
+                <p class="flip-card__input">경도<input type="text" v-model="addLocationData.longitude"></p>
+                <p class="flip-card__input">위도<input type="text" v-model="addLocationData.latitude"></p>
+                <p class="flip-card__input">국가<input type="text" v-model="addLocationData.location_country"></p>
+                <p class="flip-card__input">영화장면 유튜브 URL<input type="text" v-model="addLocationData.youtube_url"></p>
+                <p class="flip-card__input">지역 사진 URL<input type="text" v-model="addLocationData.location_photo_url"></p>
+                <p class="flip-card__input">지역 설명<input type="text" v-model="addLocationData.location_description"></p> 
+              </div> -->
+
+              <div class="form" v-if="isCreate">
+                <div class="group">
+                  <input required="true" class="main-input" type="text" v-model="addLocationData.location_name">
+                  <span class="highlight-span"></span>
+                  <label class="input_label"> 
+                    지명
+                  </label>
+                </div>
+                <div class="group">
+                  <input required="true" class="main-input" type="text" v-model="addLocationData.longitude">
+                  <span class="highlight-span"></span>
+                  <label class="input_label">
+                    경도
+                  </label>
+                </div>
+                <div class="group">
+                  <input required="true" class="main-input" type="text" v-model="addLocationData.latitude">
+                  <span class="highlight-span"></span>
+                  <label class="input_label">
+                    위도
+                  </label>
+                </div>
+                <div class="group">
+                  <input required="true" class="main-input" type="text" v-model="addLocationData.location_country">
+                  <span class="highlight-span"></span>
+                  <label class="input_label">
+                    국가
+                  </label>
+                </div>
+                <div class="group">
+                  <input required="true" class="main-input" type="text" v-model="addLocationData.youtube_url">
+                  <span class="highlight-span"></span>
+                  <label class="input_label">
+                    유튜브 URL
+                  </label>
+                </div>
+                <div class="group">
+                  <input required="true" class="main-input" type="text" v-model="addLocationData.location_photo_url">
+                  <span class="highlight-span"></span>
+                  <label class="input_label">
+                    지역사진
+                  </label>
+                </div>
+                <div class="group">
+                  <input required="true" class="main-input" type="text" v-model="addLocationData.location_description">
+                  <span class="highlight-span"></span>
+                  <label class="input_label">
+                    지역설명
+                  </label>
+                </div>
+                <button class="moveto_btn submit_btn" @click="createMovieLocation(detail_data.movie_id)">제출하기</button>
+              </div>
+              
+          
+            </div>
           </div>
-        </div>
       </div>
     </div>
 
@@ -105,12 +157,22 @@ export default {
           lat:this.detail_data.movielocation_set[this.current_location].latitude,
           lng:this.detail_data.movielocation_set[this.current_location].longitude,
         }
+        // console.log('#######################################################');
+        // console.log(this.detail_data);
+        // console.log(this.current_location);
+        // console.log('#######################################################');
         this.$store.dispatch('moveTo', payload)
       }
     },
 
     goAdd(){
-      this.isCreate = !this.isCreate
+      console.log(this.$store.getters.isLogin);
+      if (!this.$store.getters.isLogin) {
+        this.$router.push({name:'LoginView'})
+      }
+      else{
+        this.isCreate = !this.isCreate
+      }
     },
     createMovieLocation(movie_id){
       console.log(movie_id);
@@ -164,6 +226,7 @@ export default {
   height: 100%;
   background-size: cover;
   background-position: center;
+  border-radius: 10px;
 
   display: flex;
   flex-direction: column;
@@ -173,6 +236,7 @@ export default {
   text-align: left;
   padding: 10px;
   margin: 15px;
+  position: relative;
 }
 
 .various_info_box {
@@ -199,14 +263,10 @@ export default {
   font-family: 'Noto Sans KR', sans-serif;
 }
 span {
-  color: rgba(200, 255, 255, 1)
+  color: darkgrey;
+  font-weight: 500;
 }
 
-
-.movieinfo_menu {
-  display: flex;
-  cursor: pointer;
-}
 .moveto_btn {
   --bg: #3B9E83;
   --hover-bg: #0fca66;
@@ -218,6 +278,7 @@ span {
   padding: 0.5em 0.5em;
 
   height: 40px;
+
   color: #323232;
   border-radius: 5px;
   border: 2px solid var(--main-color);
@@ -240,82 +301,88 @@ span {
 }
 
 /* 영화장소 추가 FORM */
-.flip-card-wrapper {
-  --input-focus: #2d8cf0;
-  --font-color: #323232;
-  --font-color-sub: #666;
-  --bg-color: #fff;
-  --bg-color-alt: #666;
-  --main-color: #323232;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.flip-card__inner {
-  height: 350px;
+.group {
   position: relative;
-  background-color: transparent;
-  perspective: 1000px;
-    width: 100%;
-    height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+  padding-bottom: 15px;
 }
-.flip-card__front {
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  background: lightgrey;
-  gap: 20px;
-  border-radius: 5px;
-  border: 2px solid var(--main-color);
-  box-shadow: 4px 4px var(--main-color);
-}
-.flip-card__form {
-  display: flex;
-  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  gap: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 15px;
+  background-color: black;
+  border-radius: 5px;
+  position: relative;
+}
+.main-input {
+  font-size: 16px;
+  padding: 5px;
+  display: block;
+  width: 400px;
+  border: none;
+  border-bottom: 1px solid #6c6c6c;
+  background: transparent;
+  color: #ffffff;
+}
+.main-input:focus {
+  outline: none;
+  border-bottom-color: #42ff1c;
+}
+.input_label {
+  color: #999999;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
 }
 
-.flip-card__input {
-  width: 100%;
-  height: 40px;
-  border-radius: 5px;
-  border: 2px solid var(--main-color);
-  background-color: var(--bg-color);
-  box-shadow: 4px 4px var(--main-color);
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--font-color);
-  padding: 5px 10px;
-  outline: none;
+.main-input:focus ~ .input_label,
+.main-input:valid ~ .input_label {
+  top: -20px;
+  font-size: 16px;
+  color: #42ff1c;
 }
-.flip-card__input::placeholder {
-  color: var(--font-color-sub);
-  opacity: 0.8;
+.highlight-span {
+  position: absolute;
+  height: 60%;
+  width: 0px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
 }
-.flip-card__input:focus {
-  border: 2px solid var(--input-focus);
+
+.main-input:focus ~ .highlight-span {
+  -webkit-animation: input-focus 0.3s ease;
+  animation: input-focus 0.3s ease;
 }
-.flip-card__btn:active, .button-confirm:active {
-  box-shadow: 0px 0px var(--main-color);
-  transform: translate(3px, 3px);
+
+@keyframes input-focus {
+  from {
+    background: #42ff1c;
+  }
+  to {
+    width: 185px;
+  }
 }
-.submit__btn {
-  margin: 20px 0 20px 0;
-  width: 120px;
-  height: 40px;
-  border-radius: 5px;
-  border: 2px solid var(--main-color);
-  background-color: var(--bg-color);
-  box-shadow: 4px 4px var(--main-color);
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--font-color);
-  cursor: pointer;
-} 
+.submit {
+  margin-top: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
 </style>

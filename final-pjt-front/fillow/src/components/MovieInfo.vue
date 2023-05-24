@@ -37,7 +37,6 @@ export default {
     // 변경 감지되면 get 실행함
     infowindow_changed(){
       this.getMovieDetail(this.$store.getters.selectedmovie)
-      console.log(1234);
     },
   },
   created(){
@@ -77,10 +76,14 @@ export default {
 </script>
 
 <style>
+.MovieInfo {
+  background-color: black;
+  height: 100vh;
+}
 .MovieVideo {
   position: relative;
 }
 .MovieDetail {
-  margin-top: 0px;
+  margin: 5px;
 }
 </style>

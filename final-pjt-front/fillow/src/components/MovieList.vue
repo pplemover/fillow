@@ -1,9 +1,7 @@
 <template>
   <div @scroll="ScrollEvent" ref="scrollContainer" class="MovieList">
 
-    <div class="black-box">
-    
-    </div>
+    <div class="black-box"></div>
 
     <div class="search-box">
       <input type="input" placeholder="영화 검색" name="text" class="input" @keyup.enter="getAnotherMovie" v-model.trim="query">

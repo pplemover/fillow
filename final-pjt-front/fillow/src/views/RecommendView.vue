@@ -57,8 +57,8 @@ export default {
       const lst = this.$store.getters.currentLocations
       const position = this.$store.state.my_location
       const calculate_lst = []
-      console.log(position.lng);
-      console.log(position.lat);
+      // console.log(position.lng);
+      // console.log(position.lat);
       for (const item of lst) {
         const newdata = {
           data:item,
@@ -70,15 +70,27 @@ export default {
         return a.distance_from_me - b.distance_from_me
       })
 
-      console.log(newlst);
+      // 동일한 객체 넣지 않는 함수
+      function pushUniqueObject(list, object) {
+        const isDuplicate = list.some((cur) => {
+          // Check for equality based on specific properties
+          return cur.data.tmdb_id === object.data.tmdb_id
+        });
 
-      const recommend_lst = []
-      for (const item of newlst) {
-        if (!recommend_lst.includes(item.data.tmdb_id) && (recommend_lst.length < 3)) {
-          recommend_lst.push(item)
+        if (!isDuplicate) {
+          list.push(object);
+          console.log(object.data.tmdb_id);
         }
       }
-      console.log(recommend_lst);
+
+      pushUniqueObject
+      const recommend_lst = []
+      for (const item of newlst) {
+        if (recommend_lst.length < 3 ) {
+          // recommend_lst.push(item)
+          pushUniqueObject(recommend_lst, item)
+        }
+      }
       this.my_recommend_lst = recommend_lst
     },
     // 거리 계산 ================================================================================================

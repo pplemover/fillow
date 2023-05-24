@@ -25,6 +25,7 @@
         @closeclick="openMarker(null)"
         @keyup.esc="openMarker(null)"
         :opened="openedMarkerID === m.id"
+        :options="{ disableAutoPan: true }"
         >
         
           <InfoWindowVue
@@ -57,6 +58,7 @@ export default {
       this.$emit('infoWindoUpdateComplete')
     },
     moveTo(data){
+      console.log('move to activate');
       const targetCoordinates = {
         lat:parseFloat(data.lat),
         lng:parseFloat(data.lng),
@@ -93,7 +95,7 @@ export default {
   },
   watch:{
     moveto(data){
-      // console.log(data);
+      // console.log('move');
       this.moveTo(data)
     }
   },

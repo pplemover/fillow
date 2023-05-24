@@ -77,10 +77,10 @@ export default {
   },
   methods: {
     goRecommend(){
-      this.$router.push({name:'RecommendView'})
+      this.$router.push({name:'RecommendView'}).catch(()=>{});
     },
     goAddMovie(){
-      this.$router.push({name:'AddMovieView'})
+      this.$router.push({name:'AddMovieView'}).catch(()=>{});
     },
     getMovieLocations() {
       // console.log(this.$store.state.movieLocations.length)
