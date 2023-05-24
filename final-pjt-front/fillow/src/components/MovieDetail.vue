@@ -40,8 +40,8 @@
             <span style="color: lightcoral">영화 촬영지</span>
             <div class="m_location" v-if="detail_data.movielocation_set.length !== 0">
               &lt;{{ detail_data.title }}&gt; 의 대표적인 촬영지는
-              {{detail_data.movielocation_set[current_location ].location_country}}의 
-              {{detail_data.movielocation_set[current_location ].location_name}}입니다.
+              {{detail_data.movielocation_set[current_location].location_country}}의 
+              {{detail_data.movielocation_set[current_location].location_name}}입니다.
 
               <div class="m_summary" v-if="(detail_data.movielocation_set[current_location].location_description)">
                 {{ detail_data.movielocation_set[current_location ].location_description }}
@@ -143,8 +143,8 @@ export default {
           this.moveTo()
           this.isCreate = false
         // 영화 장소 리스트 길이가 바뀐 경우(추가되거나 삭제된 경우 똑같이 시행)
-        } else if(newValue.movielocation_set.length !== oldValue.movielocation_set.length){ 
-          this.current_location = this.detail_data.movielocation_set.length-1
+        } else if(newValue.movielocation_set.length !== oldValue.movielocation_set.length){
+          this.current_location = newValue.movielocation_set.length-2
           this.moveTo()
           this.isCreate = false
         } else{  // 그대로인 경우(데이터가 바뀌었는데 길이는 그대로 === 수정된 경우)
@@ -157,7 +157,7 @@ export default {
               break
             }
           }
-          this.current_location = update_index
+          this.current_location = update_index-1
           console.log(this.current_location);
           this.moveTo()
           this.isCreate = false
@@ -176,6 +176,11 @@ export default {
   },
   methods:{
     moveTo(){
+      // 순환
+      console.log('circulation', this.current_location);
+      this.current_location += 1
+      this.current_location = this.current_location % this.detail_data.movielocation_set.length
+      // 순환
       if (this.detail_data.movielocation_set.length !== 0) {
         const payload = {
           lat:this.detail_data.movielocation_set[this.current_location].latitude,
@@ -186,10 +191,6 @@ export default {
         // console.log(this.current_location);
         // console.log('#######################################################');
         this.$store.dispatch('moveTo', payload)
-        // 순환
-        this.current_location += 1
-        this.current_location = this.current_location % this.detail_data.movielocation_set.length
-        // 순환
       }
     },
 

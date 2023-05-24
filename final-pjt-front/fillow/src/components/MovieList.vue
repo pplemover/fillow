@@ -47,7 +47,7 @@ export default {
       const container = this.$refs.scrollContainer;
       const scrollPosition = container.scrollTop + container.clientHeight;
       const scrollHeight = container.scrollHeight;
-      console.log(scrollPosition, scrollHeight, '##################');
+      // console.log(scrollPosition, scrollHeight, '##################');
       // 컴포넌트 안에서 아래쪽에 닿았는지 확인 해야 됨.
       if (scrollPosition+0.5 >= scrollHeight) {
         console.log(true);
