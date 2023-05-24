@@ -1,5 +1,8 @@
 <template>
   <div>
+
+    <div class="black-box"></div>
+    
     <gmap-map
     :zoom="5"
     :center="center"
@@ -23,8 +26,9 @@
         @keyup.esc="openMarker(null)"
         :opened="openedMarkerID === m.id"
         >
-
+        
           <InfoWindowVue
+          @updatecomplete="infoWindoUpdateComplete"
           :movie-location-item="m.data"
           />
           
@@ -49,8 +53,10 @@ export default {
     InfoWindowVue,
   },
   methods:{
+    infoWindoUpdateComplete(){
+      this.$emit('infoWindoUpdateComplete')
+    },
     moveTo(data){
-      console.log(typeof data.lat);
       const targetCoordinates = {
         lat:parseFloat(data.lat),
         lng:parseFloat(data.lng),
@@ -87,7 +93,7 @@ export default {
   },
   watch:{
     moveto(data){
-      console.log(data);
+      // console.log(data);
       this.moveTo(data)
     }
   },

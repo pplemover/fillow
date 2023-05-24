@@ -1,23 +1,23 @@
 /* Scroll bar stylings */
 ::-webkit-scrollbar {
-    width: 0px;
+    width: 4px;
     height: 7px;
   }
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: transparent;
+    background: black;
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: transparent; /* 핸들의 배경색을 투명하게 설정 */
+    background: #3B9E83;/* 핸들의 배경색을 투명하게 설정 */
     border-radius: 5px;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: transparent;  /* hover 시 핸들의 배경색을 투명하게 설정 */
+    background: #0fca66;  /* hover 시 핸들의 배경색을 투명하게 설정 */
   }
 
   /* 커스텀버튼 */
@@ -52,3 +52,6 @@
     box-shadow: none;
   }
 
+  .black-box {
+    height: 60px;
+  }

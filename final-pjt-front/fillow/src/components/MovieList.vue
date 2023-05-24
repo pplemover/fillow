@@ -1,6 +1,10 @@
 <template>
   <div @scroll="ScrollEvent" ref="scrollContainer" class="MovieList">
 
+    <div class="black-box">
+    
+    </div>
+
     <div class="search-box">
       <input type="input" placeholder="영화 검색" name="text" class="input" @keyup.enter="getAnotherMovie" v-model.trim="query">
     </div>
@@ -61,8 +65,6 @@ export default {
       else{
         current = this.query
       }
-      console.log(this.beforequery);
-      console.log(current, page);
       axios({
         method: "GET",
         url: "http://127.0.0.1:8000/api/v1/movies/",
@@ -72,7 +74,7 @@ export default {
         }
       })
       .then((res)=>{
-        console.log(res.data.length);
+        // console.log(res.data.length);
         if (res.data.length === 0) {
           this.queryerror = true
         } else if (this.homemovielist) {

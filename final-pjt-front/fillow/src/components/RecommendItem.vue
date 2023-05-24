@@ -47,5 +47,20 @@ export default {
 </script>
 
 <style>
-
+/* .card {
+  color: #036635;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 300px;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3), 
+              0 0 5px rgba(0, 0, 0, 0.3), 
+              0 0 15px rgba(0, 0, 0, 0.3), 
+              0 0 20px rgba(0, 0, 0, 0.3);
+} */
 </style>

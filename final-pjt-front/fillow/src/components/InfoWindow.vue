@@ -13,8 +13,8 @@
     <!-- 업데이트 할떄 -->
     <div v-if="isUpdating">
       <p>지명:<input type="text" v-model="updatingData.location_name"></p>
-      <p>경도:<input type="text" v-model="updatingData.latitude"></p>
-      <p>위도:<input type="text" v-model="updatingData.longitude"></p>
+      <p>경도:<input type="text" v-model="updatingData.longitude"></p>
+      <p>위도:<input type="text" v-model="updatingData.latitude"></p>
       <p>국가<input type="text" v-model="updatingData.location_country"></p>
       <p>영화장면 유튜브 URL<input type="text" v-model="updatingData.youtube_url"></p>
       <p>지역 사진 URL<input type="text" v-model="updatingData.location_photo_url"></p>
@@ -55,6 +55,7 @@ export default {
       this.isUpdating = true
     },
     updateMovieLocation(){
+      this.updatingData.user = this.$store.state.user_detail.pk
       axios({
         method:'put',
         headers:`Token ${this.$store.state.token}`,
@@ -63,13 +64,14 @@ export default {
       })
       .then((res)=>{
         console.log(res);
+        this.isUpdating = false
+        this.$store.dispatch('getMovieLocations')
+        this.$emit('updatecomplete')
       })
       .catch((err)=>{
         console.log(err);
       })
       .finally(()=>{
-        this.isUpdating = false
-        this.$store.dispatch('getMovieLocations')
       })
     }
   }

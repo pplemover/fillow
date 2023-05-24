@@ -186,7 +186,6 @@ header {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  margin-top: 60px;
 }
 .sign h1 {
   color: white;
@@ -210,17 +209,16 @@ header {
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
-
 .sign__card h2 strong {
   font-weight: 400;
   color: #006633;
 }
-
 .sign__card form {
   padding: 30px 22px;
   margin-bottom: 25px;
 }
 .sign__card form input {
+  font-family: 'Poppins', sans-serif;
   width: 100%;
   margin-bottom: 12px;
   padding: 15px;

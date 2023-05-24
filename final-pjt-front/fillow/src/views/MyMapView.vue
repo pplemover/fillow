@@ -1,9 +1,15 @@
 <template>
   <div>
     <div class="flex-box">
-      <MovieList class="left" style="overflow-x: hidden; height: calc(100vh);"/>
-      <MovieInfo class="mid" style="overflow-x: hidden; height: calc(100vh);"/>
-      <MapView class="right"/>
+      <MovieList class="left" style="overflow-x: hidden; height: 100vh;"/>
+      <MovieInfo class="mid" 
+      style="overflow-x: hidden; height: 100vh;"
+      :infowindow_changed="infowindow_changed"
+      />
+      <MapView class="right" 
+      @infoWindoUpdateComplete="infoWindoUpdateComplete"
+      style="overflow-y: hidden; height: 100vh;"
+      />
     </div>
 
   </div>
@@ -23,9 +29,15 @@ export default {
     MovieInfo,
   },
   methods:{
-
+    infoWindoUpdateComplete(){
+      this.infowindow_changed = !this.infowindow_changed
+    },
   },
-
+  data(){
+    return{
+      infowindow_changed:false,
+    }
+  }
 }
 </script>
 
@@ -33,7 +45,7 @@ export default {
 /* MovieListView, MovieInfoView, MapView */
 .flex-box {
   display: flex;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 .left {
   flex-basis: 25%;

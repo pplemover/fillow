@@ -13,7 +13,7 @@ const DJANGO_URL = 'http://127.0.0.1:8000'
 export default new Vuex.Store({
   plugins: [
     createPersistedState({
-      paths:['homemovieselect_id', 'token', 'my_location',]
+      paths:['homemovieselect_id', 'token', 'my_location','user_detail']
     }),
   ],
   state: {
@@ -24,6 +24,7 @@ export default new Vuex.Store({
     token:null,
     my_location:null,
     moveto: null,
+    user_detail : null,
   },
   getters: {
     selectedmovie(state){
@@ -58,6 +59,21 @@ export default new Vuex.Store({
     // =============================mutations 인증 시스템 관련 =================================
     SAVE_TOKEN(state, token){
       state.token = token
+      // 유저 정보 요청 후 vuex에 저장
+      axios({
+        method:'get',
+        url:'http://localhost:8000/accounts/user/',
+        headers:{
+          Authorization : `Token ${token}`
+        }
+      })
+      .then((res)=>{
+        console.log(res);
+        state.user_detail = res.data
+      })
+      .catch((err)=>{
+        console.log(err);
+      })
       router.push({name:'MyMapView'})  // store/index,js $ router 접근 불가 ->import 해야됨
     },
     DELETE_TOKEN(state){
@@ -90,7 +106,7 @@ export default new Vuex.Store({
       context.commit('GET_MY_LOCATION', payload)
     },
     moveTo(context, payload){
-      console.log(payload);
+      // console.log(payload);
       context.commit('MOVE_TO', payload)
     },
 

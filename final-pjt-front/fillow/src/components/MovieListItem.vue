@@ -2,24 +2,25 @@
   <div>
 
     <div class="item-box" @click="selectThisItem">
-      <div>
 
-        <div class="movie_title">{{movieitem.title}}</div>
-        <div class="movie_release_year">{{movieitem.release_date.slice(0, 4)}}</div>
+        <div class="movie_info_container">
+          <div class="movie_title">{{movieitem.title}}</div>
+          <div class="movie_release_year">{{movieitem.release_date.slice(0, 4)}}</div>
 
-        <div class="movie_tagline">{{movieitem.tagline}}</div>
+          <div class="movie_tagline">{{movieitem.tagline}}</div>
 
-        <span v-for="index in 5" :key="index" :class="{'filled': index <= rating}" @click="setRating(index)">&#9733;</span>
-        <div class="tmdb_score smlet">({{((movieitem.vote_avg)/2).toFixed(1)}})</div>
+          <span v-for="index in 5" :key="index" :class="{'filled': index <= rating}" @click="setRating(index)">&#9733;</span>
+          <div class="tmdb_score smlet">({{((movieitem.vote_avg)/2).toFixed(1)}})</div>
 
-        <div class="smlet">{{movieitem.original_language}}</div>
+          <div class="smlet">{{movieitem.original_language | languageFilter }}</div>
+          <!-- movieitem.original_language 변수를 languageFilter 필터를 통해 변환한 결과를 출력 -->
+        </div>
 
-      </div>
+        <div class="movie_poster_container">
+          <!-- 영화 포스터 -->
+          <img :src="`https://image.tmdb.org/t/p/original/${movieitem.poster_path}`" alt="" class="movie_poster">
+        </div>
 
-      <div class="movie_poster_container">
-        <!-- 영화 포스터 -->
-        <img :src="`https://image.tmdb.org/t/p/original/${movieitem.poster_path}`" alt="" class="movie_poster">
-      </div>
     </div>
 
   </div>
@@ -52,7 +53,6 @@ export default {
 .item-box {
   position: relative;
   width: 100%;
-  /* height: 140px; */
   border-bottom: 0.1px solid grey;
   padding: 10px;
 
@@ -60,12 +60,12 @@ export default {
   text-align: left;
   color: #78797a;
 
-  /* background-color: white; */
   border-radius: 2px;
   cursor: pointer;
 
   display: flex;
-  align-items: space-between;
+  justify-content: space-between;
+  align-items: center;
 }
 .item-box:hover {
   background-color: #f8f4f4;

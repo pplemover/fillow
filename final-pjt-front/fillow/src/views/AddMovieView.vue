@@ -40,10 +40,10 @@ export default {
       })
       .then((res)=>{
         // console.log(res.data.results);
-        if (res.data.results) {
+        if (res.data.results.length !== 0) {
           this.search_reslult = res.data.results[0]
         } else{
-          alert('제대로 입력해')
+          alert('제대로 입력하세요')
         }
         this.query = null
       })

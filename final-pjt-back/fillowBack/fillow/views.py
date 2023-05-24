@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from rest_framework import status
 
 from .models import MovieLocation, Movie
 from .serializers import MovieLocationSerializer, MovieSerializer, MovieDetailSerializer, MovieCreateSerializer
@@ -42,9 +43,12 @@ def update_location(request, location_pk):
     location = MovieLocation.objects.get(pk=location_pk)
     if request.method == 'PUT':
         serializer = MovieLocationSerializer(location, data =request.data) # the ArticleSerializer is updated using the passed data 
-        if serializer.is_valid(raise_exception=True): # After validation,
-            serializer.save() # the updated article object is saved.
-            return Response(serializer.data)
+        if -360<=float(request.data['longitude'])<=360 and -90<=float(request.data['latitude'])<=90:
+            if serializer.is_valid(raise_exception=True): # After validation,
+                serializer.save() # the updated article object is saved.
+                return Response(serializer.data)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['GET', 'POST'])

@@ -1,5 +1,7 @@
 <template>
   <div>
+
+    <div class="black-box"></div>
     <!-- selected movie id 가 없으면 데이터 변경 제대로 반영 안됨 -->
     <div v-show="false">{{ selected_movie_id }}</div>
     
@@ -9,7 +11,7 @@
       </div>
       <div class="MovieDetail">
           <MovieDetail :detail_data="detail_data" 
-          @updateData = "childToUpdate"/>
+          @createData = "createLocationData"/>
       </div>
     </div>
 
@@ -28,6 +30,16 @@ export default {
     MovieDetail,
     MovieVideo,
   },
+  props:{
+    infowindow_changed:Boolean,
+  },
+  watch:{
+    // 변경 감지되면 get 실행함
+    infowindow_changed(){
+      this.getMovieDetail(this.$store.getters.selectedmovie)
+      console.log(1234);
+    },
+  },
   created(){
     this.getMovieDetail(this.$store.getters.selectedmovie)
   },
@@ -39,7 +51,7 @@ export default {
     }
   },
   methods:{
-    childToUpdate(){
+    createLocationData(){
       this.getMovieDetail(this.$store.getters.selectedmovie)
     },
     getMovieDetail(thisid){
