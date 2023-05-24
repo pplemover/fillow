@@ -320,6 +320,7 @@ span {
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 15px;
+  margin: 5px 20px;
   background-color: black;
   border-radius: 5px;
   position: relative;
@@ -328,7 +329,7 @@ span {
   font-size: 16px;
   padding: 5px;
   display: block;
-  width: 400px;
+  width: 350px;
   border: none;
   border-bottom: 1px solid #6c6c6c;
   background: transparent;
@@ -377,7 +378,7 @@ span {
     background: #42ff1c;
   }
   to {
-    width: 185px;
+    width: 500px;
   }
 }
 .submit {
