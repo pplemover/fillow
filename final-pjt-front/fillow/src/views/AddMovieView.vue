@@ -51,11 +51,13 @@
 
           <div v-if="search_result">
             <div class="search_result_wrapper">
-              <img v-if="search_result.poster_path" :src="`https://image.tmdb.org/t/p/original/${search_result.poster_path}`" alt="영화 없음" 
-              width="300px" @load="loadingcomplete"
-              class="search_result_poster">
-              <hr>
-              <button @click="addMovietoDB(search_result.id)" class="check_btn">이 영화 추가하기</button>
+              
+              <div class="d-flex">
+                <img v-if="search_result.poster_path" :src="`https://image.tmdb.org/t/p/original/${search_result.poster_path}`" alt="영화 없음" 
+                width="300px" @load="loadingcomplete"
+                class="search_result_poster">
+              </div>
+              <button @click="addMovietoDB(search_result.id)" class="check_btn">이 영화를 Fillow DB에 추가하기</button>
             </div>
           </div>
         </div>
@@ -108,7 +110,7 @@ export default {
       })
     },
     addMovietoDB(movie_id){
-      if (window.confirm('영화를 추가하시겠습니까?')){
+      if (window.confirm('이 영화를 추가하시겠습니까?')){
         axios({
           method:'post',
           url:`http://127.0.0.1:8000/api/v1/movies/?id=${movie_id}`
