@@ -195,7 +195,7 @@ export default {
     },
 
     goAdd(){
-      if(window.confirm('로그인 화면으로 이동합니다')){
+      if(window.confirm('수정 페이지로 이동합니다.')){
         // console.log(this.$store.getters.isLogin);
         if (!this.$store.getters.isLogin) {
           this.$router.push({name:'LoginView'})

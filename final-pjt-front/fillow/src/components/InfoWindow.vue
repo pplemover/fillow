@@ -2,13 +2,17 @@
   <div class="info_card">
     <div class="d-flex" v-if="!isUpdating">
       <div>
-        <div class="text-start">
+        <div class="info_card_info">
           <!-- {{ movieLocationItem }} -->
-          <p class="fw-bold location_title">{{ movieLocationItem.location_name }} </p>
-          <p>{{ movieLocationItem.location_country }} </p>
-          <p>수정자:{{ movieLocationItem.user }} </p>
-          <p v-if="movieLocationItem.updated_at">수정 시간:{{ movieLocationItem.updated_at.slice(0,10) }} </p>
-          <button @click="goUpdate">수정하기</button>
+          <div>
+            <p class="fw-bold location_title marginadjust">{{ movieLocationItem.location_country }} </p> 
+            <p class="fw-bold location_title marginadjust">{{ movieLocationItem.location_name }}</p>
+          </div>
+          <div>
+            <span>수정한 FILLOW 회원 ID: {{ movieLocationItem.user }} </span>
+            <span v-if="movieLocationItem.updated_at">마지막 수정 시간:{{ movieLocationItem.updated_at.slice(0,10) }} </span>
+          </div>
+          <button @click="goUpdate" class="moveto_btn">수정하기</button>
         </div>
       </div>
       <div class="location_container">
@@ -31,7 +35,6 @@
 
     <form class="form" v-if="isUpdating">
         <p class="title">영화 촬영지 정보 수정하기 </p>
-        <p class="message">Fillow를 완성시켜주세요!</p>
         <label>
             <input required="" placeholder="" type="text" class="input" v-model="updatingData.location_name">
             <span>지명</span>
@@ -95,11 +98,14 @@ export default {
     }
   },
   methods:{
+
     goUpdate(){
-      if (!this.$store.getters.isLogin) {
-        this.$router.push({name:'LoginView'})
-      }else{
-        this.isUpdating = !this.isUpdating
+      if(window.confirm('정보를 수정하시겠습니까?')){
+        if (!this.$store.getters.isLogin) {
+          this.$router.push({name:'LoginView'})
+        }else{
+          this.isUpdating = !this.isUpdating
+        }
       }
     },
     updateMovieLocation(){
@@ -134,6 +140,13 @@ export default {
   background-color: #282828;
   color: white;
 }
+.info_card_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .location_container {
   /* position: absolute; */
   right: 5px;
@@ -193,7 +206,7 @@ export default {
   animation: pulse 1s linear infinite;
 }
 
-.message, .signin {
+.signin {
   color: rgba(88, 87, 87, 0.822);
   font-size: 14px;
 }
@@ -264,6 +277,11 @@ export default {
 
 .submit:hover {
   background-color: rgb(56, 90, 194);
+}
+
+.marginadjust {
+  margin: 5px;
+  padding: 10px;
 }
 
 @keyframes pulse {
