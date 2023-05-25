@@ -1,46 +1,33 @@
 <template>
   <div>
-    <div class="recommend_card" v-if="movie">
-      <div class="content">
-        <div class="back">
-          
-          <div class="back-content" v-if="item.data.location_photo_url" >
-            <img :src="item.data.location_photo_url" alt="해당 촬영지에 대해 사용지가 추가한 이미지가 없습니다" width="800px">
-          </div>
-          
-        </div>
+    <div class="recommend_card_container">
 
-        <div class="front">
-          <img :src="`https://image.tmdb.org/t/p/original/${movie.poster_path}`" alt="" width="400px" height="550px">
-          <div class="front-content">
-            <!-- 장르 -->
-            <small class="badge">Pasta</small>  
-            <!-- <strong>{{movie}}</strong> -->
-            <div class="description">
-              <div class="title">
-                <p class="title">
-                  <strong>{{movie.title}}</strong>
-                </p>
-                <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>
-              </div>
-              <p class="card-footer">
-                ({{movie.release_date.slice(0,4)}})
-              </p>
+      <div class="recommend_card" v-if="movie">
+        <div class="content">
+          <div class="back">
+            
+            <div class="back-content" v-if="item.data.location_photo_url" >
+              <img :src="item.data.location_photo_url" alt="해당 촬영지에 대해 사용지가 추가한 이미지가 없습니다" width="800px">
             </div>
+            
           </div>
+
+          <div class="front">
+            <img :src="`https://image.tmdb.org/t/p/original/${movie.poster_path}`" alt="" width="250px" height="350px">
+          </div>
+        </div>
+
+        <div class="distance_card">
+        <p>영화  <span>&lt;{{movie.title}}&gt;</span>의 대표적인 촬영지인 {{item.data.location_country}}
+          {{item.data.location_name}}은 
+          나로부터 {{ item.distance_from_me | metersToKilometers }} km 만큼 떨어져 있습니다.</p>
+        <!-- {{ movie }} -->
+        <!-- <p>location id {{item.data}}</p> -->
         </div>
       </div>
 
-      <div class="distance_card">
-      <p>&lt;영화  {{movie.title}}&gt;의 대표적인 촬영지인 
-        {{item.data.location_name}}은 
-        나로부터 {{ item.distance_from_me | metersToKilometers }} km 만큼 떨어져 있습니다.</p>
-      <!-- {{ movie }} -->
-      <!-- <p>location id {{item.data}}</p> -->
-      </div>
-    </div>
 
-    
+    </div>
   </div>
 </template>
 
@@ -87,8 +74,8 @@ export default {
 <style scoped>
 .recommend_card {
   overflow: visible;
-  width: 400px;
-  height: 550px;
+  width: 250px;
+  height: 350px;
   margin: 30px;
 }
 
@@ -126,7 +113,7 @@ export default {
   content: ' ';
   display: block;
   width: 160px;
-  height: 160%;
+  height: 150%;
   background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
   animation: rotation_481 5000ms infinite linear;
 }

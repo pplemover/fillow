@@ -126,11 +126,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .recommend_container {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .recommend_select, h3 {
   color: white;

@@ -1,5 +1,7 @@
 <template>
-  <div class="addmovie_bg">
+  <div class="addmovie_bg" :style="search_result ? 
+  {backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(https://image.tmdb.org/t/p/w780${search_result.backdrop_path})`, 
+  backgroundSize: 'cover', width: '100vw', height: '100vh'} : {}">
 
       <div class="addmovie_container">
         <!-- 첫 화면의 요소 (showInitialContent 데이터 속성을 사용하여 초기 컨텐츠 표시하거나 숨기기)-->
@@ -35,28 +37,26 @@
         </div>
 
         <!-- 진짜 보여줄 내용 -->
-        <div v-if="!showInitialContent" class="addmovie__back">
+        <div v-if="!showInitialContent" class="addmovie__back"
+        >
+          <!--조건부 표현식을 사용하여 search_result 값이 true인 경우에만 배경 이미지 스타일을 설정하도록 함-->
           <div class="black-box"></div>
 
-          <div class="search-box" @keyup.enter="CheckMovie">
+          <div class="addmovie_search-box" @keyup.enter="CheckMovie">
             <input type="input" placeholder="영화 검색" name="text" class="input"  v-model="query">
-            <button class="check_btn" @click="CheckMovie">확인</button>
+            <button class="check_btn" @click="CheckMovie">
+              <i class="material-icons">search</i>
+            </button>
           </div>
+
           <div v-if="search_result">
-            <div v-if="!search_result.poster_path">
-              <p>{{ search_result.title }}</p>
-              <p>{{ search_result.overview }}</p>
+            <div class="search_result_wrapper">
+              <img v-if="search_result.poster_path" :src="`https://image.tmdb.org/t/p/original/${search_result.poster_path}`" alt="영화 없음" 
+              width="300px" @load="loadingcomplete"
+              class="search_result_poster">
+              <hr>
+              <button @click="addMovietoDB(search_result.id)" class="check_btn">이 영화 추가하기</button>
             </div>
-
-            <div class="three-body" v-if="isload">
-              <div class="three-body__dot"></div>
-              <div class="three-body__dot"></div>
-              <div class="three-body__dot"></div>
-            </div>
-
-            <img v-if="search_result.poster_path" :src="`https://image.tmdb.org/t/p/original/${search_result.poster_path}`" alt="" width="500px" @load="loadingcomplete">
-            <br>
-            <button @click="addMovietoDB(search_result.id)">이 영화 추가하기</button>
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@ export default {
         if (res.data.results.length !== 0) {
           this.search_result = res.data.results[0]
         } else{
-          alert('제대로 입력하세요')
+          alert('해당 이름으로 검색되는 영화가 없습니다.')
         }
         this.query = null
       })
@@ -108,24 +108,26 @@ export default {
       })
     },
     addMovietoDB(movie_id){
-      axios({
-        method:'post',
-        url:`http://127.0.0.1:8000/api/v1/movies/?id=${movie_id}`
-      })
-      .then((res)=>{
-        console.log(res);
-        this.$router.push({name:'RecommendView'})
-      })
-      .catch((err)=>{
-        if (err.message === 'Request failed with status code 400') {
-          alert('정보가 부족한 영화입니다');
-        }
-        else if (err.message === 'Request failed with status code 406') {
-          alert('이미 있는 영화입니다');
-        }
-        console.log(err.message);
-        console.log(err);
-      })
+      if (window.confirm('영화를 추가하시겠습니까?')){
+        axios({
+          method:'post',
+          url:`http://127.0.0.1:8000/api/v1/movies/?id=${movie_id}`
+        })
+        .then((res)=>{
+          console.log(res);
+          this.$router.push({name:'RecommendView'})
+        })
+        .catch((err)=>{
+          if (err.message === 'Request failed with status code 400') {
+            alert('정보가 부족한 영화입니다');
+          }
+          else if (err.message === 'Request failed with status code 406') {
+            alert('이미 있는 영화입니다');
+          }
+          console.log(err.message);
+          console.log(err);
+        })
+      }
     },
     // 클릭 이벤트 발생 시 'showInitialContent'를 false로 설정하여 초기 컨텐츠를 숨김.
     toggleContent() {
@@ -145,11 +147,9 @@ export default {
 }
 .addmovie_container {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .addmovie_select {
-  width: 500px;
+  width: 600px;
   font-family: 'Black Han Sans', sans-serif;
 }
 .addmovie_select h1 {
@@ -186,9 +186,15 @@ export default {
   transition-property: width, left;
 }
 
+.addmovie_search-box {
+  width: 500px;
+  display: flex;
+}
+
 /* 검색창  */
 .input {
   position: relative;
+  margin: 0 auto;
   --input-focus: #2d8cf0;
   --font-color: #323232;
   --font-color-sub: #666;
@@ -223,10 +229,12 @@ export default {
   --main-color: #323232;
   
   margin: 5px;
-  padding: 0.2em 0.2em;
+  padding: 0.4em;
   
-  width: 50px;
-  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   color: whitesmoke; 
   border-radius: 5px;
   border: 2px solid var(--main-color);
@@ -243,6 +251,26 @@ export default {
   box-shadow: 0.25rem 0.25rem var(--bg);
 }
 .check_btn:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+.serach_result_wrapper {
+  min-width: 100vh;
+  position: fixed;
+}
+
+.search_result_poster {
+  margin-top: 10px; 
+  border-radius: 15px;
+}
+.search_result_poster:hover {
+  color: var(--hover-text);
+  transform: translate(-0.2rem,-0.2rem);
+  background: var(--hover-bg);
+  box-shadow: 0.5rem 0.5rem var(--bg);
+}
+.search_result_poster:active {
   transform: translate(0);
   box-shadow: none;
 }
