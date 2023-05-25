@@ -83,7 +83,6 @@ export default {
 .MovieVideo {
   position: relative;
 }
-.MovieDetail {
-  margin: 5px;
-}
+/* .MovieDetail {
+} */
 </style>

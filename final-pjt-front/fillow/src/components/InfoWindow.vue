@@ -2,12 +2,28 @@
   <div>
 
     <!-- 기본 보여주는 폼 -->
-    <div v-if="!isUpdating" class="info_card">
-      <img :src="movieLocationItem.location_photo_url" alt="" width="200px" height="150px">
+    <!-- <div v-if="!isUpdating" class="info_card">
+      <img :src="movieLocationItem.location_photo_url" alt="" width="200px"  style="background-size: cover;">
       <div>
         {{movieLocationItem}}
         <button @click="goUpdate">수정</button>
       </div>
+    </div> -->
+    <div class="d-flex" v-if="!isUpdating">
+      <div>
+        <div class="text-start">
+          <!-- {{ movieLocationItem }} -->
+          <p class="fw-bold location_title">{{ movieLocationItem.location_name }} </p>
+          <p>{{ movieLocationItem.location_country }} </p>
+          <p>수정자:{{ movieLocationItem.user }} </p>
+          <p>수정 시간:{{ movieLocationItem.updated_at.slice(0,10) }} </p>
+          <button @click="goUpdate">수정하기</button>
+        </div>
+      </div>
+      <div class="movie_poster_container">
+        <img :src="movieLocationItem.location_photo_url" alt="" class="movie_poster">
+      </div>
+
     </div>
 
     <!-- 업데이트 할떄 -->
@@ -52,7 +68,11 @@ export default {
   },
   methods:{
     goUpdate(){
-      this.isUpdating = true
+      if (!this.$store.getters.isLogin) {
+        this.$router.push({name:'LoginView'})
+      }else{
+        this.isUpdating = !this.isUpdating
+      }
     },
     updateMovieLocation(){
       this.updatingData.user = this.$store.state.user_detail.pk
@@ -78,7 +98,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .info_card {
   position: relative;
   font-family: 'Black Han Sans', sans-serif;
@@ -87,5 +107,17 @@ export default {
   color: white;
   
   display: flex;
+}
+.movie_poster_container {
+  /* position: absolute; */
+  right: 5px;
+}
+.movie_poster {
+  border-radius: 5px;
+  width: 20rem;
+  background-size: cover;
+}
+.location_title{
+  font-size: 20px;
 }
 </style>

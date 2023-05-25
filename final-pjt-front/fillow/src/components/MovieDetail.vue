@@ -13,7 +13,7 @@
             <div class="various_info_box">
               <div class="row1">
                 <div class="m_original_title"><span>원제       </span>{{ detail_data.original_title }}</div> <!-- 영화 원제-->
-                <div class="m_release_date"><span>개봉일      </span>{{ detail_data.release_date }}  </div> <!-- 영화 개봉일-->
+                <div class="m_release_date"><span>개봉날짜    </span>{{ detail_data.release_date }}  </div> <!-- 영화 개봉일-->
               </div>
               <div class="row2">
                 <div class="m_runtime"><span>상영시간     </span>{{ detail_data.runtime }}분</div> <!-- 영화 러닝타임-->

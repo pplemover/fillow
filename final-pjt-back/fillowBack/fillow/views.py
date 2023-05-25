@@ -64,16 +64,19 @@ def movie_list(request):
         
         # 쿼리문이 있을때와 없을때 구분
         if query:
+            # print(query)
             # Perform the search using the name field and the query string
             movies = Movie.objects.filter(Q(title__icontains=query))
             paginated_queryset = pagination_class.paginate_queryset(movies, request)
             serializer = MovieSerializer(paginated_queryset, many=True)
-            return Response(serializer.data)
+            return pagination_class.get_paginated_response(data=serializer.data)
+            # return Response(serializer.data)
         else:
             movies = get_list_or_404(Movie)
             paginated_queryset = pagination_class.paginate_queryset(movies, request)
             serializer = MovieSerializer(paginated_queryset, many=True)
-            return Response(serializer.data)
+            return pagination_class.get_paginated_response(data=serializer.data)
+            # return Response(serializer.data)
         
     
     # 여기는 영화 추가하기========================================================================================
@@ -85,27 +88,27 @@ def movie_list(request):
         
 
         genre_lst = [genre['id'] for genre in movie['genres']]
-        mydict = {
-            'movie_id': movie['id'],
-            'title': movie['title'],
-            'release_date': movie['release_date'],
-            'popularity': movie['popularity'],
-            'vote_count': movie['vote_count'],
-            'vote_avg': movie['vote_average'],
-            'overview': movie['overview'],
-            'poster_path': movie['poster_path'],
-            # 'genres': {id:12, id:14},
-            'adult': movie['adult'],
-            'backdrop_path': movie['backdrop_path'],
-            'original_language': movie['original_language'],
-            'original_title': movie['original_title'],
-            'revenue': movie['revenue'],
-            'runtime': movie['runtime'],
-            'tagline': movie['tagline'],
-        }
-        query_dict = QueryDict('', mutable=True)
-        query_dict.update(mydict)
-        serializer = MovieCreateSerializer(data=query_dict)
+        # mydict = {
+        #     'movie_id': movie['id'],
+        #     'title': movie['title'],
+        #     'release_date': movie['release_date'],
+        #     'popularity': movie['popularity'],
+        #     'vote_count': movie['vote_count'],
+        #     'vote_avg': movie['vote_average'],
+        #     'overview': movie['overview'],
+        #     'poster_path': movie['poster_path'],
+        #     # 'genres': {id:12, id:14},
+        #     'adult': movie['adult'],
+        #     'backdrop_path': movie['backdrop_path'],
+        #     'original_language': movie['original_language'],
+        #     'original_title': movie['original_title'],
+        #     'revenue': movie['revenue'],
+        #     'runtime': movie['runtime'],
+        #     'tagline': movie['tagline'],
+        # }
+        # query_dict = QueryDict('', mutable=True)
+        # query_dict.update(mydict)
+        serializer = MovieCreateSerializer(data=movie)
         
         if serializer.is_valid(raise_exception=True):
             serializer.save()

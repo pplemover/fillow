@@ -38,6 +38,7 @@ export default {
   },
   methods:{
     getAnotherMovie(){
+      this.endpage = false
       this.beforequery = null
       this.homemovielist = null
       this.page = 1
@@ -49,7 +50,7 @@ export default {
       const scrollHeight = container.scrollHeight;
       // console.log(scrollPosition, scrollHeight, '##################');
       // 컴포넌트 안에서 아래쪽에 닿았는지 확인 해야 됨.
-      if (scrollPosition+0.5 >= scrollHeight) {
+      if (scrollPosition+0.5 >= scrollHeight && !this.endpage) {
         console.log(true);
         this.page+=1
         this.getMovieList(this.page)
@@ -73,21 +74,24 @@ export default {
         }
       })
       .then((res)=>{
-        // console.log(res.data.length);
-        if (res.data.length === 0) {
+        // console.log(res.data);
+        if (res.data.results.length === 0) {
           this.queryerror = true
         } else if (this.homemovielist) {
-          for (const movie of res.data) {
+          for (const movie of res.data.results) {
             this.homemovielist.push(movie)
           }
         } else{
-          this.homemovielist = res.data
+          this.homemovielist = res.data.results
           // console.log(this.homemovielist);
           this.$store.dispatch('selectThisItem', this.homemovielist[0].movie_id)
         }
         // console.log(res.data);
         this.beforequery = this.query
         this.query = null
+        if (!res.data.next) {
+          this.endpage = true
+        }
       })
       .catch((err)=>{
         console.log(err);
@@ -103,6 +107,7 @@ export default {
       beforequery : null,
       page:1,
       queryerror: false,
+      endpage:false
     }
   }
 }

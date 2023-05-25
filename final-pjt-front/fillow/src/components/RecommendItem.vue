@@ -1,15 +1,46 @@
 <template>
   <div>
-      <div class="recommend_card">
-        <div v-if="movie">
-          {{movie}}
-          <hr>
-          <div class="distance_card">
-            <p>distance {{item.distance_from_me}}</p>
-            <p>location id {{item.data.id}}</p>
+    <div class="recommend_card" v-if="movie">
+      <div class="content">
+        <div class="back">
+          
+          <div class="back-content">
+            <img :src="item.data.location_photo_url" alt="" width="800px">
+            
+          </div>
+        </div>
+
+        <div class="front">
+          <img :src="`https://image.tmdb.org/t/p/original/${movie.poster_path}`" alt="" width="400px" height="550px">
+          <div class="front-content">
+            <!-- 장르 -->
+            <small class="badge">Pasta</small>  
+            <!-- <strong>{{movie}}</strong> -->
+            <div class="description">
+              <div class="title">
+                <p class="title">
+                  <strong>{{movie.title}}</strong>
+                </p>
+                <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>
+              </div>
+              <p class="card-footer">
+                ({{movie.release_date.slice(0,4)}})
+              </p>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="distance_card">
+      <p>&lt;영화  {{movie.title}}&gt;의 대표적인 촬영지인 
+        {{item.data.location_name}}은 
+        나로부터 {{ item.distance_from_me | metersToKilometers }} km 만큼 떨어져 있습니다.</p>
+      <!-- {{ movie }} -->
+      <!-- <p>location id {{item.data}}</p> -->
+      </div>
+    </div>
+
+    
   </div>
 </template>
 
@@ -24,6 +55,12 @@ export default {
   data(){
     return{
       movie:null,
+    }
+  },
+  filters: {
+    metersToKilometers(value){
+      // 미터(m)를 킬로미터(kliometer)로 변환
+      return (value/1000).toFixed(2);
     }
   },
   methods:{
@@ -47,21 +84,149 @@ export default {
 }
 </script>
 
-<style>
-.distance_card {
-  color: #036635;
-  background-color: whitesmoke;
+<style scoped>
+.recommend_card {
+  overflow: visible;
+  width: 400px;
+  height: 550px;
+  margin: 30px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px #000000ee;
+  border-radius: 5px;
+}
+
+.front, .back {
+  background-color: #151515;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
   display: flex;
   align-items: center;
+  overflow: hidden;
+}
+
+.back::before {
+  position: absolute;
+  content: ' ';
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
+  animation: rotation_481 5000ms infinite linear;
+}
+
+.back-content {
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  background-color: #151515;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 250px;
-  height: 300px;
-  margin: 5px;
+  align-items: center;
+  gap: 30px;
+}
+.back-content img {
+  background-size: cover;
+}
+
+.recommend_card:hover .content {
+  transform: rotateY(180deg);
+}
+
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  0% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.front {
+  transform: rotateY(180deg);
+  color: white;
+}
+
+.front .front-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.front-content .badge {
+  background-color: #00000055;
+  padding: 2px 10px;
   border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3), 
-              0 0 5px rgba(0, 0, 0, 0.3), 
-              0 0 15px rgba(0, 0, 0, 0.3), 
-              0 0 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  width: fit-content;
+}
+
+.description {
+  box-shadow: 0px 0px 10px 5px #00000088;
+  width: 100%;
+  padding: 10px;
+  background-color: #00000099;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 11px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title p {
+  width: 50%;
+}
+
+.recommend_card-footer {
+  color: #ffffff88;
+  margin-top: 5px;
+  font-size: 8px;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.distance_card {
+  color: white;
+  margin-top: 30px;
 }
 </style>

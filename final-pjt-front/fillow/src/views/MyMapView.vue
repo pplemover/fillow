@@ -52,6 +52,7 @@ export default {
 }
 .mid {
   flex-basis: 33.33%;
+  background-color: #1f1f1f;
 }
 .right {
   flex-basis: 41.67%;
