@@ -16,7 +16,7 @@
           </label>
         </div>
         <div class="menu-items" v-show="menuVisible">
-            <div @click="goAddMovie" class="func_btn">내가 좋아하는 영화 추가하기</div>
+            <div @click="goAddMovie" class="func_btn">영화 추가 제안하기</div>
             <div @click="goRecommend" class="func_btn">내 위치를 기반으로 추천받기</div>
         </div>
      </div>
@@ -185,7 +185,7 @@ header {
 .header_menu {
   position: fixed;
   left: 130px;
-  width: 425px;
+  width: 380px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -250,7 +250,6 @@ header {
 
 .menu-items {
   display: flex;
-  left: 50px;
 }
 
 /* SIGN CARD */
