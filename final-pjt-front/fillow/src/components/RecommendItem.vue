@@ -1,19 +1,15 @@
 <template>
   <div>
-
-    <div class="recommend_container">
-      <div v-if="movie">
-        {{movie}}
-        <hr>
-        <div class="card">
-          <p>distance {{item.distance_from_me}}</p>
-          <p>location id {{item.data.id}}</p>
+      <div class="recommend_card">
+        <div v-if="movie">
+          {{movie}}
+          <hr>
+          <div class="distance_card">
+            <p>distance {{item.distance_from_me}}</p>
+            <p>location id {{item.data.id}}</p>
+          </div>
         </div>
       </div>
-    </div>
-
-
-
   </div>
 </template>
 
@@ -52,11 +48,7 @@ export default {
 </script>
 
 <style>
-.recommend_container {
-  display: flex;
-  flex-direction: row-reverse;
-}
-.card {
+.distance_card {
   color: #036635;
   background-color: whitesmoke;
   display: flex;
