@@ -1,14 +1,5 @@
 <template>
   <div>
-
-    <!-- 기본 보여주는 폼 -->
-    <!-- <div v-if="!isUpdating" class="info_card">
-      <img :src="movieLocationItem.location_photo_url" alt="" width="200px"  style="background-size: cover;">
-      <div>
-        {{movieLocationItem}}
-        <button @click="goUpdate">수정</button>
-      </div>
-    </div> -->
     <div class="d-flex" v-if="!isUpdating">
       <div>
         <div class="text-start">
@@ -16,7 +7,7 @@
           <p class="fw-bold location_title">{{ movieLocationItem.location_name }} </p>
           <p>{{ movieLocationItem.location_country }} </p>
           <p>수정자:{{ movieLocationItem.user }} </p>
-          <p>수정 시간:{{ movieLocationItem.updated_at.slice(0,10) }} </p>
+          <p v-if="movieLocationItem.updated_at">수정 시간:{{ movieLocationItem.updated_at.slice(0,10) }} </p>
           <button @click="goUpdate">수정하기</button>
         </div>
       </div>

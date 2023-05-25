@@ -117,7 +117,13 @@ export default {
         this.$router.push({name:'RecommendView'})
       })
       .catch((err)=>{
-        alert('이미 있는 영화입니다');
+        if (err.message === 'Request failed with status code 400') {
+          alert('정보가 부족한 영화입니다');
+        }
+        else if (err.message === 'Request failed with status code 406') {
+          alert('이미 있는 영화입니다');
+        }
+        console.log(err.message);
         console.log(err);
       })
     },

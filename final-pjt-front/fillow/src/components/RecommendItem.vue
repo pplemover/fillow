@@ -4,10 +4,10 @@
       <div class="content">
         <div class="back">
           
-          <div class="back-content">
-            <img :src="item.data.location_photo_url" alt="" width="800px">
-            
+          <div class="back-content" v-if="item.data.location_photo_url" >
+            <img :src="item.data.location_photo_url" alt="해당 촬영지에 대해 사용지가 추가한 이미지가 없습니다" width="800px">
           </div>
+          
         </div>
 
         <div class="front">
@@ -79,8 +79,8 @@ export default {
     },
   },
   created(){
-    this.getMovie()
-  }
+      this.getMovie()
+  },
 }
 </script>
 

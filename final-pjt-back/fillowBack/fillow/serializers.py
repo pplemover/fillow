@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import MovieLocation, Movie, Genre   
-from rest_framework.exceptions import ValidationError
+from rest_framework.exceptions import ValidationError, NotAcceptable
 
 
 class GenreSerializer(serializers.ModelSerializer):
@@ -40,4 +40,4 @@ class MovieCreateSerializer(serializers.ModelSerializer):
         try:
             return super().create(validated_data)
         except:
-            raise ValidationError('unique error')
+            raise NotAcceptable('unique error')
