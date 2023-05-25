@@ -195,12 +195,14 @@ export default {
     },
 
     goAdd(){
-      console.log(this.$store.getters.isLogin);
-      if (!this.$store.getters.isLogin) {
-        this.$router.push({name:'LoginView'})
-      }
-      else{
-        this.isCreate = !this.isCreate
+      if(window.confirm('로그인 화면으로 이동합니다')){
+        // console.log(this.$store.getters.isLogin);
+        if (!this.$store.getters.isLogin) {
+          this.$router.push({name:'LoginView'})
+        }
+        else{
+          this.isCreate = !this.isCreate
+        }
       }
     },
     createMovieLocation(movie_id){

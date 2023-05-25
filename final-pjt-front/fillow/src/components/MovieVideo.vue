@@ -3,7 +3,7 @@
     <!-- <div class="video_box" v-if="detail_data.movielocation_set.length !== 0"> -->
     <div class="video_box" v-if="detail_data.movielocation_set.length !== 0">
       <div class="video_ratio">
-        <iframe width="100%" height="100%" :src="detail_data.movielocation_set[0].youtube_url" 
+        <iframe width="100%" height="100%" :src="detail_data.movielocation_set[0].youtube_url + '?autoplay=1'" 
           title="YouTube video player" 
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
