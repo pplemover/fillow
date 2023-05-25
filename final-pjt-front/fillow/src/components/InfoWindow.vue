@@ -66,7 +66,7 @@
             <input required="" placeholder="" type="text" class="input" v-model="updatingData.location_description">
             <span>지역 설명</span>
         </label>
-        <button class="submit" @click="updateMovieLocation">수정 완료</button>
+        <button class="submit" @click.prevent="updateMovieLocation">수정 완료</button>
     </form>
 
 
