@@ -56,8 +56,13 @@
                 <img v-if="search_result.poster_path" :src="`https://image.tmdb.org/t/p/original/${search_result.poster_path}`" alt="영화 없음" 
                 width="300px" @load="loadingcomplete"
                 class="search_result_poster">
+                <div class="search_result_movieinfo">
+                  <div class="m_title">{{ search_result.title }}</div>
+                  <div class="m_release_date">{{ search_result.release_date.slice(0, 4) }}</div>
+                  <div class="m_summary">{{ search_result.overview }}</div>
+                </div>
               </div>
-              <button @click="addMovietoDB(search_result.id)" class="check_btn">이 영화를 Fillow DB에 추가하기</button>
+              <button @click="addMovietoDB(search_result.id)" class="check_btn adjustment">이 영화를 Fillow DB에 추가하기</button>
             </div>
           </div>
         </div>
@@ -189,8 +194,24 @@ export default {
 }
 
 .addmovie_search-box {
-  width: 500px;
+  width: 700px;
   display: flex;
+}
+
+.addmovie__back {
+  width: 700px;
+}
+
+.adjustment {
+  margin-top: 5em;
+  width: 100%;
+}
+
+.search_result_movieinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* 검색창  */
@@ -264,7 +285,7 @@ export default {
 
 .search_result_poster {
   margin-top: 10px; 
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .search_result_poster:hover {
   color: var(--hover-text);
