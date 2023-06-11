@@ -125,8 +125,8 @@ Fillow은 사용자들이 영화 촬영 장소를 탐색하고 해당 영화 장
   <summary>5/20/2023 - Google Map, TMDB 데이터 확인</summary>
 
   `BACK`
-  - 영화 촬영지의 위도, 경도 정보를 토대로 구글 맵에 마커로 띄우고, 마커를 클릭했을때 해당 영화에 대한 추가 정보를 볼 수 있도록 하는 기능 구현
-  1) 구글 맵 설치: npm install vue2-google-maps
+  - 영화 촬영지의 위도, 경도 정보를 토대로 구글 맵에 마커를 띄우고, 사용자가 마커를 선택했을때 해당 영화에 대한 추가 정보를 볼 수 있도록 하는 기능 구현
+  - 구글 맵 설치: npm install vue2-google-maps
 
   `FRONT`
   ![데이터확인](https://file.notion.so/f/s/df4a89af-d725-4fab-8168-31225a8a5a17/Untitled.png?id=0b8f9076-30aa-4e6e-8262-f522b8783174&table=block&spaceId=f7ab64f0-6613-4035-b609-06b6865d9b61&expirationTimestamp=1685084987500&signature=XZ5nUXJdqpuFE4p6uJIITPRWS3MssOjEkZ1nWpnoBeA&downloadName=Untitled.png)
